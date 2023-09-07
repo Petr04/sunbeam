@@ -9,7 +9,10 @@ services:
       DATABASE_CLIENT: postgres 
       DATABASE_NAME: ${POSTGRES_DB} 
       DATABASE_USERNAME: ${POSTGRES_USER} 
-      DATABASE_PASSWORD: ${POSTGRES_PASSWORD} 
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+    env_file: ./backend/.env
+    volumes:
+      - ./backend/public/uploads:/data/public
     ports: 
       - 1337:1337 
     restart: unless-stopped 
