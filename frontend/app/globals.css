@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 204, 23, 1;
+  --background-rgb: 255, 249, 228, 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 249, 228, 1;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb))
+}
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components{
+  .container{
+    @apply max-w-[1080px]
+  }
+}
+
+.burger {
+  height: 20px;
+  position: relative;
+  width: 30px;
+}
+
+.burger-line {
+  display: flex;
+  width: 30px;
+  height: 2px;
+  background: #FFCC17 ;
+  transition: .3s all ease;
+}
+
+.top-line {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.mid-line {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bottom-line {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
