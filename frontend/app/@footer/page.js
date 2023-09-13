@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <div class="absolute bottom-0 h-[288px] lg:h-[470px] md:h-[470px] bg-black_bg w-[100%] ">
-            <div class="absolute left-[90px] top-[50px] lg:left-[70px] md:left-[30px]">
+            <div class="absolute left-[90px] top-[3rem] lg:left-[70px] md:left-[30px]">
                 <div class="flex-col items-start">
                     <img src="/logo_bw.png" alt="logo" class=""></img>
                     <div class="my-5"><button class="font-light text-grey_text text-xl">ru</button><img src="/ru-en_grey.png" alt="ru-en" class="inline mx-1" ></img></div>
