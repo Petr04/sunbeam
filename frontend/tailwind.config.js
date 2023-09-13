@@ -11,7 +11,7 @@ module.exports = {
       md: {'max': '600px'},
       lg: {'min': '601px', 'max': '1180px'},
       xl: {'min': '1181px', 'max': '1600px'},
-      wide: {'min': '1601px', 'max': '1920px'}
+      wide: {'min': '1601px', 'max': '3000px'}
     },
     container: {
       padding: '20px',
@@ -20,6 +20,8 @@ module.exports = {
     colors: {
       white: '#FFFFFF',
       black: '#000000',
+      black_bg: '#242424',
+      grey_text: '#949494',
       yellow_bg: '#FFF9E4',
       yellow_text: '#FFCC17',
     }

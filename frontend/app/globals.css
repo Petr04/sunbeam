@@ -30,36 +30,3 @@ body {
     @apply max-w-[1080px]
   }
 }
-
-.burger {
-  height: 20px;
-  position: relative;
-  width: 30px;
-}
-
-.burger-line {
-  display: flex;
-  width: 30px;
-  height: 2px;
-  background: #FFCC17 ;
-  transition: .3s all ease;
-}
-
-.top-line {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-
-.mid-line {
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-.bottom-line {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-}

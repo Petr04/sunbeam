@@ -16,10 +16,8 @@ export default function RootLayout({ children , header, footer }) {
       </head>
       <body>
         {header}
-        {/* {children}
-        {footer} */}
-
-        
+        {/* {children} */}
+        {footer}
       </body>
     </html> 
   )
