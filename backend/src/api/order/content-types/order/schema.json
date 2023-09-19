@@ -21,12 +21,6 @@
       "target": "api::picture.picture",
       "inversedBy": "order"
     },
-    "status_option": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::status-option.status-option",
-      "inversedBy": "orders"
-    },
     "full_name": {
       "type": "string"
     },
@@ -37,7 +31,18 @@
       "type": "string"
     },
     "invoice_id": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "status": {
+      "type": "string",
+      "regex": "created|sent|paid|expired",
+      "default": "created"
+    },
+    "invoice_url": {
+      "type": "string",
+      "required": true
     }
   }
 }
