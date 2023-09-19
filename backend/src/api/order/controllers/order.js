@@ -1,7 +1,6 @@
 'use strict';
 
 async function refreshStatus(strapi, order, intervalId) {
-  console.log('ORDER:', order);
   const status = await strapi.service('api::order.payment')
     .getStatus(order.data.invoice_id);
 
@@ -33,6 +32,16 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
       const { invoice_url, invoice_id } =
         await strapi.service('api::order.payment')
           .getNewPaymentLink(paykeeperParams);
+
+      ctx.request.body.data.invoice_url = invoice_url;
+      ctx.request.body.data.invoice_id = invoice_id;
+
+      const result = await super.create(ctx);
+
+      let intervalId = null;
+      intervalId = setInterval(() => refreshStatus(strapi, result, intervalId), 2000);
+
+      return result;
     } catch (e) {
       if (e.code === 400) {
         ctx.badRequest(e.message);
@@ -44,16 +53,6 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
         return;
       }
     }
-
-    ctx.request.body.data.invoice_url = invoice_url;
-    ctx.request.body.data.invoice_id = invoice_id;
-
-    const result = await super.create(ctx);
-
-    let intervalId = null;
-    intervalId = setInterval(() => refreshStatus(strapi, result, intervalId), 2000);
-
-    return result;
   },
   async findOne(ctx) {
     const refreshStatusRequired = !['', 'false', '0']
