@@ -1,18 +1,10 @@
 'use client'
-import {useState} from 'react'
 
-export default function Header() {
-  const [showModal, setShowModal] = useState(false);
+import { useState } from 'react'
 
-  const handleClick = () => {
-    if (!showModal) {
-      setShowModal(true)
-    } else {
-      setShowModal(false)
-    }
-    
-    console.log(showModal)
-  };
+export default function Menu() {
+  const [showModal, setShowModal] = useState(false)
+  const toggleModal = () => setShowModal(!showModal)
 
   return (
     <div class="pt-[50px] px-[68px]  md:px-[30px]">
@@ -28,15 +20,15 @@ export default function Header() {
           <li><a href="" class="font-light text-xl wide:text-2xl">ru</a><img src="/ru-en_yellow.svg" alt="ru-en" class="inline mx-1" ></img></li>
         </ul>
 
-        <button onClick={handleClick} class="relative h-[20px] w-[30px] hidden lg:block md:block lg:right-0">
-          <span class="absolute left-0 top-0 flex w-[30px] h-[2px] bg-yellow_text"> </span>
-          <span class="absolute left-0 top-[50%] flex w-[30px] h-[2px] bg-yellow_text "> </span>
-          <span class="absolute left-0 bottom-0 flex w-[30px] h-[2px] bg-yellow_text"> </span> 
-        </button>               
-
+        <button
+          onClick={toggleModal}
+          class="relative h-[20px] w-[30px] hidden lg:block md:block lg:right-0"
+        >
+          <img src="/menu-01.svg" />
+        </button>
       </nav>
 
-      {showModal==true &&
+      {showModal === true &&
         <div class="absolute md:top-[120px] md:left-5 lg:top-[140px] lg:left-10 bg-yellow_bg"> 
           <ul class="grid grid-cols-2 gap-2">
             <li><a href="/schedule" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">расписание</a></li>
@@ -44,7 +36,10 @@ export default function Header() {
             <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
             <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
             <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">контакты</a></li>
-            <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">ru</a><img src="/ru-en_yellow.svg" alt="ru-en" class="inline mx-1" ></img></li>
+            <li>
+              <a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">ru</a>
+              <img src="/ru-en_yellow.svg" alt="ru-en" class="inline mx-1" ></img>
+            </li>
           </ul>
         </div>       
       }

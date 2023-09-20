@@ -1,6 +1,9 @@
 import './globals.css'
-import Footer from './components/footer'
-import Header from './components/header'
+import { Montserrat } from 'next/font/google'
+import Menu from './_components/Menu'
+import Footer from './_components/Footer'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Луч солнца',
@@ -10,16 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="./global.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"/>
-      </head>
-      <body class="overflow-x-clip">
-        <Header/>
+      <body className={`overflow-x-hidden ${montserrat.className}`}>
+        <Menu />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html> 
   )
