@@ -21,10 +21,10 @@ module.exports = {
     colors: {
       white: '#FFFFFF',
       black: '#000000',
-      black_bg: '#242424',
-      grey_text: '#949494',
-      yellow_bg: '#FFF9E4',
-      yellow_text: '#FFCC17',
+      blackBg: '#242424',
+      greyText: '#949494',
+      yellowBg: '#FFF9E4',
+      yellowText: '#FFCC17',
     }
   },
   plugins: [],

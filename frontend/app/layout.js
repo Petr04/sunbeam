@@ -1,11 +1,13 @@
 import './globals.css'
+import Footer from './components/footer'
+import Header from './components/header'
 
 export const metadata = {
   title: 'Луч солнца',
   description: 'Сайт-магазин для продажи картин воспитанников студии',
 }
 
-export default function RootLayout({ children , header, footer }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -14,10 +16,10 @@ export default function RootLayout({ children , header, footer }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"/>
       </head>
-      <body class="overflow-x-hidden">
-        {header}
+      <body class="overflow-x-clip">
+        <Header/>
         {children}
-        {footer}
+        <Footer/>
       </body>
     </html> 
   )

@@ -39,7 +39,7 @@ export default function Header() {
       {showModal==true &&
         <div class="absolute md:top-[120px] md:left-5 lg:top-[140px] lg:left-10 bg-yellow_bg"> 
           <ul class="grid grid-cols-2 gap-2">
-            <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">расписание</a></li>
+            <li><a href="/schedule" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">расписание</a></li>
             <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">новости</a></li>
             <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
             <li><a href="" class="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
