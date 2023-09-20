@@ -64,7 +64,7 @@ export default function Home() {
       <div class="relative ml-[20rem] top-[40rem] grid grid-cols-1 gap-10">
         <div class="text-5xl font-bold relative ">Почему образование полезно</div>
         <div class="grid grid-cols-1 gap-0">
-          {/* <Item_of_list text="учим детей"/> */}
+          <Item_of_list title="учим детей"/>
           <div class="text-black bg-yellow_text text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Учит быть нацеленным на результат</div>
           <div class="text-black bg-yellow_text text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет справиться со стрессом</div>
           <div class="text-black bg-yellow_text text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает воображение</div>
