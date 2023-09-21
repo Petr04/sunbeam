@@ -16,7 +16,8 @@ module.exports = {
     },
     container: {
       padding: '20px',
-      center: true
+      center: true,
+      zIndex: 0
     },
     colors: {
       white: '#FFFFFF',
@@ -25,7 +26,7 @@ module.exports = {
       greyText: '#949494',
       yellowBg: '#FFF9E4',
       yellowText: '#FFCC17',
-    }
+    },
   },
   plugins: [],
 }

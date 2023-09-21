@@ -1,7 +1,9 @@
+import ItemOfListOurPrograms from "./_components/ItemOfListOurPrograms"
+
 export default function Home() {
 
   return (
-    <main className="lg:wi-[80%] lg:p-[5rem] z-0">
+    <main className="lg:w-[80%] lg:p-[5rem] z-0">
       <div className="realtive lg:hidden z-0">
         <img src="/dawn.svg" alt="dawn" className="block relative left-[-4rem] top-10 w-[13%] -z-10"></img>
         <img src="/explosion.svg" alt="explosion" className="block relative left-[1rem] top-[10rem] w-[12%] -z-10"></img>
@@ -50,83 +52,13 @@ export default function Home() {
         <div className="text-5xl ml-[21rem] font-bold relative left-[10rem]">Наши программы</div>
         <div className="ml-[5rem] grid grid-cols-3">
 
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" children_num="4 человека в группе"/>
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" children_num="4 человека в группе"/>
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" children_num="4 человека в группе"/>
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" children_num="4 человека в группе"/>
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" children_num="4 человека в группе"/>
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" children_num="4 человека в группе"/>
 
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
         </div>
       </div>
 
@@ -148,7 +80,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative ml-[1rem] mr-[2rem] top-[46rem] z-0">
+      <div className="relative ml-[1rem] mr-[2rem] top-[55em] z-0">
         <div className="text-5xl font-bold relative ml-[26rem]">Где мы находимся?</div>
         <div className="grid grid-rows-1">
           <div className="w-full mt-[3rem] grid grid-cols-1">
@@ -159,7 +91,7 @@ export default function Home() {
         </div> 
       </div>
 
-      <div className="relative justify-items-center top-[20rem] z-0">
+      <div className="relative justify-items-center top-[25rem] z-0">
         <div className="ml-[33rem]">
           <div className="font-medium text-[24px]">Остались вопросы? Звоните!</div>
           <div className="font-bold text-[24px] ml-[4rem]">+7 (913) 640-03-59</div>
