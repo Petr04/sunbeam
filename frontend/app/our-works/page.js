@@ -1,7 +1,7 @@
-export default function Schedule() {
+export default function OurWorks() {
   return (
     <div>
-      <h1>Shedule</h1>
+      <h1>OurWorks</h1>
     </div>
   )
 }

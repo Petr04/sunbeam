@@ -7,22 +7,22 @@ export default function Menu() {
   const toggleModal = () => setShowModal(!showModal)
 
   return (
-    <div className="pt-[50px] px-[68px] md:px-[30px]">
+    <div className="lg:mx-auto lg:w-[80%] pt-[50px] px-[68px] lt:px-[30px] md:px-[30px]">
       <nav className="flex justify-between items-center z-0">
-        <a href="#">
+        <a href="/">
           <img 
             src="/logo_yellow.svg" alt="logo" 
             className="wide:w-[276px] xl:w-[276px] md:w-[14rem]"/>
         </a>
 
         <ul className="flex gap-8 wide:gap-12  lg:hidden md:hidden">
-          <li><a href="/schedule" className="font-light text-xl wide:text-2xl">расписание</a></li>
-          <li><a href="/news" className="font-light text-xl wide:text-2xl">новости</a></li>
-          <li><a href="/our-works" className="font-light text-xl wide:text-2xl">наши работы</a></li>
-          <li><a href="/art-shop" className="font-light text-xl wide:text-2xl">арт-лавка</a></li>
-          <li><a href="/contacts" className="font-light text-xl wide:text-2xl">контакты</a></li>
+          <li><a href="/schedule" className="font-light lt:text-lg xl:text-xl wide:text-2xl">расписание</a></li>
+          <li><a href="/news" className="font-light lt:text-lg xl:text-xl wide:text-2xl">новости</a></li>
+          <li><a href="/our-works" className="font-light lt:text-lg xl:text-xl wide:text-2xl">наши работы</a></li>
+          <li><a href="/art-shop" className="font-light lt:text-lg xl:text-xl wide:text-2xl">арт-лавка</a></li>
+          <li><a href="/contacts" className="font-light lt:text-lg xl:text-xl wide:text-2xl">контакты</a></li>
           <li>
-            <a href="" className="font-light text-xl wide:text-2xl">ru</a>
+            <a href="" className="font-light lt:text-lg xl:text-xl wide:text-2xl">ru</a>
             <img src="/ru-en_yellow.svg" alt="ru-en" className="inline mx-1"/>
           </li>
         </ul>
@@ -43,10 +43,10 @@ export default function Menu() {
           "> 
           <ul className="grid grid-cols-2 gap-2">
             <li><a href="/schedule" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">расписание</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">новости</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">контакты</a></li>
+            <li><a href="/news" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">новости</a></li>
+            <li><a href="/our-works" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
+            <li><a href="/art-shop" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
+            <li><a href="/contacts" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">контакты</a></li>
             <li>
               <a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">ru</a>
               <img src="/ru-en_yellow.svg" alt="ru-en" className="inline mx-1" ></img>

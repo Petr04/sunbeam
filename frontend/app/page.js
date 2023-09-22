@@ -2,55 +2,82 @@ import ItemOfListOurPrograms from "./_components/ItemOfListOurPrograms"
 
 export default function Home() {
 
-  const listElementsStyle="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0 md:w-[65%]"
+  const listElementsStyle="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0 md:w-[60%] lg:w-max"
 
   return (
-    <main className="lg:w-[80%] md:w-[100%] grid grid-cols-1 xl:h-fit items-center z-0">
+    <main className="md:w-[100%] lg:mx-auto lg:w-[80%] grid grid-cols-1 h-fit items-center z-0">
 
       <div className="z-0">
         <img 
           src="/dawn.svg" alt="dawn" 
           className="
-            block absolute xl:left-[-4rem] xl:top-[10rem] w-[13%] -z-10 
+            block absolute left-[-4rem] top-[10rem] w-[13%] -z-10 
+            lg:w-[8rem] lg:right-[6rem] lg:left-auto lg:top-[39rem]
+            mg:right-[-3rem] mg:top-[26rem]
             md:w-[8rem] md:right-[-3rem] md:left-auto md:top-[35rem]
           "/>
         <img 
           src="/explosion.svg" alt="explosion" 
           className="
-            block absolute xl:left-[1rem] xl:top-[30rem] xl:w-[12%] 
-            md:w-[256px] md:right-[-4.5rem] md:left-auto md:top-[2.5rem] -z-10
+            block absolute left-[1rem] top-[30rem] w-[12%] -z-10
+            lg:w-[256px] lg:right-[5.5em] lg:left-auto lg:top-[3.5rem] 
+            md:w-[256px] md:right-[-4.5rem] md:left-auto md:top-[2.5rem]
           "/>
         <img 
           src="/mainPageMobile.svg" alt="main_photo" 
-          className="xl:hidden lg:hidden md:block md:relative md:top-[2rem] md:left-[0rem] md:w-full z-10"/>
+          className="z-10
+            wide:hidden
+            md:block md:relative md:top-[2rem] md:left-[0rem] md:w-full 
+          "/>
+
+        <img 
+          src="/homepage_main_photo.svg" 
+          alt="main_photo" className="
+            block absolute top-[10rem] right-[-8rem] w-[48%] z-0
+            lg:block lg:relative lg:top-[2rem] lg:left-[0rem] lg:mx-auto lg:w-[80%]
+            md:hidden 
+            "/>
 
         <div className="
-          relative lt:left-[6rem] xl:left-[9rem] xl:top-[12rem] 
-          md:left-[1rem] md:top-[4rem] md:w-[30rem] z-0
+          wide:left-[13%]
+          relative lt:left-[6rem] left-[9rem] top-[12rem] z-0
+          lg:left-[2rem] lg:top-[4rem] lg:w-fit 
+          md:left-[1rem] md:top-[4rem] md:w-[30rem] 
         ">
           <div className="
-            font-bold xl:text-5xl relative xl:left-[1.5rem] lt:left-[4rem] lt:text-4xl 
-            md:text-[36px] md:leading-10 md:left-0 z-0
+            font-bold text-5xl relative left-[1.5rem] z-0
+            lt:left-[4rem] lt:text-4xl 
+            lg:text-[36px] lg:leading-10 lg:left-0 
+            md:text-[36px] md:leading-10 md:left-0
           ">Мы за детские улыбки!</div>
           <div className="
-            font-medium xl:text-xl xl:mt-[1.2rem] lt:text-lg 
-            md:text-[18px] md:mt-[1rem] z-0
+            font-medium text-xl mt-[1.2rem] z-0
+            lt:text-lg
+            lg:text-[18px] lg:mt-[1rem]
+            md:text-[18px] md:mt-[1rem]
           ">Помогаем детям с непростой судьбой заниматься творчеством</div>
         </div>
 
         <div className="
-          relative lt:left-[6rem] xl:left-[9rem] xl:top-[13.5rem] grid xl:grid-cols-2 xl:gap-6 xl:w-fit z-0
-          md:left-0 md:top-[6rem] md:grid-cols-1 md:gap-4 md:w-[90%] md:mx-[2rem]">
+          wide:left-[13%]
+          relative lt:left-[6rem] left-[9rem] top-[13.5rem] grid grid-cols-2 gap-6 w-fit z-0
+          lg:left-0 lg:top-[6rem] lg:grid-cols-1 lg:gap-4 lg:w-[90%] lg:mx-[2rem]
+          md:left-0 md:top-[6rem] md:grid-cols-1 md:gap-4 md:w-[90%] md:mx-[2rem]
+          ">
           <button className="
-            text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0
-            md:py-4
+            text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 z-0
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:py-4
             ">Записаться на занятия</button>
           <button className="
-            text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0
-            md:py-4
+            text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
+            lt:px-5 lt:py-3 lt:text-lg 
+            lg:py-4
             ">Узнать расписание</button>
           <button className="
-            text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg z-0
+            text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:left-0 lg:py-4
             md:left-0 md:py-4
             "><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
         </div>
@@ -58,24 +85,26 @@ export default function Home() {
         <img 
           src="/spiral_top.svg" alt="spiral" 
           className="
-            block absolute top-[57%] right-[35%] w-[16%] 
-            md:w-[9rem] md:right-auto md:left-[-1.5rem] md:top-[6.5rem] -z-10
+            block absolute top-[57%] right-[35%] w-[16%] -z-10
+            lg:w-[9rem] lg:right-auto lg:left-[8rem] lg:top-[6.5rem] 
+            md:w-[9rem] md:right-auto md:left-[-1.5rem] md:top-[6.5rem]
           "/>
-        <img 
-          src="/homepage_main_photo.svg" 
-          alt="main_photo" className="xl:block lg:block md:hidden xl:absolute xl:top-[10rem] xl:right-[-8rem] xl:w-[48%] z-0"/>
       </div>
 
 
       <div className="
-        grid grid-cols-1 gap-5 ml-[21rem] w-[50rem] text-[24px] mt-[28rem] leading-7 font-medium z-0
+        wide:mt-[35rem]
+        grid grid-cols-1 gap-5 mx-auto w-[50%] text-[24px] mt-[28rem] leading-7 font-medium z-0
+        lt:text-[22px]
+        lg:mx-[1.5rem] lg:w-fit lg:text-[20px] lg:mt-[8rem]
         md:mx-[1.5rem] md:w-fit md:text-[20px] md:mt-[8rem]
         ">
         <img 
         src="./spiral4.svg" alt="spiral" 
         className="
-          block absolute left-[3rem] top-[63rem] -z-10
-          md:relative md:left-auto md:top-auto md:ml-[10rem] md:mb-[2rem]
+          block absolute left-[3rem] top-[63rem] w-[15%] -z-10
+          lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:mb-[2rem] lg:w-[26%]
+          md:relative md:left-auto md:top-auto md:mx-auto md:mb-[2rem]
         "/>
         <div>Наша цель — помогать детям в трудных жизненных ситуациях, обеспечивая им возможности для творчества и развития.</div>
         <div>Занятия проводятся для детей с четырёх лет в группах по 4—6 человек.</div>
@@ -84,20 +113,23 @@ export default function Home() {
         <img 
           src="./waves.svg" alt="waves" 
           className="
-            block absolute right-[3rem] top-[52rem] width-[50%] -z-10
-            md:relative md:left-auto md:top-auto md:ml-[10rem]
+            block absolute right-[3rem] top-[52rem] w-[20%] -z-10
+            lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:w-[26%]
+            md:relative md:left-auto md:top-auto md:mx-auto 
           "/>
       </div>
 
 
       <div className="
-        ml-[21rem] grid grid-cols-1 gap-10 mt-[8rem] z-0
-        md:mx-[1.5rem] md:mt-[6rem] md:gap-6
+        grid grid-cols-1 gap-10 mx-auto mt-[8rem] z-0
+        lg:mx-[1.5rem] lg:mt-[2rem] lg:gap-6
+        md:mx-[1.5rem] md:mt-[2rem] md:gap-6
       "> 
-        <div className="text-5xl md:text-[36px] font-bold z-0">У нас занимаются бесплатно:</div>
+        <div className="text-5xl lt:text-4xl md:text-[36px] font-bold z-0">У нас занимаются бесплатно:</div>
         <div className="
           flex flex-wrap flex-row w-[52rem] z-0
-          md:flex-col
+          lg:flex-row lg:w-[52rem]
+          mg:flex-col
         ">
           <div className={listElementsStyle}>Дети, воспитываемые одним родителем</div>
           <div className={listElementsStyle}>Сироты</div>
@@ -107,41 +139,49 @@ export default function Home() {
           <div className={listElementsStyle}>Дети с инвалидностью</div>
           <div className={listElementsStyle}>Дети, родители которых являются инвалидами</div>
         </div>
-        <div className="text-[24px] font-medium w-[50rem] md:text-[20px] md:w-fit z-0">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
+        <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
         <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
 
         <img 
           src="./spiral2.svg" alt="big_spiral" 
           className="
-            block absolute left-[0rem] top-[86rem] -z-10
-            md:hidden
+            block absolute left-[0rem] top-[86rem] w-[20%] -z-10
+            lt:w-[15%]
+            lg:hidden
           "/>
         <img 
           src="./big_dawn.svg" alt="big_dawn" 
           className="
-          block absolute right-[0rem] top-[74rem] -z-10
-          md:hidden  
+          block absolute right-[0rem] top-[74rem] w-[20%] -z-10
+          lt:w-[18%]
+          lg:hidden  
         "/>
         <img 
           src="./zigzag.svg" alt="zigzag" 
           className="
-          xl:hidden
-          md:block md:relative md:ml-[9rem] md:mt-[3rem] -z-10
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:mt-[0rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:mt-[3rem]
         "/>
       </div>
 
 
       <div className="
-        grid grid-cols-1 mt-[8rem] z-0
+        grid grid-cols-1 mx-auto mt-[8rem] z-0
+        lg:mx-[1.5rem] lg:mt-[2rem]
         md:mx-[1.5rem] md:mt-[4rem]
       ">
         <div className="
           text-5xl mx-auto mb-[2rem] font-bold
-          md:left-[0rem] md:text-[36px]  
+          lt:text-4xl
+          lg:mx-auto lg:text-[36px]  
+          md:mx-auto md:text-[36px]  
         ">Наши программы</div>
         <div className="
-          ml-[5rem] grid grid-cols-3
-          md:grid-cols-1
+          mx-auto grid grid-cols-3 gap-4
+          lt:gap-0
+          lg:grid-cols-2 lg:gap-4
+          mg:grid-cols-1
         ">
           <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms1.svg"/>
           <ItemOfListOurPrograms title="Художественное творчество" age="5-6 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms2.svg"/>
@@ -154,18 +194,21 @@ export default function Home() {
         <img 
           src="./lightWaves.svg" alt="lightwaves" 
           className="
-          xl:hidden
-          md:block md:relative md:ml-[9rem] md:mt-[2rem] -z-10
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:mt-[2rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:mt-[2rem] 
         "/>
       </div>
 
       <div className="
-        grid grid-cols-1 gap-10 mt-[8rem] z-0
+        grid grid-cols-1 gap-10 mx-auto mt-[8rem] z-0
+        lg:mx-[1.5rem] lg:mt-[4rem] lg:gap-6
         md:mx-[1.5rem] md:mt-[4rem] md:gap-6
         ">
-        <div className="text-5xl md:text-[36px] font-bold relative z-0 mx-auto">Почему рисование полезно</div>
+        <div className="text-5xl lt:text-4xl md:text-[36px] font-bold relative z-0">Почему рисование полезно</div>
         <div className="
-          grid grid-cols-1 gap-0 z-0 ml-[24rem]
+          grid grid-cols-1 gap-0 z-0
+          lg:flex lg:flex-wrap lg:flex-col lg:w-[52rem] lg:realtive lg:mx-auto
           md:flex md:flex-wrap md:flex-col md:w-[52rem] md:realtive md:mx-auto
           ">
           <div className={listElementsStyle}>Учит быть нацеленным на результат</div>
@@ -182,76 +225,107 @@ export default function Home() {
         <img 
           src="/dawnCenter.svg" alt="dawn" 
           className="
-            block absolute left-[1rem] top-[204rem] w-[26%] -z-10
-            md:hidden
+            block absolute left-[1rem] top-[210rem] w-[24%] -z-10
+            lg:hidden
           "/>
         <img 
           src="/explosionReverse.svg" alt="explosion" 
           className="
-            block absolute left-[0rem] top-[235rem] w-[18%] -z-10
-            md:hidden
+            block absolute left-[0rem] top-[235rem] w-[16%] -z-10
+            lg:hidden
           "/>
         <img 
           src="./spiral5.svg" alt="spiral" 
           className="
-            block absolute right-[6rem] top-[216rem] w-[26%] -z-10
-            md:hidden
+            block absolute right-[6rem] top-[216rem] w-[24%] -z-10
+            lg:hidden
           "/>
 
         <img 
           src="./spiralBetween.svg" alt="spiralbetween" 
           className="
-          xl:hidden
-          md:block md:relative md:left-[9rem] md:top-[0rem] -z-10
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:top-[0rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:top-[0rem] 
         "/>
 
       </div>
 
 
-      <div className="mt-[4rem] z-0">
-        <div className="text-5xl font-bold relative ml-[30rem] mb-[2rem] md:text-[36px] md:ml-[7rem]">Где мы находимся?</div>
+      <div className="mx-auto grid grid-cols-1 w-full mt-[4rem] lg:mt-[2rem] z-0">
         <div className="
-          text-white bg-yellowText text-xl rounded-[1rem] w-fit h-fit py-4 px-[5.5rem] font-normal ml-[1.5rem]
-          md:px-[8rem]
-          ">г. Омск, ул. Энергетиков, 70</div>
-        <img 
-          src="./sunbeam_studio.svg" alt="studio" 
-          className="rounded-[1rem] w-[32rem] left-0 md:w-full"/>
-        <iframe 
-          className="
-            rounded-[1rem] w-[56rem] h-[31rem] ml-[40rem] absolute right-[3rem] top-[261.5rem]
-            md:relative md:w-[34rem] md:h-[32rem] md:ml-[1.5rem] md:right-auto md:top-auto" 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" 
-          allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+          text-5xl font-bold relative mb-[2rem] text-center
+          lt:text-4xl
+          lg:text-[36px] 
+          md:text-[36px] md:ml-[7rem]
+          ">Где мы находимся?</div>
+
+        <div className="
+          realtive grid grid-cols-3 gap-2
+          lg:grid-cols-1 lg:justify-items-center lg:grid-rows-3
+          ">
+          <div className="
+            grid grid-cols-1 w-fit justify-items-center col-span-1
+            lg:col-span-1 lg:w-full lg:h-fit lg:gap-3 lg:row-span-2
+            ">
+            <div className="
+              text-white bg-yellowText text-xl rounded-[1rem] h-fit py-4 text-center w-[92%] font-normal
+              lg:mx-auto 
+              ">г. Омск, ул. Энергетиков, 70</div>
+            <img 
+              src="./sunbeam_studio.svg" alt="studio" 
+              className="
+                rounded-[1rem] w-full
+                lg:w-full 
+                "/>
+          </div>
+          <iframe 
+            className="
+              rounded-[1rem] w-[97%] h-[95%] col-span-2 
+              lg:col-span-1 lg:w-[90%] lg:row-span-1
+              " 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" 
+            allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+        </div>
 
         <img 
           src="./heavyWaves.svg" alt="heavywaves" 
           className="
-          xl:hidden
-          md:block md:relative md:left-[11rem] md:top-[2rem] -z-10
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:top-[2rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:top-[2rem]
         "/>
       </div>
 
-      <div className="z-0 md:mt-[4rem]">
-        <div className="ml-[33rem] md:ml-[7rem]">
-          <div className="font-medium text-[24px]">Остались вопросы? Звоните!</div>
-          <div className="font-bold text-[24px] ml-[4rem]">+7 (913) 640-03-59</div>
+      <div className="z-0 mt-[4rem] mx-auto lg:w-full">
+        <div className="wide:ml-[7rem] xl:mx-auto w-fit">
+          <div className="font-medium text-[24px] lt:text-[22px] text-center">Остались вопросы? Звоните!</div>
+          <div className="font-bold text-[24px] lt:text-[22px] text-center">+7 (913) 640-03-59</div>
         </div>
         <div className="
-          grid grid-cols-2 gap-6 w-fit mt-[3rem] ml-[24rem]
+          grid grid-cols-2 gap-6 w-fit mt-[1rem] wide:ml-[-2rem] xl:mx-auto
+          lg:grid-cols-1 lg:gap-6 lg:w-[90%] lg:mx-[2rem]
           md:grid-cols-1 md:gap-4 md:w-[90%] md:ml-[2rem]">
           <button className="
-            text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg
+            text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5  
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:py-4
             md:py-4
             ">Записаться на занятия</button>
           <button className="
-            text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg
+            text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:py-4
             md:py-4
             ">Узнать расписание</button>
           <button className="
-            text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg
+            text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] 
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:left-0 lg:py-4
             md:left-0 md:py-4
-            "><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+            ">
+            <img src="/support_project.svg" alt="support_project" className="inline mr-3"/>
+          Поддержать проект</button>
         </div>        
       </div>
     </main>
