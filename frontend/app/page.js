@@ -1,4 +1,7 @@
+import ItemOfListOurPrograms from "./_components/ItemOfListOurPrograms"
+
 export default function Home() {
+
   return (
     <main className="lg:wi-[80%] lg:p-[5rem] z-0">
       <div className="realtive lg:hidden z-0">
@@ -45,23 +48,24 @@ export default function Home() {
       <img src="./spiral2.svg" alt="big_spiral" className="block absolute left-[0rem] top-[90rem] -z-10"></img>
       <img src="./big_dawn.svg" alt="big_dawn" className="block absolute right-[0rem] top-[90rem] -z-10"></img>
 
-      <div className="relative ml-[21rem] top-[38rem] grid grid-cols-1 gap-10 z-0">
-        <div className="text-5xl font-bold relative left-[10rem]">Наши программы</div>
-        <div className="grid grid-cols-3">
-          <div className="bg-yellow_text rounded-[3rem]">
-            <img src="" alt="" className=""></img>
-            <div></div>
-            <div></div>
-            <div></div>
-            <button></button>
-            <button></button>
-          </div> 
+      <div className="relative top-[38rem] grid grid-cols-1 gap-10 z-0">
+        <div className="text-5xl ml-[21rem] font-bold relative left-[10rem]">Наши программы</div>
+        <div className="ml-[5rem] grid grid-cols-3">
+          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms1.svg"/>
+          <ItemOfListOurPrograms title="Художественное творчество" age="5-6 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms2.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" age="7-8 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms3.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" age="8-9 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms4.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" age="9-11 лет" childrenNum="6 человек в группе" imgSrc="/imgOurPrograms5.svg"/>
+          <ItemOfListOurPrograms title="Индивидуальные коррекционные занятия" age="4-11 лет" childrenNum="" imgSrc="/imgOurPrograms6.svg"/>
         </div>
       </div>
 
-      <div className="relative ml-[20rem] top-[40rem] grid grid-cols-1 gap-10 z-0">
-        <div className="text-5xl font-bold relative z-0">Почему образование полезно</div>
-        <div className="grid grid-cols-1 gap-0 z-0">
+      <div className="relative top-[50rem] grid grid-cols-1 gap-10 z-0">
+        <div className="text-5xl font-bold relative z-0 ml-[24rem]">Почему рисование полезно</div>
+        <img src="/dawnCenter.svg" alt="dawn" className="block absolute left-[1rem] top-[0rem] w-[28%] -z-10"></img>
+        <img src="/explosionReverse.svg" alt="explosion" className="block absolute left-[1rem] top-[28rem] w-[20%] -z-10"></img>
+        <img src="./spiral5.svg" alt="spiral" className="block absolute right-[5rem] top-[8rem] w-[28%] -z-10"></img>
+        <div className="grid grid-cols-1 gap-0 z-0 ml-[24rem]">
           <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Учит быть нацеленным на результат</div>
           <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет справиться со стрессом</div>
           <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает воображение</div>
@@ -74,18 +78,18 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative ml-[1rem] mr-[2rem] top-[46rem]">
-        <div className="text-5xl font-bold relative ml-[26rem]">Где мы находимся?</div>
+      <div className="relative ml-[1rem] mr-[2rem] top-[55rem] z-0">
+        <div className="text-5xl font-bold relative ml-[30rem]">Где мы находимся?</div>
         <div className="grid grid-rows-1">
           <div className="w-full mt-[3rem] grid grid-cols-1">
           <div className="text-white bg-yellowText text-xl rounded-[1rem] w-fit h-fit py-4 px-[4.5rem] text-[22px] font-normal ml-[1.5rem]">г. Омск, ул. Энергетиков, 70</div>
-            <img src="./sunbeam_studio.svg" alt="studio" className="rounded-[1rem] w-[30rem] left-0 -z-10"></img>
+            <img src="./sunbeam_studio.svg" alt="studio" className="rounded-[1rem] w-[30rem] left-0"></img>
           </div>
           <iframe className="rounded-[1rem] w-[58rem] h-[30rem] ml-[40rem] relative left-[-10rem] top-[-31rem]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div> 
       </div>
 
-      <div className="relative justify-items-center top-[20rem] ">
+      <div className="relative justify-items-center top-[27rem] z-0">
         <div className="ml-[33rem]">
           <div className="font-medium text-[24px]">Остались вопросы? Звоните!</div>
           <div className="font-bold text-[24px] ml-[4rem]">+7 (913) 640-03-59</div>
