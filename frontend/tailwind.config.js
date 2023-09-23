@@ -6,19 +6,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    // screens: {
-    //   sm: {'max': '500px'},
-    //   md: {'max': '600px'},
-    //   lg: {'min': '601px', 'max': '1180px'},
-    //   lt: {'min': '1181px', 'max': '1440px'},
-    //   xl: {'min': '1181px', 'max': '1600px'},
-    //   wide: {'min': '1601px', 'max': '3000px'}
-    // },
     screens: {
+      zoom: {'max': '4000px'},
       wide: {'max': '3000px'},
-      xl: {'max': '1600px'},
+      xl: {'max': '1920px'},
       lt: {'max': '1440px'},
       lg: {'max': '1180px'},
+      mg: {'max': '950px'},
       md: {'max': '600px'},
       sm: {'max': '500px'},
     },
@@ -33,6 +27,7 @@ module.exports = {
       greyText: '#949494',
       yellowBg: '#FFF9E4',
       yellowText: '#FFCC17',
+      opacityBlack: '#00000050'
     }
   },
   plugins: [],
