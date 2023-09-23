@@ -5,13 +5,14 @@ export default function Home() {
   const listElementsStyle="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0 md:w-[60%] lg:w-max"
 
   return (
-    <main className="md:w-[100%] lg:mx-auto lg:w-[80%] grid grid-cols-1 h-fit items-center z-0">
+    <main className="wide:w-[80%] xl:w-[100%] lg:w-[80%] md:w-[100%] mx-auto grid grid-cols-1 h-fit items-center z-0">
 
       <div className="z-0">
         <img 
           src="/dawn.svg" alt="dawn" 
           className="
-            block absolute left-[-4rem] top-[10rem] w-[13%] -z-10 
+            wide:left-[10rem] wide:top-[10rem]
+            block absolute xl:left-[-4rem] xl:top-[10rem] w-[13%] -z-10 
             lg:w-[8rem] lg:right-[6rem] lg:left-auto lg:top-[39rem]
             mg:right-[-3rem] mg:top-[26rem]
             md:w-[8rem] md:right-[-3rem] md:left-auto md:top-[35rem]
@@ -19,21 +20,22 @@ export default function Home() {
         <img 
           src="/explosion.svg" alt="explosion" 
           className="
-            block absolute left-[1rem] top-[30rem] w-[12%] -z-10
+            wide:left-[10rem] wide:top-[30rem]
+            block absolute xl:left-[1rem] xl:top-[30rem] w-[12%] -z-10
             lg:w-[256px] lg:right-[5.5em] lg:left-auto lg:top-[3.5rem] 
             md:w-[256px] md:right-[-4.5rem] md:left-auto md:top-[2.5rem]
           "/>
         <img 
           src="/mainPageMobile.svg" alt="main_photo" 
-          className="z-10
-            wide:hidden
+          className="z-0
+            zoom:hidden
             md:block md:relative md:top-[2rem] md:left-[0rem] md:w-full 
           "/>
 
         <img 
           src="/homepage_main_photo.svg" 
           alt="main_photo" className="
-            block absolute top-[10rem] right-[-8rem] w-[48%] z-0
+            block wide:absolute wide:top-[10rem] wide:right-[-8rem] wide:w-[48%] z-0
             lg:block lg:relative lg:top-[2rem] lg:left-[0rem] lg:mx-auto lg:w-[80%]
             md:hidden 
             "/>
@@ -85,7 +87,8 @@ export default function Home() {
         <img 
           src="/spiral_top.svg" alt="spiral" 
           className="
-            block absolute top-[57%] right-[35%] w-[16%] -z-10
+            wide:right-[45rem] wide:top-[30rem]
+            block absolute xl:top-[28rem] xl:right-[32rem] w-[16%] -z-10
             lg:w-[9rem] lg:right-auto lg:left-[8rem] lg:top-[6.5rem] 
             md:w-[9rem] md:right-auto md:left-[-1.5rem] md:top-[6.5rem]
           "/>
@@ -93,8 +96,8 @@ export default function Home() {
 
 
       <div className="
-        wide:mt-[35rem]
-        grid grid-cols-1 gap-5 mx-auto w-[50%] text-[24px] mt-[28rem] leading-7 font-medium z-0
+        wide:mt-[40rem]
+        grid grid-cols-1 gap-5 mx-auto w-[50%] text-[24px] xl:mt-[28rem] leading-7 font-medium z-0
         lt:text-[22px]
         lg:mx-[1.5rem] lg:w-fit lg:text-[20px] lg:mt-[8rem]
         md:mx-[1.5rem] md:w-fit md:text-[20px] md:mt-[8rem]
@@ -102,7 +105,8 @@ export default function Home() {
         <img 
         src="./spiral4.svg" alt="spiral" 
         className="
-          block absolute left-[3rem] top-[63rem] w-[15%] -z-10
+          wide:left-[12rem] wide:top-[63rem]
+          block absolute xl:left-[3rem] xl:top-[63rem] w-[15%] -z-10
           lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:mb-[2rem] lg:w-[26%]
           md:relative md:left-auto md:top-auto md:mx-auto md:mb-[2rem]
         "/>
@@ -113,7 +117,8 @@ export default function Home() {
         <img 
           src="./waves.svg" alt="waves" 
           className="
-            block absolute right-[3rem] top-[52rem] w-[20%] -z-10
+            wide:right-[12rem] wide:top-[63rem]
+            block absolute xl:right-[3rem] xl:top-[52rem] w-[20%] -z-10
             lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:w-[26%]
             md:relative md:left-auto md:top-auto md:mx-auto 
           "/>
@@ -145,14 +150,16 @@ export default function Home() {
         <img 
           src="./spiral2.svg" alt="big_spiral" 
           className="
-            block absolute left-[0rem] top-[86rem] w-[20%] -z-10
+            wide:top-[100rem] wide:w-[15%]
+            block absolute left-[0rem] xl:top-[86rem] xl:w-[20%] -z-10
             lt:w-[15%]
             lg:hidden
           "/>
         <img 
           src="./big_dawn.svg" alt="big_dawn" 
           className="
-          block absolute right-[0rem] top-[74rem] w-[20%] -z-10
+          wide:top-[90rem] wide:w-[15%]
+          block absolute right-[0rem] xl:top-[74rem] xl:w-[20%] -z-10
           lt:w-[18%]
           lg:hidden  
         "/>
@@ -225,19 +232,22 @@ export default function Home() {
         <img 
           src="/dawnCenter.svg" alt="dawn" 
           className="
-            block absolute left-[1rem] top-[210rem] w-[24%] -z-10
+            wide:left-[10rem] wide:top-[210rem] wide:w-[15%]
+            block absolute xl:left-[1rem] xl:top-[210rem] xl:w-[24%] -z-10
             lg:hidden
           "/>
         <img 
           src="/explosionReverse.svg" alt="explosion" 
           className="
-            block absolute left-[0rem] top-[235rem] w-[16%] -z-10
+            wide:top-[235rem] wide:w-[15%]
+            block absolute left-[0rem] xl:top-[235rem] xl:w-[16%] -z-10
             lg:hidden
           "/>
         <img 
           src="./spiral5.svg" alt="spiral" 
           className="
-            block absolute right-[6rem] top-[216rem] w-[24%] -z-10
+            wide:right-[15rem] wide:top-[220rem] wide:w-[15%]
+            block absolute xl:right-[6rem] xl:top-[216rem] xl:w-[24%] -z-10
             lg:hidden
           "/>
 
@@ -261,7 +271,8 @@ export default function Home() {
           ">Где мы находимся?</div>
 
         <div className="
-          realtive grid grid-cols-3 gap-2
+          wide:gap-0 
+          realtive grid grid-cols-3 gap-2 xl:ml-[0rem]
           lg:grid-cols-1 lg:justify-items-center lg:grid-rows-3
           ">
           <div className="
