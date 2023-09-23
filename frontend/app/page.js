@@ -39,152 +39,212 @@ export default function Home() {
           <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети с инвалидностью</div>
           <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, родители которых являются инвалидами</div>
         </div>
-        <div className="text-[24px] font-medium w-[50rem] z-0">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
+        <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0 ssm:text-[18px]">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
         <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
+
+        <img 
+          src="./spiral2.svg" alt="big_spiral" 
+          className="
+            wide:top-[100rem] wide:w-[15%]
+            block absolute left-[0rem] xl:top-[86rem] xl:w-[20%] -z-10
+            lt:w-[15%]
+            lg:hidden
+          "/>
+        <img 
+          src="./big_dawn.svg" alt="big_dawn" 
+          className="
+          wide:top-[90rem] wide:w-[15%]
+          block absolute right-[0rem] xl:top-[74rem] xl:w-[20%] -z-10
+          lt:w-[18%]
+          lg:hidden  
+        "/>
+        <img 
+          src="./zigzag.svg" alt="zigzag" 
+          className="
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:mt-[0rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:mt-[3rem]
+          sm:w-[15rem]
+        "/>
       </div>
 
-      <img src="./spiral2.svg" alt="big_spiral" className="block absolute left-[0rem] top-[90rem] -z-10"></img>
-      <img src="./big_dawn.svg" alt="big_dawn" className="block absolute right-[0rem] top-[90rem] -z-10"></img>
 
-      <div className="relative top-[38rem] grid grid-cols-1 gap-10 z-0">
-        <div className="text-5xl ml-[21rem] font-bold relative left-[10rem]">Наши программы</div>
-        <div className="ml-[5rem] grid grid-cols-3">
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
-
-          <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
-            <img src="/ourPrograms1.svg" alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
-            <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 года</li>
-              <li className="text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3">4 человека в группе</li>
-            </ul>
-            <div className="text-white font-medium text-3xl w-[20rem] my-4">Раннее творческое развитие</div>
-            <div className="flex gap-6 my-1">
-              <button className="font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5">Записаться</button>
-              <button className="font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5">Узнать расписание</button>
-            </div>
-          </div> 
+      <div className="
+        grid grid-cols-1 mx-auto mt-[8rem] z-0
+        lg:mx-[1.5rem] lg:mt-[2rem]
+        md:mx-[1.5rem] md:mt-[4rem]
+      ">
+        <div className="
+          text-5xl mx-auto mb-[2rem] font-bold
+          lt:text-4xl
+          lg:mx-auto lg:text-[36px]  
+          md:mx-auto md:text-[36px]  
+          ssm:text-[30px]
+        ">Наши программы</div>
+        <div className="
+          mx-auto grid grid-cols-3 gap-4
+          lt:gap-0
+          lg:grid-cols-2 lg:gap-4
+          mg:grid-cols-1
+        ">
+          {/* {ourPrograms.map((ourProgram) =>
+            <ItemOfListOurPrograms key={ourProgram.id} {...ourProgram}/>
+          )} */}
+          <ItemOfListOurPrograms title="Раннее творческое развитие" childrenAge="4 года" numOfChildren="4 человека в группе" image="/imgOurPrograms1.svg"/>
+          <ItemOfListOurPrograms title="Художественное творчество" childrenAge="5-6 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms2.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="7-8 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms3.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="8-9 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms4.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="9-11 лет" numOfChildren="6 человек в группе" image="/imgOurPrograms5.svg"/>
+          <ItemOfListOurPrograms title="Индивидуальные коррекционные занятия" childrenAge="4-11 лет" numOfChildren="" image="/imgOurPrograms6.svg"/>
         </div>
+
+        <img 
+          src="./lightWaves.svg" alt="lightwaves" 
+          className="
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:mt-[2rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:mt-[2rem] 
+          sm:w-[15rem]
+        "/>
       </div>
 
-      <div className="relative top-[50rem] grid grid-cols-1 gap-10 z-0">
-        <div className="text-5xl font-bold relative z-0 ml-[24rem]">Почему рисование полезно</div>
-        <img src="/dawnCenter.svg" alt="dawn" className="block absolute left-[1rem] top-[0rem] w-[28%] -z-10"></img>
-        <img src="/explosionReverse.svg" alt="explosion" className="block absolute left-[1rem] top-[28rem] w-[20%] -z-10"></img>
-        <img src="./spiral5.svg" alt="spiral" className="block absolute right-[5rem] top-[8rem] w-[28%] -z-10"></img>
-        <div className="grid grid-cols-1 gap-0 z-0 ml-[24rem]">
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Учит быть нацеленным на результат</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет справиться со стрессом</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает воображение</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает пространственное мышление</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает ассоциативное мышление </div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет самовыражаться</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Улучшает память и внимание</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает мелкую моторику</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Даёт эмоциональную устойчивость</div>
+      <div className="
+        grid grid-cols-1 gap-10 mx-auto mt-[8rem] z-0
+        lg:mx-[1.5rem] lg:mt-[4rem] lg:gap-6
+        md:mx-[1.5rem] md:mt-[4rem] md:gap-6
+        ">
+        <div className="text-5xl lt:text-4xl md:text-[36px] ssm:text-[30px] font-bold relative z-0">Почему рисование полезно</div>
+        <div className="
+          grid grid-cols-1 gap-0 z-0
+          lg:flex lg:flex-wrap lg:flex-col lg:w-[52rem] lg:realtive lg:mx-auto
+          md:flex md:flex-wrap md:flex-col md:w-[52rem] md:realtive md:mx-auto
+          ">
+          <div className={listElementsStyle}>Учит быть нацеленным на результат</div>
+          <div className={listElementsStyle}>Позволяет справиться со стрессом</div>
+          <div className={listElementsStyle}>Развивает воображение</div>
+          <div className={listElementsStyle}>Развивает пространственное мышление</div>
+          <div className={listElementsStyle}>Развивает ассоциативное мышление </div>
+          <div className={listElementsStyle}>Позволяет самовыражаться</div>
+          <div className={listElementsStyle}>Улучшает память и внимание</div>
+          <div className={listElementsStyle}>Развивает мелкую моторику</div>
+          <div className={listElementsStyle}>Даёт эмоциональную устойчивость</div>
         </div>
+
+        <img 
+          src="/dawnCenter.svg" alt="dawn" 
+          className="
+            wide:left-[10rem] wide:top-[210rem] wide:w-[15%]
+            block absolute xl:left-[1rem] xl:top-[210rem] xl:w-[24%] -z-10
+            lg:hidden
+          "/>
+        <img 
+          src="/explosionReverse.svg" alt="explosion" 
+          className="
+            wide:top-[235rem] wide:w-[15%]
+            block absolute left-[0rem] xl:top-[235rem] xl:w-[16%] -z-10
+            lg:hidden
+          "/>
+        <img 
+          src="./spiral5.svg" alt="spiral" 
+          className="
+            wide:right-[15rem] wide:top-[220rem] wide:w-[15%]
+            block absolute xl:right-[6rem] xl:top-[216rem] xl:w-[24%] -z-10
+            lg:hidden
+          "/>
+
+        <img 
+          src="./spiralBetween.svg" alt="spiralbetween" 
+          className="
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:top-[0rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:top-[0rem] 
+          sm:w-[15rem]
+        "/>
+
       </div>
 
-      <div className="relative ml-[1rem] mr-[2rem] top-[46rem] z-0">
-        <div className="text-5xl font-bold relative ml-[26rem]">Где мы находимся?</div>
-        <div className="grid grid-rows-1">
-          <div className="w-full mt-[3rem] grid grid-cols-1">
-          <div className="text-white bg-yellowText text-xl rounded-[1rem] w-fit h-fit py-4 px-[4.5rem] text-[22px] font-normal ml-[1.5rem]">г. Омск, ул. Энергетиков, 70</div>
-            <img src="./sunbeam_studio.svg" alt="studio" className="rounded-[1rem] w-[30rem] left-0"></img>
+
+      <div className="mx-auto grid grid-cols-1 w-full mt-[4rem] lg:mt-[2rem] z-0">
+        <div className="
+          text-5xl font-bold relative mb-[2rem] text-center
+          lt:text-4xl
+          lg:text-[36px] 
+          md:text-[36px] md:ml-[7rem]
+          sm:ml-0
+          ssm:text-[30px]
+          ">Где мы находимся?</div>
+
+        <div className="
+          wide:gap-0 
+          realtive grid grid-cols-3 gap-2 xl:ml-[0rem]
+          lg:grid-cols-1 lg:justify-items-center lg:grid-rows-3
+          ">
+          <div className="
+            grid grid-cols-1 w-fit justify-items-center col-span-1
+            lg:col-span-1 lg:w-full lg:h-fit lg:gap-3 lg:row-span-2
+            ">
+            <div className="
+              text-white bg-yellowText text-xl rounded-[1rem] h-fit py-4 text-center w-[92%] font-normal
+              lg:mx-auto 
+              ssm:text-[18px]
+              ">г. Омск, ул. Энергетиков, 70</div>
+            <img 
+              src="./sunbeam_studio.svg" alt="studio" 
+              className="
+                rounded-[1rem] w-full
+                lg:w-full 
+                "/>
           </div>
-          <iframe className="rounded-[1rem] w-[58rem] h-[30rem] ml-[40rem] relative left-[-10rem] top-[-31rem]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-        </div> 
+          <iframe 
+            className="
+              rounded-[1rem] w-[97%] h-[95%] col-span-2 
+              lg:col-span-1 lg:w-[90%] lg:row-span-1
+              sm:h-full" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" 
+            allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+        </div>
+
+        <img 
+          src="./heavyWaves.svg" alt="heavywaves" 
+          className="
+          wide:hidden -z-10
+          lg:block lg:relative lg:mx-auto lg:top-[2rem] lg:w-[30%]
+          md:block md:relative md:mx-auto md:top-[2rem]
+          sm:w-[15rem]
+        "/>
       </div>
 
-      <div className="relative justify-items-center top-[20rem] z-0">
-        <div className="ml-[33rem]">
-          <div className="font-medium text-[24px]">Остались вопросы? Звоните!</div>
-          <div className="font-bold text-[24px] ml-[4rem]">+7 (913) 640-03-59</div>
+      <div className="z-0 mt-[4rem] mx-auto lg:w-full">
+        <div className="wide:ml-[7rem] xl:mx-auto w-fit">
+          <div className="font-medium text-[24px] lt:text-[22px] ssm:text-[20px] text-center">Остались вопросы? Звоните!</div>
+          <div className="font-bold text-[24px] lt:text-[22px] ssm:text-[20px] text-center">+7 (913) 640-03-59</div>
         </div>
-        <div className="grid grid-cols-2 gap-6 w-fit mt-[3rem] ml-[24rem]">
-          <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg">Записаться на занятия</button>
-          <button className="text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg">Узнать расписание</button>
-          <button className="text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+        <div className="
+          grid grid-cols-2 gap-6 w-fit mt-[1rem] wide:ml-[-2rem] xl:mx-auto
+          lg:grid-cols-1 lg:gap-6 lg:w-[90%] lg:mx-[2rem]
+          md:grid-cols-1 md:gap-4 md:w-[90%] md:ml-[2rem]
+          sm:ml-[1rem]">
+          <button className="
+            text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5  
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:py-4
+            md:py-4
+            ">Записаться на занятия</button>
+          <button className="
+            text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:py-4
+            md:py-4
+            ">Узнать расписание</button>
+          <button className="
+            text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] 
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:left-0 lg:py-4
+            md:left-0 md:py-4
+            ">
+            <img src="/support_project.svg" alt="support_project" className="inline mr-3"/>
+          Поддержать проект</button>
         </div>        
-      </div>
-
-      <div className="lg:block xl:hidden wide:hidden w-fit">
-        <img src="/explosion.svg" alt="explosion" className="lg:absolute lg:block lg:top-[4rem] lg:right-[0.5rem] lg:w-[30%]"></img>
-        <img src="/spiral_top.svg" alt="spiral" className="lg:relative lg:block lg:top-[-4rem] lg:left-[0rem] lg:w-[10rem]"></img>
-        <img src="/dawn.svg" alt="dawn" className="lg:absolute lg:right-[1rem] lg:top-[35rem] lg:w-[10rem]"></img>
-        <img src="/homepage_main_photo.svg" alt="main_photo" className="lg:relative lg:block lg:mx-[14%] lg:top-[-13rem] lg:w-[100%]"></img>
-        <div className="lg:relative lg:top-[-10rem] lg:left-[3rem] flex-col w-fit">
-          <div className="font-bold text-5xl">Мы за детские улыбки!</div>
-          <div className="text-xl mt-[1.2rem] font-medium">Помогаем детям с непростой судьбой заниматься творчеством</div>
-        </div>
-        <div className="lg:relative lg:top-[-8rem] lg:left-[6%] lg:grid lg:grid-cols-1 lg:gap-6 lg:w-[115%]">
-          <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-6">Записаться на занятия</button>
-          <button className="text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-6">Узнать расписание</button>
-          <button className="text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-6"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
-        </div>
       </div>
     </main>
   )
