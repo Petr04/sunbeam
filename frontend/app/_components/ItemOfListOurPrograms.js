@@ -1,6 +1,6 @@
 export default function ItemOfListOurPrograms ({title, age, childrenNum, imgSrc}) {
     return (
-        <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-[2rem] h-fit">
+        <div className="bg-yellowText rounded-[2rem] p-5 w-fit my-2 h-fit">
             <img src={imgSrc} alt="ourProgramsPhoto" className="rounded-[1rem]"></img>
             <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
                 {age != "" &&    
