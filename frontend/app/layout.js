@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`overflow-x-hidden ${montserrat.className}`}>
+      <body className={`overflow-x-hidden ${montserrat.className} text-primary bg-background`}>
         <Menu />
         {children}
         <Footer />

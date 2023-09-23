@@ -12,9 +12,9 @@ export default function Home() {
           <div className="text-xl mt-[1.2rem] lt:text-lg font-medium z-0">Помогаем детям с непростой судьбой заниматься творчеством</div>
         </div>
         <div className="grid grid-cols-2 gap-6 w-fit absolute lt:left-[6rem] left-[9rem] top-[26rem] z-0">
-          <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0">Записаться на занятия</button>
-          <button className="text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0">Узнать расписание</button>
-          <button className="text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg z-0"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+          <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0">Записаться на занятия</button>
+          <button className="text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0">Узнать расписание</button>
+          <button className="text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg z-0"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
         </div>
         <img src="/spiral_top.svg" alt="spiral" className="block absolute top-[60%] right-[35%] w-[16%] -z-10"></img>
         <img src="/homepage_main_photo.svg" alt="main_photo" className="block absolute top-[10rem] right-[-8rem] w-[48%] overflow-hidden z-0"></img>
@@ -33,16 +33,16 @@ export default function Home() {
       <div className="relative ml-[21rem] top-[30rem] grid grid-cols-1 gap-10 z-0"> 
         <div className="text-5xl font-bold z-0">У нас занимаются бесплатно:</div>
         <div className="flex flex-wrap flex-row w-[52rem] z-0">
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, воспитываемые одним родителем</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Сироты</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети участников СВО</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети из малоимущих семей</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети из многодетных семей</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети с инвалидностью</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, родители которых являются инвалидами</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, воспитываемые одним родителем</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Сироты</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети участников СВО</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети из малоимущих семей</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети из многодетных семей</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети с инвалидностью</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, родители которых являются инвалидами</div>
         </div>
         <div className="text-[24px] font-medium w-[50rem] z-0">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
-        <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
+        <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
       </div>
 
       <img src="./spiral2.svg" alt="big_spiral" className="block absolute left-[0rem] top-[90rem] -z-10"></img>
@@ -66,15 +66,15 @@ export default function Home() {
         <img src="/explosionReverse.svg" alt="explosion" className="block absolute left-[1rem] top-[28rem] w-[20%] -z-10"></img>
         <img src="./spiral5.svg" alt="spiral" className="block absolute right-[5rem] top-[8rem] w-[28%] -z-10"></img>
         <div className="grid grid-cols-1 gap-0 z-0 ml-[24rem]">
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Учит быть нацеленным на результат</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет справиться со стрессом</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает воображение</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает пространственное мышление</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает ассоциативное мышление </div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет самовыражаться</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Улучшает память и внимание</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает мелкую моторику</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Даёт эмоциональную устойчивость</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Учит быть нацеленным на результат</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет справиться со стрессом</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает воображение</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает пространственное мышление</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает ассоциативное мышление </div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Позволяет самовыражаться</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Улучшает память и внимание</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Развивает мелкую моторику</div>
+          <div className="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5">Даёт эмоциональную устойчивость</div>
         </div>
       </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
         <div className="text-5xl font-bold relative ml-[30rem]">Где мы находимся?</div>
         <div className="grid grid-rows-1">
           <div className="w-full mt-[3rem] grid grid-cols-1">
-          <div className="text-white bg-yellowText text-xl rounded-[1rem] w-fit h-fit py-4 px-[4.5rem] text-[22px] font-normal ml-[1.5rem]">г. Омск, ул. Энергетиков, 70</div>
+          <div className="text-white bg-primary text-xl rounded-[1rem] w-fit h-fit py-4 px-[4.5rem] text-[22px] font-normal ml-[1.5rem]">г. Омск, ул. Энергетиков, 70</div>
             <img src="./sunbeam_studio.svg" alt="studio" className="rounded-[1rem] w-[30rem] left-0"></img>
           </div>
           <iframe className="rounded-[1rem] w-[58rem] h-[30rem] ml-[40rem] relative left-[-10rem] top-[-31rem]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
@@ -95,9 +95,9 @@ export default function Home() {
           <div className="font-bold text-[24px] ml-[4rem]">+7 (913) 640-03-59</div>
         </div>
         <div className="grid grid-cols-2 gap-6 w-fit mt-[3rem] ml-[24rem]">
-          <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg">Записаться на занятия</button>
-          <button className="text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg">Узнать расписание</button>
-          <button className="text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+          <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg">Записаться на занятия</button>
+          <button className="text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg">Узнать расписание</button>
+          <button className="text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
         </div>        
       </div>
 
@@ -111,9 +111,9 @@ export default function Home() {
           <div className="text-xl mt-[1.2rem] font-medium">Помогаем детям с непростой судьбой заниматься творчеством</div>
         </div>
         <div className="lg:relative lg:top-[-8rem] lg:left-[6%] lg:grid lg:grid-cols-1 lg:gap-6 lg:w-[115%]">
-          <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-6">Записаться на занятия</button>
-          <button className="text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-6">Узнать расписание</button>
-          <button className="text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-6"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+          <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-6">Записаться на занятия</button>
+          <button className="text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-6">Узнать расписание</button>
+          <button className="text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-6"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
         </div>
       </div>
     </main>

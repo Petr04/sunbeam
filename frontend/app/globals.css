@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 204, 23, 1;
-  --background-rgb: 255, 249, 228, 1;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb))
-}
-
-@layer base {
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
-}
-
 @layer components{
   .container{
     @apply max-w-[1080px]

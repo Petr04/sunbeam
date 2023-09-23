@@ -15,7 +15,7 @@ export default function Menu() {
           <li><a href="" className="font-light text-xl wide:text-2xl">расписание</a></li>
           <li><a href="" className="font-light text-xl wide:text-2xl">новости</a></li>
           <li><a href="" className="font-light text-xl wide:text-2xl">наши работы</a></li>
-          <li><a href="" className="font-light text-xl wide:text-2xl">арт-лавка</a></li>
+          <li><a href="/art-shop" className="font-light text-xl wide:text-2xl">арт-лавка</a></li>
           <li><a href="" className="font-light text-xl wide:text-2xl">контакты</a></li>
           <li><a href="" className="font-light text-xl wide:text-2xl">ru</a><img src="/ru-en_yellow.svg" alt="ru-en" className="inline mx-1" ></img></li>
         </ul>

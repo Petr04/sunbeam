@@ -19,12 +19,13 @@ module.exports = {
       center: true
     },
     colors: {
-      white: '#FFFFFF',
-      black: '#000000',
-      blackBg: '#242424',
-      greyText: '#949494',
-      yellowBg: '#FFF9E4',
-      yellowText: '#FFCC17',
+      'primary': '#FFCC17',
+      'background': '#FFF9E4',
+      'white': 'white',
+      'gray-01': '#ACACAC',
+      'gray-02': '#949494',
+      'gray-03': '#373737',
+      'gray-04': '#242424',
     }
   },
   plugins: [],
