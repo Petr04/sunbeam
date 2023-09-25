@@ -12,9 +12,29 @@ function refactorFormats(formats) {
   }
 }
 
+function getMaxSizeName(formats, imageSize) {
+  const sizes = [ 'thumbnail', 'small', 'medium', 'large' ];
+
+  if (!(sizes.includes(imageSize))) {
+    const error = new Error(
+      `Некорректный размер изображения: ${imageSize}. ` +
+      `Должен быть один из следующих: ${sizes}`
+    );
+    error.code = 400;
+    throw error;
+  }
+
+  for (let i = sizes.indexOf(imageSize); i >= 0; i--) {
+    if (sizes[i] in formats)
+      return sizes[i];
+  }
+}
+
 function refactorImage(image, imageSize = null) {
-  const format = image.formats[imageSize];
   if (imageSize) {
+    const maxImageSize = getMaxSizeName(image.formats, imageSize);
+    const format = image.formats[maxImageSize];
+
     return {
       width: format.width,
       height: format.height,
@@ -53,7 +73,13 @@ async function respond(ctx, next) {
 
   const params = new URLSearchParams(ctx.request.url.split('?')[1])
 
-  refactorResponse(ctx.response.body, params.get('imageSize'));
+  try {
+    refactorResponse(ctx.response.body, params.get('imageSize'));
+  } catch (error) {
+    if (error.code === 400)
+      ctx.badRequest(error.message);
+    else throw error;
+  }
 }
 
 module.exports = () => respond;
