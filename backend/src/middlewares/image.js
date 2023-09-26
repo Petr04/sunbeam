@@ -1,15 +1,11 @@
-function refactorFormat(format) {
-  return {
-    width: format.width,
-    height: format.height,
-    url: format.url,
-  }
-}
+const returnProps = ['width', 'height', 'url'];
 
-function refactorFormats(formats) {
-  for (let format in formats) {
-    formats[format] = refactorFormat(formats[format]);
+function selectKeysFromObject(keys, object) {
+  const result = {};
+  for (let key of keys) {
+    result[key] = object[key];
   }
+  return result;
 }
 
 function getMaxSizeName(formats, imageSize) {
@@ -35,21 +31,14 @@ function refactorImage(image, imageSize = null) {
     const maxImageSize = getMaxSizeName(image.formats, imageSize);
     const format = image.formats[maxImageSize];
 
-    return {
-      width: format.width,
-      height: format.height,
-      url: format.url,
-    };
+    return selectKeysFromObject(returnProps, format);
   }
 
-  const imageNew = {
-    width: image.width,
-    height: image.height,
-    url: image.url,
-    formats: image.formats,
-  };
+  const imageNew = selectKeysFromObject(returnProps.concat('formats'), image);
 
-  refactorFormats(imageNew.formats, imageSize);
+  for (let format in image.formats) {
+    image.formats[format] = selectKeysFromObject(returnProps, image.formats[format]);
+  }
 
   return imageNew;
 }
