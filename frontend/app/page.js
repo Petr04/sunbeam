@@ -144,7 +144,7 @@ export default function Home() {
           <div className={listElementsStyle}>Дети с инвалидностью</div>
           <div className={listElementsStyle}>Дети, родители которых являются инвалидами</div>
         </div>
-        <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
+        <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0 ssm:text-[18px]">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
         <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
 
         <img 
@@ -169,6 +169,7 @@ export default function Home() {
           wide:hidden -z-10
           lg:block lg:relative lg:mx-auto lg:mt-[0rem] lg:w-[30%]
           md:block md:relative md:mx-auto md:mt-[3rem]
+          sm:w-[15rem]
         "/>
       </div>
 
@@ -183,6 +184,7 @@ export default function Home() {
           lt:text-4xl
           lg:mx-auto lg:text-[36px]  
           md:mx-auto md:text-[36px]  
+          ssm:text-[30px]
         ">Наши программы</div>
         <div className="
           mx-auto grid grid-cols-3 gap-4
@@ -190,12 +192,15 @@ export default function Home() {
           lg:grid-cols-2 lg:gap-4
           mg:grid-cols-1
         ">
-          <ItemOfListOurPrograms title="Раннее творческое развитие" age="4 года" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms1.svg"/>
-          <ItemOfListOurPrograms title="Художественное творчество" age="5-6 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms2.svg"/>
-          <ItemOfListOurPrograms title="Основы художественного образования" age="7-8 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms3.svg"/>
-          <ItemOfListOurPrograms title="Основы художественного образования" age="8-9 лет" childrenNum="4 человека в группе" imgSrc="/imgOurPrograms4.svg"/>
-          <ItemOfListOurPrograms title="Основы художественного образования" age="9-11 лет" childrenNum="6 человек в группе" imgSrc="/imgOurPrograms5.svg"/>
-          <ItemOfListOurPrograms title="Индивидуальные коррекционные занятия" age="4-11 лет" childrenNum="" imgSrc="/imgOurPrograms6.svg"/>
+          {/* {ourPrograms.map((ourProgram) =>
+            <ItemOfListOurPrograms key={ourProgram.id} {...ourProgram}/>
+          )} */}
+          <ItemOfListOurPrograms title="Раннее творческое развитие" childrenAge="4 года" numOfChildren="4 человека в группе" image="/imgOurPrograms1.svg"/>
+          <ItemOfListOurPrograms title="Художественное творчество" childrenAge="5-6 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms2.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="7-8 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms3.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="8-9 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms4.svg"/>
+          <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="9-11 лет" numOfChildren="6 человек в группе" image="/imgOurPrograms5.svg"/>
+          <ItemOfListOurPrograms title="Индивидуальные коррекционные занятия" childrenAge="4-11 лет" numOfChildren="" image="/imgOurPrograms6.svg"/>
         </div>
 
         <img 
@@ -204,6 +209,7 @@ export default function Home() {
           wide:hidden -z-10
           lg:block lg:relative lg:mx-auto lg:mt-[2rem] lg:w-[30%]
           md:block md:relative md:mx-auto md:mt-[2rem] 
+          sm:w-[15rem]
         "/>
       </div>
 
@@ -212,7 +218,7 @@ export default function Home() {
         lg:mx-[1.5rem] lg:mt-[4rem] lg:gap-6
         md:mx-[1.5rem] md:mt-[4rem] md:gap-6
         ">
-        <div className="text-5xl lt:text-4xl md:text-[36px] font-bold relative z-0">Почему рисование полезно</div>
+        <div className="text-5xl lt:text-4xl md:text-[36px] ssm:text-[30px] font-bold relative z-0">Почему рисование полезно</div>
         <div className="
           grid grid-cols-1 gap-0 z-0
           lg:flex lg:flex-wrap lg:flex-col lg:w-[52rem] lg:realtive lg:mx-auto
@@ -257,6 +263,7 @@ export default function Home() {
           wide:hidden -z-10
           lg:block lg:relative lg:mx-auto lg:top-[0rem] lg:w-[30%]
           md:block md:relative md:mx-auto md:top-[0rem] 
+          sm:w-[15rem]
         "/>
 
       </div>
@@ -268,6 +275,8 @@ export default function Home() {
           lt:text-4xl
           lg:text-[36px] 
           md:text-[36px] md:ml-[7rem]
+          sm:ml-0
+          ssm:text-[30px]
           ">Где мы находимся?</div>
 
         <div className="
@@ -282,6 +291,7 @@ export default function Home() {
             <div className="
               text-white bg-yellowText text-xl rounded-[1rem] h-fit py-4 text-center w-[92%] font-normal
               lg:mx-auto 
+              ssm:text-[18px]
               ">г. Омск, ул. Энергетиков, 70</div>
             <img 
               src="./sunbeam_studio.svg" alt="studio" 
@@ -294,7 +304,7 @@ export default function Home() {
             className="
               rounded-[1rem] w-[97%] h-[95%] col-span-2 
               lg:col-span-1 lg:w-[90%] lg:row-span-1
-              " 
+              sm:h-full" 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5062605223816!2d73.27371800294775!3d55.04599080885763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ab0076919eb677%3A0x4dd3b6c8f9aede9b!2z0YPQuy4g0K3QvdC10YDQs9C10YLQuNC60L7QsiwgNzAsINCe0LzRgdC6LCDQntC80YHQutCw0Y8g0L7QsdC7LiwgNjQ0MDg4!5e0!3m2!1sru!2sru!4v1694856076094!5m2!1sru!2sru" 
             allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
         </div>
@@ -305,18 +315,20 @@ export default function Home() {
           wide:hidden -z-10
           lg:block lg:relative lg:mx-auto lg:top-[2rem] lg:w-[30%]
           md:block md:relative md:mx-auto md:top-[2rem]
+          sm:w-[15rem]
         "/>
       </div>
 
       <div className="z-0 mt-[4rem] mx-auto lg:w-full">
         <div className="wide:ml-[7rem] xl:mx-auto w-fit">
-          <div className="font-medium text-[24px] lt:text-[22px] text-center">Остались вопросы? Звоните!</div>
-          <div className="font-bold text-[24px] lt:text-[22px] text-center">+7 (913) 640-03-59</div>
+          <div className="font-medium text-[24px] lt:text-[22px] ssm:text-[20px] text-center">Остались вопросы? Звоните!</div>
+          <div className="font-bold text-[24px] lt:text-[22px] ssm:text-[20px] text-center">+7 (913) 640-03-59</div>
         </div>
         <div className="
           grid grid-cols-2 gap-6 w-fit mt-[1rem] wide:ml-[-2rem] xl:mx-auto
           lg:grid-cols-1 lg:gap-6 lg:w-[90%] lg:mx-[2rem]
-          md:grid-cols-1 md:gap-4 md:w-[90%] md:ml-[2rem]">
+          md:grid-cols-1 md:gap-4 md:w-[90%] md:ml-[2rem]
+          sm:ml-[1rem]">
           <button className="
             text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5  
             lt:px-5 lt:py-3 lt:text-lg
