@@ -13,10 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`overflow-x-hidden ${montserrat.className}`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      </head>
+      <body className={`zoom-1 mx-auto overflow-x-hidden ${montserrat.className}`}>
         <Menu />
         {children}
-        <Footer />
+        <Footer />  
       </body>
     </html> 
   )

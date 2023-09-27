@@ -1,43 +1,148 @@
+import ItemOfListOurPrograms from "./_components/ItemOfListOurPrograms"
+
 export default function Home() {
 
+  const listElementsStyle="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0 md:w-[60%] lg:w-max"
+
   return (
-    <main className="lg:wi-[80%] lg:p-[5rem] z-0">
-      <div className="realtive lg:hidden z-0">
-        <img src="/dawn.svg" alt="dawn" className="block relative left-[-4rem] top-10 w-[13%] -z-10"></img>
-        <img src="/explosion.svg" alt="explosion" className="block relative left-[1rem] top-[10rem] w-[12%] -z-10"></img>
-        <div className="absolute lt:left-[6rem] left-[9rem] top-[18rem] flex-col items-center w-fit z-0">
-          <div className="font-bold text-5xl relative left-[1.5rem] lt:left-[4rem] lt:text-4xl z-0">Мы за детские улыбки!</div>
-          <div className="text-xl mt-[1.2rem] lt:text-lg font-medium z-0">Помогаем детям с непростой судьбой заниматься творчеством</div>
+    <main className="wide:w-[80%] xl:w-[100%] lg:w-[80%] md:w-[100%] mx-auto grid grid-cols-1 h-fit items-center z-0">
+
+      <div className="z-0">
+        <img 
+          src="/dawn.svg" alt="dawn" 
+          className="
+            wide:left-[10rem] wide:top-[10rem]
+            block absolute xl:left-[-4rem] xl:top-[10rem] w-[13%] -z-10 
+            lg:w-[8rem] lg:right-[6rem] lg:left-auto lg:top-[39rem]
+            mg:right-[-3rem] mg:top-[26rem]
+            md:w-[8rem] md:right-[-3rem] md:left-auto md:top-[35rem]
+          "/>
+        <img 
+          src="/explosion.svg" alt="explosion" 
+          className="
+            wide:left-[10rem] wide:top-[30rem]
+            block absolute xl:left-[1rem] xl:top-[30rem] w-[12%] -z-10
+            lg:w-[256px] lg:right-[5.5em] lg:left-auto lg:top-[3.5rem] 
+            md:w-[256px] md:right-[-4.5rem] md:left-auto md:top-[2.5rem]
+          "/>
+        <img 
+          src="/mainPageMobile.svg" alt="main_photo" 
+          className="z-0
+            zoom:hidden
+            md:block md:relative md:top-[2rem] md:left-[0rem] md:w-full 
+          "/>
+
+        <img 
+          src="/homepage_main_photo.svg" 
+          alt="main_photo" className="
+            block wide:absolute wide:top-[10rem] wide:right-[-8rem] wide:w-[48%] z-0
+            lg:block lg:relative lg:top-[2rem] lg:left-[0rem] lg:mx-auto lg:w-[80%]
+            md:hidden 
+            "/>
+
+        <div className="
+          wide:left-[13%]
+          relative lt:left-[6rem] left-[9rem] top-[12rem] z-0
+          lg:left-[2rem] lg:top-[4rem] lg:w-fit 
+          md:left-[1rem] md:top-[4rem] md:w-[30rem] 
+        ">
+          <div className="
+            font-bold text-5xl relative left-[1.5rem] z-0
+            lt:left-[4rem] lt:text-4xl 
+            lg:text-[36px] lg:leading-10 lg:left-0 
+            md:text-[36px] md:leading-10 md:left-0
+          ">Мы за детские улыбки!</div>
+          <div className="
+            font-medium text-xl mt-[1.2rem] z-0
+            lt:text-lg
+            lg:text-[18px] lg:mt-[1rem]
+            md:text-[18px] md:mt-[1rem]
+          ">Помогаем детям с непростой судьбой заниматься творчеством</div>
         </div>
-        <div className="grid grid-cols-2 gap-6 w-fit absolute lt:left-[6rem] left-[9rem] top-[26rem] z-0">
-          <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0">Записаться на занятия</button>
-          <button className="text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 lt:px-5 lt:py-3 lt:text-lg z-0">Узнать расписание</button>
-          <button className="text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] lt:px-5 lt:py-3 lt:text-lg z-0"><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+
+        <div className="
+          wide:left-[13%]
+          relative lt:left-[6rem] left-[9rem] top-[13.5rem] grid grid-cols-2 gap-6 w-fit z-0
+          lg:left-0 lg:top-[6rem] lg:grid-cols-1 lg:gap-4 lg:w-[90%] lg:mx-[2rem]
+          md:left-0 md:top-[6rem] md:grid-cols-1 md:gap-4 md:w-[90%] md:mx-[2rem]
+          ">
+          <button className="
+            text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 z-0
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:py-4
+            ">Записаться на занятия</button>
+          <button className="
+            text-black bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
+            lt:px-5 lt:py-3 lt:text-lg 
+            lg:py-4
+            ">Узнать расписание</button>
+          <button className="
+            text-white bg-blackBg text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
+            lt:px-5 lt:py-3 lt:text-lg
+            lg:left-0 lg:py-4
+            md:left-0 md:py-4
+            "><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
         </div>
-        <img src="/spiral_top.svg" alt="spiral" className="block absolute top-[60%] right-[35%] w-[16%] -z-10"></img>
-        <img src="/homepage_main_photo.svg" alt="main_photo" className="block absolute top-[10rem] right-[-8rem] w-[48%] overflow-hidden z-0"></img>
+
+        <img 
+          src="/spiral_top.svg" alt="spiral" 
+          className="
+            wide:right-[45rem] wide:top-[30rem]
+            block absolute xl:top-[28rem] xl:right-[32rem] w-[16%] -z-10
+            lg:w-[9rem] lg:right-auto lg:left-[8rem] lg:top-[6.5rem] 
+            md:w-[9rem] md:right-auto md:left-[-1.5rem] md:top-[6.5rem]
+          "/>
       </div>
 
-      <div className="relative grid grid-cols-1 gap-5 ml-[21rem] top-[23rem] w-[50rem] text-[24px] leading-7 font-medium z-0">
-        <div className="z-0">Наша цель — помогать детям в трудных жизненных ситуациях, обеспечивая им возможности для творчества и развития.</div>
+
+      <div className="
+        wide:mt-[40rem]
+        grid grid-cols-1 gap-5 mx-auto w-[50%] text-[24px] xl:mt-[28rem] leading-7 font-medium z-0
+        lt:text-[22px]
+        lg:mx-[1.5rem] lg:w-fit lg:text-[20px] lg:mt-[8rem]
+        md:mx-[1.5rem] md:w-fit md:text-[20px] md:mt-[8rem]
+        ">
+        <img 
+        src="./spiral4.svg" alt="spiral" 
+        className="
+          wide:left-[12rem] wide:top-[63rem]
+          block absolute xl:left-[3rem] xl:top-[63rem] w-[15%] -z-10
+          lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:mb-[2rem] lg:w-[26%]
+          md:relative md:left-auto md:top-auto md:mx-auto md:mb-[2rem]
+        "/>
+        <div>Наша цель — помогать детям в трудных жизненных ситуациях, обеспечивая им возможности для творчества и развития.</div>
         <div>Занятия проводятся для детей с четырёх лет в группах по 4—6 человек.</div>
         <div>В нашей студии дети обучаются основам изобразительного и декоративно-прикладного искусства под руководством опытных преподавателей. Это улучшает их когнитивные способности и даёт положительные эмоции.</div>
         <div>У нас все дети равны и занимаются вместе. Это помогает им адаптироваться в обществе и улучшить коммуникативные навыки.</div>
+        <img 
+          src="./waves.svg" alt="waves" 
+          className="
+            wide:right-[12rem] wide:top-[63rem]
+            block absolute xl:right-[3rem] xl:top-[52rem] w-[20%] -z-10
+            lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:w-[26%]
+            md:relative md:left-auto md:top-auto md:mx-auto 
+          "/>
       </div>
 
-      <img src="./waves.svg" alt="waves" className="block absolute right-[3rem] top-[52rem] width-[50%] -z-10"></img>
-      <img src="./spiral4.svg" alt="spiral" className="block absolute left-[3rem] top-[63rem] -z-10"></img>
 
-      <div className="relative ml-[21rem] top-[30rem] grid grid-cols-1 gap-10 z-0"> 
-        <div className="text-5xl font-bold z-0">У нас занимаются бесплатно:</div>
-        <div className="flex flex-wrap flex-row w-[52rem] z-0">
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, воспитываемые одним родителем</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Сироты</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети участников СВО</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети из малоимущих семей</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети из многодетных семей</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети с инвалидностью</div>
-          <div className="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0">Дети, родители которых являются инвалидами</div>
+      <div className="
+        grid grid-cols-1 gap-10 mx-auto mt-[8rem] z-0
+        lg:mx-[1.5rem] lg:mt-[2rem] lg:gap-6
+        md:mx-[1.5rem] md:mt-[2rem] md:gap-6
+      "> 
+        <div className="text-5xl lt:text-4xl md:text-[36px] font-bold z-0">У нас занимаются бесплатно:</div>
+        <div className="
+          flex flex-wrap flex-row w-[52rem] z-0
+          lg:flex-row lg:w-[52rem]
+          mg:flex-col
+        ">
+          <div className={listElementsStyle}>Дети, воспитываемые одним родителем</div>
+          <div className={listElementsStyle}>Сироты</div>
+          <div className={listElementsStyle}>Дети участников СВО</div>
+          <div className={listElementsStyle}>Дети из малоимущих семей</div>
+          <div className={listElementsStyle}>Дети из многодетных семей</div>
+          <div className={listElementsStyle}>Дети с инвалидностью</div>
+          <div className={listElementsStyle}>Дети, родители которых являются инвалидами</div>
         </div>
         <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0 ssm:text-[18px]">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
         <button className="text-black bg-yellowText text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
