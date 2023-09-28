@@ -21,14 +21,14 @@ export default function ItemOfListOurPrograms ({title, image, childrenAge, numOf
                     <li className="
                         text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3
                         lg:text-[14px]
-                        ssm:text-[11px]
+                        ssm:text-[10px]
                         ">{childrenAge}</li>
                 }
                 {numOfChildren != "" &&
                     <li className="
                     text-white bg-blackBg font-light text-[15px] rounded-[3rem] w-fit py-1 px-3
                     lg:text-[14px]
-                    ssm:text-[11px]
+                    ssm:text-[10px]
                     ">{numOfChildren}</li>
                 }
 
@@ -37,14 +37,22 @@ export default function ItemOfListOurPrograms ({title, image, childrenAge, numOf
             <div className="
                 text-white font-medium text-3xl w-[20rem] my-4
                 lg:text-2xl
-                ssm:text-[20px] ssm:w-[15rem]
+                ssm:w-[15rem] ssm:gap-1 ssm:text-[20px]">{title}</div>
+
+            <div 
+                className="
+                flex gap-2
                 ssm:gap-1
-                ssm:text-[11px]
+                ">
+                <button className="
+                font-light bg-blackBg text-white text-[15px] rounded-[1rem] w-fit py-2 px-5
+                lg:text-[14px] 
+                ssm:text-[10px] ssm:px-3
                     ">Записаться</button>
                 <button className="
                     font-light bg-white text-black text-[15px] rounded-[1rem] w-fit py-2 px-5
                     lg:text-[14px] 
-                    ssm:text-[11px]
+                    ssm:text-[10px] ssm:px-3
                     ">Узнать расписание</button>
             </div>
         </div> 

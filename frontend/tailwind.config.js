@@ -15,6 +15,7 @@ module.exports = {
       mg: {'max': '950px'},
       md: {'max': '600px'},
       sm: {'max': '500px'},
+      ssm: {'max': '400px'}
     },
     container: {
       padding: '20px',

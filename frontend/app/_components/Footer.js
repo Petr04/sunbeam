@@ -37,7 +37,8 @@ export default function Footer() {
         className="
           absolute bottom-[50px] right-[90px] 
           lg:left-[70px] 
-          md:left-[30px]"
+          md:left-[30px]
+          ssm:w-[15rem]"
           />
     </div>
   )

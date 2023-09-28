@@ -2,7 +2,7 @@ import ItemOfListOurPrograms from "./_components/ItemOfListOurPrograms"
 
 export default function Home() {
 
-  const listElementsStyle="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 text-[22px] font-normal mr-5 mb-5 z-0 md:w-[60%] lg:w-max"
+  const listElementsStyle="text-black bg-yellowText text-xl rounded-[5rem] w-fit py-3 px-8 font-normal mr-5 mb-5 z-0 md:text-[16px] md:px-4 md:py-2 md:w-[90vw]"
 
   return (
     <main className="wide:w-[80%] xl:w-[100%] lg:w-[80%] md:w-[100%] mx-auto grid grid-cols-1 h-fit items-center z-0">
@@ -45,6 +45,7 @@ export default function Home() {
           relative lt:left-[6rem] left-[9rem] top-[12rem] z-0
           lg:left-[2rem] lg:top-[4rem] lg:w-fit 
           md:left-[1rem] md:top-[4rem] md:w-[30rem] 
+          sm:w-[18rem]
         ">
           <div className="
             font-bold text-5xl relative left-[1.5rem] z-0
@@ -65,6 +66,7 @@ export default function Home() {
           relative lt:left-[6rem] left-[9rem] top-[13.5rem] grid grid-cols-2 gap-6 w-fit z-0
           lg:left-0 lg:top-[6rem] lg:grid-cols-1 lg:gap-4 lg:w-[90%] lg:mx-[2rem]
           md:left-0 md:top-[6rem] md:grid-cols-1 md:gap-4 md:w-[90%] md:mx-[2rem]
+          sm:mx-[1rem]
           ">
           <button className="
             text-black bg-yellowText text-xl rounded-2xl shadow-xl px-9 py-5 z-0
@@ -91,6 +93,7 @@ export default function Home() {
             block absolute xl:top-[28rem] xl:right-[32rem] w-[16%] -z-10
             lg:w-[9rem] lg:right-auto lg:left-[8rem] lg:top-[6.5rem] 
             md:w-[9rem] md:right-auto md:left-[-1.5rem] md:top-[6.5rem]
+            
           "/>
       </div>
 
@@ -109,6 +112,7 @@ export default function Home() {
           block absolute xl:left-[3rem] xl:top-[63rem] w-[15%] -z-10
           lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:mb-[2rem] lg:w-[26%]
           md:relative md:left-auto md:top-auto md:mx-auto md:mb-[2rem]
+          sm:w-[13rem]
         "/>
         <div>Наша цель — помогать детям в трудных жизненных ситуациях, обеспечивая им возможности для творчества и развития.</div>
         <div>Занятия проводятся для детей с четырёх лет в группах по 4—6 человек.</div>
@@ -121,6 +125,7 @@ export default function Home() {
             block absolute xl:right-[3rem] xl:top-[52rem] w-[20%] -z-10
             lg:relative lg:left-auto lg:top-auto lg:mx-auto lg:w-[26%]
             md:relative md:left-auto md:top-auto md:mx-auto 
+            sm:w-[13rem] sm:mx-auto
           "/>
       </div>
 
@@ -275,7 +280,7 @@ export default function Home() {
           lt:text-4xl
           lg:text-[36px] 
           md:text-[36px] md:ml-[7rem]
-          sm:ml-0
+          sm:ml-[0.5rem] sm:w-[90%]
           ssm:text-[30px]
           ">Где мы находимся?</div>
 
