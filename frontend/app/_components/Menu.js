@@ -1,30 +1,70 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
+import LanguagePicker from './LanguagePicker'
 
 export default function Menu() {
   const [showModal, setShowModal] = useState(false)
   const toggleModal = () => setShowModal(!showModal)
 
   return (
-    <div className="pt-[50px] px-[68px]  md:px-[30px]">
+    <div className="py-[50px] px-[68px] md:px-[30px]">
       <nav className="flex justify-between items-center z-0">
-        <a href="#"><img src="/logo_yellow.svg" alt="logo" className="w-[276px]"></img></a>
+        <a href="/">
+          <Image
+            className="dark:hidden"
+            src="/logo_yellow.svg"
+            width={276}
+            height={41.25}
+            alt="Логотип Луч солнца"
+          />
+          <Image
+            className="hidden dark:block"
+            src="/logo_grey.svg"
+            width={276}
+            height={41.25}
+            alt="Логотип Луч солнца"
+          />
+        </a>
 
-        <ul className="flex gap-8 wide:gap-12  lg:hidden md:hidden">
-          <li><a href="" className="font-light text-xl wide:text-2xl">расписание</a></li>
-          <li><a href="" className="font-light text-xl wide:text-2xl">новости</a></li>
-          <li><a href="" className="font-light text-xl wide:text-2xl">наши работы</a></li>
-          <li><a href="/art-shop" className="font-light text-xl wide:text-2xl">арт-лавка</a></li>
-          <li><a href="" className="font-light text-xl wide:text-2xl">контакты</a></li>
-          <li><a href="" className="font-light text-xl wide:text-2xl">ru</a><img src="/ru-en_yellow.svg" alt="ru-en" className="inline mx-1" ></img></li>
+        <ul className="flex gap-8 wide:gap-12 lg:hidden md:hidden dark:text-gray-02">
+          <li>
+            <a href="" className="text-xl wide:text-2xl">расписание</a>
+          </li>
+          <li>
+            <a href="" className="text-xl wide:text-2xl">новости</a>
+          </li>
+          <li>
+            <a href="" className="text-xl wide:text-2xl">наши работы</a>
+          </li>
+          <li>
+            <a href="/art-shop" className="text-xl wide:text-2xl">арт-лавка</a>
+          </li>
+          <li>
+            <a href="" className="text-xl wide:text-2xl">контакты</a>
+          </li>
+          <LanguagePicker />
         </ul>
 
         <button
           onClick={toggleModal}
           className="relative h-[20px] w-[30px] hidden lg:block md:block lg:right-0 z-10"
         >
-          <img src="/menu-01.svg"/>
+          <Image
+            className="dark:hidden"
+            src="/menu-01.svg"
+            width={24}
+            height={24}
+            alt="Меню"
+          />
+          <Image
+            className="hidden dark:block"
+            src="/menu-01-dark.svg"
+            width={24}
+            height={24}
+            alt="Меню"
+          />
         </button>
       </nav>
 
@@ -36,10 +76,7 @@ export default function Menu() {
             <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
             <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
             <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">контакты</a></li>
-            <li>
-              <a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">ru</a>
-              <img src="/ru-en_yellow.svg" alt="ru-en" className="inline mx-1" ></img>
-            </li>
+            <LanguagePicker />
           </ul>
         </div>       
       }

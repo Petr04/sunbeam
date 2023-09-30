@@ -5,14 +5,18 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
-      sm: {'max': '400px'},
+      zoom: {'max': '4000px'},
+      wide: {'max': '3000px'},
+      xl: {'max': '1920px'},
+      lt: {'max': '1440px'},
+      lg: {'max': '1180px'},
+      mg: {'max': '950px'},
       md: {'max': '600px'},
-      lg: {'min': '601px', 'max': '1180px'},
-      lt: {'min': '1181px', 'max': '1440px'},
-      xl: {'min': '1181px', 'max': '1600px'},
-      wide: {'min': '1601px', 'max': '3000px'}
+      sm: {'max': '500px'},
+      ssm: {'max': '400px'}
     },
     container: {
       padding: '20px',
@@ -26,7 +30,12 @@ module.exports = {
       'gray-02': '#949494',
       'gray-03': '#373737',
       'gray-04': '#242424',
-    }
+    },
+    extend: {
+      boxShadow: {
+        md: '0px 7.92922px 22.0256px 0px rgba(0, 0, 0, 0.10)',
+      },
+    },
   },
   plugins: [],
 }
