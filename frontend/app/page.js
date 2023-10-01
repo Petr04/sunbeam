@@ -1,5 +1,5 @@
-import ItemOfListOurPrograms from "./_components/ItemOfListOurPrograms"
-import Layout from "./_components/Layout"
+import ItemOfListOurPrograms from "@/components/ItemOfListOurPrograms"
+import Layout from "@/components/Layout"
 
 export default function Home() {
 

@@ -1,7 +1,7 @@
 'use client'
 
 import Masonry from '@mui/lab/Masonry'
-import Picture from './Picture'
+import Picture from '@/components/Picture'
 import { useState, useEffect, useCallback } from 'react'
 
 export default function Pictures({ pictures }) {

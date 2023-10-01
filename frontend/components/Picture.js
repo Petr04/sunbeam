@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Badge from './Badge'
+import Badge from '@/components/Badge'
 
 function numeralOfAge(age) {
   if (age % 10 == 1) return 'год'

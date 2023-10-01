@@ -1,4 +1,4 @@
-import LanguagePicker from './LanguagePicker'
+import LanguagePicker from '@/components/LanguagePicker'
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
-import Layout from '../_components/Layout'
-import Pictures from './_components/Pictures'
+import Layout from '@/components/Layout'
+import Pictures from '@/components/Pictures'
 import ky from '@/ky'
 import useMemo from 'react'
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import LanguagePicker from './LanguagePicker'
+import LanguagePicker from '@/components/LanguagePicker'
 
 export default function Menu() {
   const [showModal, setShowModal] = useState(false)
