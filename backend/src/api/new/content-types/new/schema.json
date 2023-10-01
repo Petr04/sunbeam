@@ -4,7 +4,7 @@
   "info": {
     "singularName": "new",
     "pluralName": "news",
-    "displayName": "New",
+    "displayName": "News",
     "description": ""
   },
   "options": {
@@ -12,14 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "header": {
+    "title": {
       "type": "string"
     },
     "content": {
       "type": "text"
-    },
-    "new_published_at": {
-      "type": "datetime"
     },
     "images": {
       "type": "media",
@@ -32,7 +29,7 @@
         "audios"
       ]
     },
-    "admin_user": {
+    "author": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "admin::user"

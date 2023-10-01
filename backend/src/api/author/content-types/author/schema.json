@@ -4,22 +4,15 @@
   "info": {
     "singularName": "author",
     "pluralName": "authors",
-    "displayName": "Author"
+    "displayName": "PictureAuthor",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true,
-    "privateAttributes": [
-      "createdAt",
-      "updatedAt",
-      "publishedAt"
-    ]
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "author_id": {
-      "type": "uid"
-    },
-    "full_name": {
+    "fullName": {
       "type": "string"
     },
     "age": {

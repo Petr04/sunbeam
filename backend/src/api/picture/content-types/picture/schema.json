@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "picture_id": {
-      "type": "uid"
-    },
     "title": {
       "type": "string"
     },

@@ -43,8 +43,8 @@ async function getInvoice(token, props) {
   }
 
   return {
-    invoice_url: data.invoice_url,
-    invoice_id: data.invoice_id,
+    invoiceUrl: data.invoice_url,
+    invoiceId: data.invoice_id,
   };
 }
 
@@ -68,8 +68,8 @@ module.exports = () => ({
     }
     return invoice;
   },
-  getStatus: async (invoice_id) => {
-    const response = await axios.get(`/info/invoice/byid?id=${invoice_id}`);
+  getStatus: async (invoiceId) => {
+    const response = await axios.get(`/info/invoice/byid?id=${invoiceId}`);
     return response.data.status;
   },
 });

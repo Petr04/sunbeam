@@ -22,7 +22,7 @@ export default function Picture({ title, description, image, author, technology 
       <Badge text={technology} />
       <div className="flex flex-col gap-[10px]">
         <h2 className="text-[36px] font-semibold mt-[-20px] mb-[-13px]">{title}</h2>
-        <p className="text-[21px]">{author.full_name}, {author.age} {numeralOfAge(author.age)}</p>
+        <p className="text-[21px]">{author.fullName}, {author.age} {numeralOfAge(author.age)}</p>
       </div>
       <button className="rounded-[17px] py-[13px] bg-gray-04 font-semibold text-[17px] shadow-md">
         Купить
