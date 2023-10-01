@@ -80,6 +80,11 @@ export default function Menu() {
           </ul>
         </div>       
       }
+
+      {showModal === true &&
+        <div className='overflow-y:hidden fixed ml-[-9rem] w-[1150px] h-full z-10 bg-dim'>
+        </div>
+      }
     </div>
   )
 }

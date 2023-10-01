@@ -8,7 +8,11 @@ export default function Footer() {
           <img src="/logo_grey.svg" alt="logo" className=""></img>
           <LanguagePicker />
         </div>
-        <div className="grid grid-cols-2 gap-20 lg:grid-cols-1 lg:gap-2 md:grid-cols-1 md:gap-2">
+        <div className="
+          grid grid-cols-2 gap-20 
+          lg:grid-cols-1 lg:gap-2 
+          md:grid-cols-1 md:gap-2
+          ">
           <div className="flex-col items-start">
             <div className='text-gray-02 text-lg font-semibold'>Контакты:</div>
             <div className='text-gray-02 text-lg'>ВК 2гис</div>
@@ -22,7 +26,14 @@ export default function Footer() {
         </div>
       
       </div>
-      <img src="/info_footer.svg" alt="payment" className="absolute bottom-[50px] right-[90px] lg:left-[70px] md:left-[30px]"></img>
+      <img 
+        src="/info_footer.svg" alt="payment" 
+        className="
+          absolute bottom-[50px] right-[90px] 
+          lg:left-[70px] 
+          md:left-[30px]
+          ssm:w-[15rem]"
+          />
     </div>
   )
 }
