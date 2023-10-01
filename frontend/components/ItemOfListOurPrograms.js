@@ -47,11 +47,13 @@ export default function ItemOfListOurPrograms ({title, image, childrenAge, numOf
                 font-light bg-gray-04 text-white text-[15px] rounded-[1rem] w-fit py-2 px-5
                 lg:text-[14px] 
                 ssm:text-[10px] ssm:px-3
+                shadow-md
                     ">Записаться</button>
                 <button className="
                     font-light bg-white text-gray-04 text-[15px] rounded-[1rem] w-fit py-2 px-5
                     lg:text-[14px] 
                     ssm:text-[10px] ssm:px-3
+                    shadow-md
                     ">Узнать расписание</button>
             </div>
         </div> 
