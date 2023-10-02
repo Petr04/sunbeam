@@ -1,18 +1,12 @@
+import LanguagePicker from './LanguagePicker'
+
 export default function Footer() {
   return (
-    <div className="
-      relative mt-[5rem] h-[288px] bg-blackBg w-[100%] rounded-t-[3rem]
-      lg:h-[470px]
-      md:h-[470px]
-      ">
-      <div className="
-        absolute left-[90px] top-[3rem] 
-        lg:left-[70px] 
-        md:left-[30px]
-        ">
-        <div className="flex-col items-start">
+    <div className="relative mt-[30rem] h-[288px] lg:h-[470px] md:h-[470px] bg-gray-04 w-[100%] ">
+      <div className="flex flex-col gap-[44px] absolute left-[90px] top-[3rem] lg:left-[70px] md:left-[30px]">
+        <div className="flex flex-col items-start gap-[20px]">
           <img src="/logo_grey.svg" alt="logo" className=""></img>
-          <div className="my-5"><button className="font-light text-greyText text-xl">ru</button><img src="/ru-en_grey.svg" alt="ru-en" className="inline mx-1" ></img></div>
+          <LanguagePicker />
         </div>
         <div className="
           grid grid-cols-2 gap-20 
@@ -20,14 +14,14 @@ export default function Footer() {
           md:grid-cols-1 md:gap-2
           ">
           <div className="flex-col items-start">
-            <div className='text-greyText text-lg font-semibold'>Контакты:</div>
-            <div className='text-greyText text-lg'>ВК 2гис</div>
-            <div className='text-greyText text-lg'>+7 (913) 640-03-59</div>
+            <div className='text-gray-02 text-lg font-semibold'>Контакты:</div>
+            <div className='text-gray-02 text-lg'>ВК 2гис</div>
+            <div className='text-gray-02 text-lg'>+7 (913) 640-03-59</div>
           </div>
           <div className="flex-col items-start">
-            <div className='text-greyText text-lg'>© Луч солнца, 2023</div>
-            <div className='text-greyText text-lg'>ИП Рыбин Д. А.</div>
-            <div className='text-greyText text-lg'>ОГРНИП: 320723200066545</div>
+            <div className='text-gray-02 text-lg'>© Луч солнца, 2023</div>
+            <div className='text-gray-02 text-lg'>ИП Рыбин Д. А.</div>
+            <div className='text-gray-02 text-lg'>ОГРНИП: 320723200066545</div>
           </div>
         </div>
       

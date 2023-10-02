@@ -1,35 +1,44 @@
-function refactorFormat(format) {
-  return {
-    width: format.width,
-    height: format.height,
-    url: format.url,
+const returnProps = ['width', 'height', 'url'];
+
+function selectKeysFromObject(keys, object) {
+  const result = {};
+  for (let key of keys) {
+    result[key] = object[key];
   }
+  return result;
 }
 
-function refactorFormats(formats) {
-  for (let format in formats) {
-    formats[format] = refactorFormat(formats[format]);
+function getMaxSizeName(formats, imageSize) {
+  const sizes = [ 'thumbnail', 'small', 'medium', 'large' ];
+
+  if (!(sizes.includes(imageSize))) {
+    const error = new Error(
+      `Некорректный размер изображения: ${imageSize}. ` +
+      `Должен быть один из следующих: ${sizes}`
+    );
+    error.code = 400;
+    throw error;
+  }
+
+  for (let i = sizes.indexOf(imageSize); i >= 0; i--) {
+    if (sizes[i] in formats)
+      return sizes[i];
   }
 }
 
 function refactorImage(image, imageSize = null) {
-  const format = image.formats[imageSize];
   if (imageSize) {
-    return {
-      width: format.width,
-      height: format.height,
-      url: format.url,
-    };
+    const maxImageSize = getMaxSizeName(image.formats, imageSize);
+    const format = image.formats[maxImageSize];
+
+    return selectKeysFromObject(returnProps, format);
   }
 
-  const imageNew = {
-    width: image.width,
-    height: image.height,
-    url: image.url,
-    formats: image.formats,
-  };
+  const imageNew = selectKeysFromObject(returnProps.concat('formats'), image);
 
-  refactorFormats(imageNew.formats, imageSize);
+  for (let format in image.formats) {
+    image.formats[format] = selectKeysFromObject(returnProps, image.formats[format]);
+  }
 
   return imageNew;
 }
@@ -53,7 +62,13 @@ async function respond(ctx, next) {
 
   const params = new URLSearchParams(ctx.request.url.split('?')[1])
 
-  refactorResponse(ctx.response.body, params.get('imageSize'));
+  try {
+    refactorResponse(ctx.response.body, params.get('imageSize'));
+  } catch (error) {
+    if (error.code === 400)
+      ctx.badRequest(error.message);
+    else throw error;
+  }
 }
 
 module.exports = () => respond;

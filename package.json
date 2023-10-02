@@ -10,6 +10,9 @@
     "eslint-plugin-react": "^7.32.2"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@mui/core": "^5.0.0-alpha.54",
+    "@mui/lab": "^5.0.0-alpha.146",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/redux-thunk": "^2.1.0",
     "axios": "^1.4.0",
