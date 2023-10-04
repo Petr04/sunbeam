@@ -31,6 +31,7 @@ module.exports = {
       'gray-03': '#373737',
       'gray-04': '#242424',
       'dim': '#00000050',
+      'placeholder': '#94949488'
     },
     extend: {
       boxShadow: {

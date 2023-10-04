@@ -85,7 +85,7 @@ export default function Home() {
               lt:px-5 lt:py-3 lt:text-lg
               lg:left-0 lg:py-4
               md:left-0 md:py-4
-              "><img src="/support_project.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+              "><img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
           </div>
 
           <img 
@@ -354,7 +354,7 @@ export default function Home() {
               lg:left-0 lg:py-4
               md:left-0 md:py-4
               ">
-              <img src="/support_project.svg" alt="support_project" className="inline mr-3"/>
+              <img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>
             Поддержать проект</button>
           </div>        
         </div>
