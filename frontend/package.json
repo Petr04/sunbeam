@@ -11,10 +11,11 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.11",
+    "@mui/lab": "^5.0.0-alpha.147",
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "ky": "^1.0.1",
     "ky-universal": "^0.12.0",
     "next": "^13.4.19",
     "postcss": "8.4.29",
