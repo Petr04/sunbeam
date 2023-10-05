@@ -1,16 +1,18 @@
 'use client'
 
 import './dialogStyle.css'
-import { useRef, useEffect, useCallback, useImperativeHandle, forwardRef } from 'react'
+import { useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-function Dialog({ closeUrl, children }, ref) {
+export default function Dialog({ closeUrl, showDialog, children }) {
   const router = useRouter()
   const dialog = useRef(null)
   useEffect(() => {dialog.current.showModal()}, [])
-
-  useImperativeHandle(ref, () => ({ closeDialog: () => dialog.current.close() }))
+  useEffect(() => {
+    if (!showDialog)
+      dialog.current.close()
+  }, [showDialog])
   
   return (
     <dialog
@@ -29,5 +31,3 @@ function Dialog({ closeUrl, children }, ref) {
     </dialog>
   )
 }
-
-export default forwardRef(Dialog)

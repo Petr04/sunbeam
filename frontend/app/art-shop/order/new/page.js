@@ -9,12 +9,11 @@ import Button from '@/components/Button'
 
 export default function OrderNew() {
   const [showDialog, setShowDialog] = useState(true)
-  const dialog = useRef(null)
 
   return (
-    <Dialog closeUrl="/art-shop" ref={dialog}>
+    <Dialog closeUrl="/art-shop" showDialog={showDialog}>
       <div className="flex flex-col gap-[20px] p-[20px]">
-        <BackButton onClick={() => dialog.current.closeDialog()} />
+        <BackButton onClick={() => setShowDialog(false)} />
         <h1 className="text-[36px] sm:text-[32px] font-semibold mx-[10px]">
           Заказать картину
         </h1>
