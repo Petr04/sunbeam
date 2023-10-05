@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "picture_id": {
-      "type": "uid"
-    },
     "title": {
       "type": "string"
     },
@@ -43,6 +40,9 @@
       "relation": "manyToOne",
       "target": "api::author.author",
       "inversedBy": "pictures"
+    },
+    "technology": {
+      "type": "string"
     }
   }
 }

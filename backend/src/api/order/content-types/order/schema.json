@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "delivery_adress": {
+    "deliveryAdress": {
       "type": "text"
     },
     "picture": {
@@ -21,16 +21,16 @@
       "target": "api::picture.picture",
       "inversedBy": "order"
     },
-    "full_name": {
+    "fullName": {
       "type": "string"
     },
     "email": {
       "type": "email"
     },
-    "phone_number": {
+    "phoneNumber": {
       "type": "string"
     },
-    "invoice_id": {
+    "invoiceId": {
       "type": "string",
       "required": true,
       "unique": true
@@ -40,7 +40,7 @@
       "regex": "created|sent|paid|expired",
       "default": "created"
     },
-    "invoice_url": {
+    "invoiceUrl": {
       "type": "string",
       "required": true
     }

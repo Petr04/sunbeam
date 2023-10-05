@@ -2,7 +2,7 @@
 
 async function refreshStatus(strapi, order, intervalId) {
   const status = await strapi.service('api::order.payment')
-    .getStatus(order.data.invoice_id);
+    .getStatus(order.data.invoiceId);
 
   if (intervalId && (status === 'paid' || status === 'expired')) {
     clearInterval(intervalId);
@@ -29,12 +29,12 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
     }
 
     try {
-      const { invoice_url, invoice_id } =
+      const { invoiceUrl, invoiceId } =
         await strapi.service('api::order.payment')
           .getNewPaymentLink(paykeeperParams);
 
-      ctx.request.body.data.invoice_url = invoice_url;
-      ctx.request.body.data.invoice_id = invoice_id;
+      ctx.request.body.data.invoiceUrl = invoiceUrl;
+      ctx.request.body.data.invoiceId = invoiceId;
 
       const result = await super.create(ctx);
 

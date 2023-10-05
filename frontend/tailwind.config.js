@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       zoom: {'max': '4000px'},
@@ -22,14 +23,20 @@ module.exports = {
       center: true
     },
     colors: {
-      white: '#FFFFFF',
-      black: '#000000',
-      blackBg: '#242424',
-      greyText: '#949494',
-      yellowBg: '#FFF9E4',
-      yellowText: '#FFCC17',
-      opacityBlack: '#00000050'
-    }
+      'primary': '#FFCC17',
+      'background': '#FFF9E4',
+      'white': 'white',
+      'gray-01': '#ACACAC',
+      'gray-02': '#949494',
+      'gray-03': '#373737',
+      'gray-04': '#242424',
+      'dim': '#00000050',
+    },
+    extend: {
+      boxShadow: {
+        md: '0px 7.92922px 22.0256px 0px rgba(0, 0, 0, 0.10)',
+      },
+    },
   },
   plugins: [],
 }
