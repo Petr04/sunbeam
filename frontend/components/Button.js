@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge'
 
-export default function Button({ children, className, compact }) {
+export default function Button({ children, className, compact, ...rest }) {
   return <button
     className={
       twMerge(
@@ -8,6 +8,7 @@ export default function Button({ children, className, compact }) {
         className,
       )
     }
+    {...rest}
   >
     {children}
   </button>
