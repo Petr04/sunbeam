@@ -29,8 +29,8 @@ export default async function ArtShopLayout({ children }) {
                 Все средства будут направлены на поддержку студии.
               </p>
             </div>
-            <Link href="/art-shop/order/new" scroll={false}>
-              <button className="px-[30px] py-[10px] bg-gray-02 text-gray-04 rounded-[15px] w-fit font-semibold text-[20px]">
+            <Link href="/art-shop/order/new" scroll={false} className="w-fit">
+              <button className="px-[30px] py-[10px] bg-gray-02 text-gray-04 rounded-[15px] font-semibold text-[20px]">
                 Заказать картину
               </button>
             </Link>
