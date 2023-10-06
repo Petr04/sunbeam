@@ -1,0 +1,11 @@
+dialog {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.3s;
+  display: block;
+}
+
+dialog[open] {
+  opacity: 1;
+  transform: translateY(0px);
+}
