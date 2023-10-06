@@ -1,7 +1,7 @@
 'use client'
 
 import Masonry from '@mui/lab/Masonry'
-import Picture from './Picture'
+import ItemOfListNews from './ItemOfListNews';
 import { useState, useEffect, useCallback } from 'react'
 
 export default function ListNews({ news }) {
@@ -28,7 +28,7 @@ export default function ListNews({ news }) {
       columns={columns}
       spacing={2.5}
     >
-      {news.data.map((picture, i) => <Picture {...picture} key={i} />)}
+      {news.data.map((one_new, i) => <ItemOfListNews {...one_new} key={i} />)}
     </Masonry>
   )
 }

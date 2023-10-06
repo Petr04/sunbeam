@@ -199,9 +199,6 @@ export default function Home() {
             lg:grid-cols-2 lg:gap-4
             mg:grid-cols-1
           ">
-            {/* {ourPrograms.map((ourProgram) =>
-              <ItemOfListOurPrograms key={ourProgram.id} {...ourProgram}/>
-            )} */}
             <ItemOfListOurPrograms title="Раннее творческое развитие" childrenAge="4 года" numOfChildren="4 человека в группе" image="/imgOurPrograms1.svg"/>
             <ItemOfListOurPrograms title="Художественное творчество" childrenAge="5-6 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms2.svg"/>
             <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="7-8 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms3.svg"/>

@@ -3,6 +3,7 @@ import Badge from '@/components/Badge'
 
 function numeralOfAge(age) {
   if (age % 10 == 1) return 'год'
+  if (age>9, age<21) return 'лет'
   if ([2, 3, 4].includes(age % 10)) return 'года'
   return 'лет'
 }

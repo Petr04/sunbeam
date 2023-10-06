@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout'
 import Pictures from '@/components/Pictures'
 import ky from '@/ky'
-import useMemo from 'react'
 
 export const revalidate = 2 // change in prod
 
