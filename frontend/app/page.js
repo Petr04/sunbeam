@@ -1,9 +1,14 @@
 import ItemOfListOurPrograms from "@/components/ItemOfListOurPrograms"
 import Layout from "@/components/Layout"
+import ky from '@/ky'
+import ListOurPrograms from "@/components/ListOurPrograms"
 
-export default function Home() {
+export const revalidate = 2 // change in prod
+
+export default async function Home() {
 
   const listElementsStyle="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 font-normal mr-5 mb-5 z-0 md:text-[16px] md:px-4 md:py-2 md:w-[90vw]"
+  const ourPrograms = await ky.get('api/our-programs?populate[0]=image').json()
 
   return (
     <Layout>
@@ -193,19 +198,7 @@ export default function Home() {
             md:mx-auto md:text-[36px]  
             ssm:text-[30px]
           ">Наши программы</div>
-          <div className="
-            mx-auto grid grid-cols-3 gap-4
-            lt:gap-0
-            lg:grid-cols-2 lg:gap-4
-            mg:grid-cols-1
-          ">
-            <ItemOfListOurPrograms title="Раннее творческое развитие" childrenAge="4 года" numOfChildren="4 человека в группе" image="/imgOurPrograms1.svg"/>
-            <ItemOfListOurPrograms title="Художественное творчество" childrenAge="5-6 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms2.svg"/>
-            <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="7-8 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms3.svg"/>
-            <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="8-9 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms4.svg"/>
-            <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="9-11 лет" numOfChildren="6 человек в группе" image="/imgOurPrograms5.svg"/>
-            <ItemOfListOurPrograms title="Индивидуальные коррекционные занятия" childrenAge="4-11 лет" numOfChildren="" image="/imgOurPrograms6.svg"/>
-          </div>
+            <ListOurPrograms ourPrograms={ourPrograms}/>
 
           <img 
             src="./lightWaves.svg" alt="lightwaves" 
