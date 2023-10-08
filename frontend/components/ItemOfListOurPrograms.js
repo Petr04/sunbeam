@@ -31,7 +31,7 @@ export default function ItemOfListOurPrograms ({title, image, childrenAge, child
             <Image
                 src={path} 
                 alt="ourProgramsPhoto" 
-                width={343}
+                width={300}
                 height={250}
                 className="w-full h-auto rounded-[15px]"
             />

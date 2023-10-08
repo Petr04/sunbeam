@@ -21,8 +21,8 @@ export default async function Home() {
               wide:left-[10rem] wide:top-[10rem]
               block absolute xl:left-[-4rem] xl:top-[10rem] w-[13%] -z-10 
               lg:w-[8rem] lg:right-[6rem] lg:left-auto lg:top-[39rem]
-              mg:right-[-3rem] mg:top-[26rem]
-              md:w-[8rem] md:right-[-3rem] md:left-auto md:top-[35rem]
+              mg:right-[1rem] mg:top-[26rem]
+              md:w-[8rem] md:right-[1rem] md:left-auto md:top-[35rem]
             "/>
           <img 
             src="/explosion.svg" alt="explosion" 
@@ -40,9 +40,16 @@ export default async function Home() {
             "/>
 
           <img 
+            src="/laptopBackgroundImage.svg" 
+            alt="main_photo" className="
+              block wide:absolute wide:top-[10rem] wide:right-0 wide:w-[40%] z-0
+              lg:hidden 
+              "/>
+
+          <img
             src="/homepage_main_photo.svg" 
             alt="main_photo" className="
-              block wide:absolute wide:top-[10rem] wide:right-[-8rem] wide:w-[48%] z-0
+              zoom:hidden
               lg:block lg:relative lg:top-[2rem] lg:left-[0rem] lg:mx-auto lg:w-[80%]
               md:hidden 
               "/>
