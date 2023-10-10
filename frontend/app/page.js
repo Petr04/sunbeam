@@ -91,7 +91,7 @@ export default async function Home() {
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
               lg:py-4
-              ">Узнать расписание</button>
+              "><a href="/schedule">Узнать расписание</a></button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
               lt:px-5 lt:py-3 lt:text-lg
@@ -205,7 +205,7 @@ export default async function Home() {
             md:mx-auto md:text-[36px]  
             ssm:text-[30px]
           ">Наши программы</div>
-            <ListOurPrograms ourPrograms={ourPrograms}/>
+          <ListOurPrograms ourPrograms={ourPrograms}/>
 
           <img 
             src="./lightWaves.svg" alt="lightwaves" 

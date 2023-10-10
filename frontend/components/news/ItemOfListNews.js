@@ -5,9 +5,9 @@ function formatTime(time) {
   return time.slice(8, 10) + "." + time.slice(5,7) + "." + time.slice(0,4)
 }
 
-export default function ItemOfListNews({ title, content, images, publishedAt, readingTime }) {
+export default function ItemOfListNews({ title, content, image, publishedAt, readingTime }) {
 
-  const path = process.env.NEXT_PUBLIC_API_URL + '/'+ images.url;
+  const path = process.env.NEXT_PUBLIC_API_URL + image.url;
   const publishedTime = formatTime(publishedAt)
 
   return (
@@ -20,7 +20,7 @@ export default function ItemOfListNews({ title, content, images, publishedAt, re
         src={path}
         className="w-full relative basis-1/4 rounded-[15px]"
       />
-      <div className="absolute right-[2rem] top-[50%] flex flex-inline gap-2 text-gray-04 text-[14px] ssm:top-[44%]">
+      <div className="absolute right-[2rem] top-[50%] mg:top-[45%] pic_help:top-[60%] md:top-[50%] sm:top-[45%] flex flex-inline gap-2 text-gray-04 text-[14px] ssm:top-[44%]">
         <div className=" bg-white rounded-[2rem] flex flex-inline gap-1 w-fit">
           <img alt="calendar" src="/news/calendar.svg" className="ps-[0.6rem]"/> 
           <p className="p-[0.2rem] pe-[0.6rem]">{publishedTime}</p> 

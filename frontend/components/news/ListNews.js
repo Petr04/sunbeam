@@ -10,7 +10,7 @@ export default function ListNews({ news }) {
   const changeColumns = useCallback(() => {
     if (window.innerWidth < 700)
       setColumns(1)
-    else if (window.innerWidth < 1100)
+    else if (window.innerWidth < 1180)
       setColumns(2)
     else
       setColumns(3)
