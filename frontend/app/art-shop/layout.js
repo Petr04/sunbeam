@@ -3,6 +3,7 @@ import Layout from '@/components/Layout'
 import Pictures from '@/components/Pictures'
 import ky from '@/ky'
 import useMemo from 'react'
+import PicturesProvider from './PicturesProvider'
 
 export const revalidate = 2 // change in prod
 
@@ -11,7 +12,9 @@ export default async function ArtShopLayout({ children }) {
 
   return (
     <Layout dark>
-      {children}
+      <PicturesProvider value={pictures}>
+        {children}
+      </PicturesProvider>
       <div className="flex flex-col gap-[50px] mx-auto max-w-[1300px] px-[10px] align-center">
         <div className="flex lg:flex-col gap-x-[70px] md:gap-y-[20px] justify-between px-[10px] w-fit mx-auto">
           <div className="w-fit md:hidden">

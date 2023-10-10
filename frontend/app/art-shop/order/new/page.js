@@ -20,7 +20,7 @@ export default function OrderNew() {
   return (
     <Dialog closeUrl="/art-shop" showDialog={showDialog}>
       <form
-        className="flex flex-col gap-[20px] p-[20px]"
+        className="flex flex-col gap-[20px] p-[20px] w-[580px]"
         onSubmit={handleSubmit(onSubmit)}
       >
         <BackButton onClick={() => setShowDialog(false)} />

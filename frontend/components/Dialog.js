@@ -5,7 +5,7 @@ import { useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-export default function Dialog({ closeUrl, showDialog, children }) {
+export default function Dialog({ closeUrl, showDialog, children, className, style }) {
   const router = useRouter()
   const dialog = useRef(null)
   useEffect(() => {
@@ -20,8 +20,9 @@ export default function Dialog({ closeUrl, showDialog, children }) {
   return (
     <dialog
       ref={dialog}
-      className="bg-gray-03 rounded-[40px] text-gray-02 z-50 w-[580px] shadow-md backdrop:bg-dim max-w-full"
+      className={`bg-gray-03 rounded-[40px] text-gray-02 z-50 shadow-md backdrop:bg-dim max-w-full ${className}`}
       onClose={() => setTimeout(() => router.push(closeUrl, { scroll: false }), 300)}
+      style={style}
     >
       <div>
         {children}
