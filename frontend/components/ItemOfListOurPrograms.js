@@ -21,7 +21,7 @@ export default function ItemOfListOurPrograms ({title, image, childrenAge, child
 
     return (
         <div className="
-            bg-primary rounded-[2rem] p-5 w-fit my-2 h-fit
+            bg-primary rounded-[2rem] p-5 w-[100%] my-2 h-fit
             lt:w-[90%]
             lg:w-fit
             mg:w-full mg:h-fit
@@ -31,9 +31,9 @@ export default function ItemOfListOurPrograms ({title, image, childrenAge, child
             <Image
                 src={path} 
                 alt="ourProgramsPhoto" 
-                width={300}
-                height={250}
-                className="w-full h-auto rounded-[15px]"
+                width={350}
+                height={300}
+                className="rounded-[15px]"
             />
 
             <ul className="flex gap-2 my-[0.7rem] list-disc list-inside	">
