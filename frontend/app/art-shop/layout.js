@@ -8,6 +8,7 @@ export const revalidate = 2 // change in prod
 
 export default async function ArtShopLayout({ children }) {
   const pictures = await ky.get('api/pictures?populate[0]=image&populate[1]=author').json()
+  const isArtShop = true
 
   return (
     <Layout dark>
@@ -37,7 +38,7 @@ export default async function ArtShopLayout({ children }) {
           </div>
         </div>
         <img src="/art-shop-spiral-short.svg" className="object-scale-down hidden md:block" />
-        <Pictures pictures={pictures} />
+        <Pictures pictures={pictures} isArtShop={isArtShop} />
       </div>
     </Layout>
   )

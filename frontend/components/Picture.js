@@ -8,7 +8,7 @@ function numeralOfAge(age) {
   return 'лет'
 }
 
-export default function Picture({ title, description, image, author, technology }) {
+export default function Picture({ title, description, image, author, technology, isArtShop }) {
   const path = process.env.NEXT_PUBLIC_API_URL + image.url;
 
   return (
@@ -25,9 +25,11 @@ export default function Picture({ title, description, image, author, technology 
         <h2 className="text-[36px] font-semibold mt-[-20px] mb-[-13px]">{title}</h2>
         <p className="text-[21px]">{author.fullName}, {author.age} {numeralOfAge(author.age)}</p>
       </div>
-      <button className="rounded-[17px] py-[13px] bg-gray-04 font-semibold text-[17px] shadow-md">
-        Купить
-      </button>
+      {isArtShop === true &&
+        <button className="rounded-[17px] py-[13px] bg-gray-04 font-semibold text-[17px] shadow-md">
+          Купить
+        </button>
+      }
     </div>
   )
 }
