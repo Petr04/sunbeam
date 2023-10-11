@@ -1,4 +1,3 @@
-import ItemOfListOurPrograms from "@/components/ItemOfListOurPrograms"
 import Layout from "@/components/Layout"
 import ky from '@/ky'
 import ListOurPrograms from "@/components/ListOurPrograms"
