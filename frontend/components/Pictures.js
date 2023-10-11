@@ -4,7 +4,7 @@ import Masonry from '@mui/lab/Masonry'
 import Picture from '@/components/Picture'
 import { useState, useEffect, useCallback } from 'react'
 
-export default function Pictures({ pictures }) {
+export default function Pictures({ pictures, isArtShop }) {
   const [columns, setColumns] = useState(3);
 
   const changeColumns = useCallback(() => {
@@ -28,7 +28,7 @@ export default function Pictures({ pictures }) {
       columns={columns}
       spacing={2.5}
     >
-      {pictures.data.map((picture, i) => <Picture {...picture} key={i} />)}
+      {pictures.data.map((picture, i) => <Picture {...picture} isArtShop={isArtShop} key={i} />)}
     </Masonry>
   )
 }
