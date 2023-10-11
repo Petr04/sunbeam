@@ -28,7 +28,7 @@ export default function ListNews({ news }) {
       columns={columns}
       spacing={2.5}
     >
-      {news.data.map((one_new, i) => <ItemOfListNews {...one_new} key={i} />)}
+      {news.data.map((one_new, id) => <ItemOfListNews id={id.toString()} {...one_new} key={id} />)}
     </Masonry>
   )
 }
