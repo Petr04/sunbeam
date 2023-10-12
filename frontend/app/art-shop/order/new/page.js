@@ -18,7 +18,7 @@ export default function OrderNew() {
   const [showDialog, setShowDialog] = useState(true)
 
   return (
-    <Dialog closeUrl="/art-shop" showDialog={showDialog}>
+    <Dialog closeUrl="/art-shop" showDialog={showDialog} setShowDialog={setShowDialog}>
       <form
         className="flex flex-col gap-[20px] p-[20px] w-[580px]"
         onSubmit={handleSubmit(onSubmit)}

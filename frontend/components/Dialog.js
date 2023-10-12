@@ -5,16 +5,22 @@ import { useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-export default function Dialog({ closeUrl, showDialog, children, className, style }) {
+export default function Dialog({ closeUrl, showDialog, setShowDialog, children, className, style }) {
   const router = useRouter()
   const dialog = useRef(null)
   useEffect(() => {
-    if (!dialog.current.open)
-      dialog.current.showModal()
+    setShowDialog(true)
   }, [])
   useEffect(() => {
-    if (!showDialog)
+    if (showDialog) {
+      if (!dialog.current.open) {
+        dialog.current.showModal()
+        document.body.classList.add('overflow-hidden')
+      }
+    } else {
       dialog.current.close()
+      document.body.classList.remove('overflow-hidden')
+    }
   }, [showDialog])
   
   return (
@@ -24,9 +30,7 @@ export default function Dialog({ closeUrl, showDialog, children, className, styl
       onClose={() => setTimeout(() => router.push(closeUrl, { scroll: false }), 300)}
       style={style}
     >
-      <div>
-        {children}
-      </div>
+      {children}
     </dialog>
   )
 }
