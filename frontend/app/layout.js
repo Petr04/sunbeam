@@ -1,4 +1,5 @@
 import './globals.css'
+import ReCaptchaProviderClient from '@/components/ReCaptchaProviderClient'
 
 export const metadata = {
   title: 'Луч солнца',
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning={true}>
-      {children}
+      <ReCaptchaProviderClient reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}>
+        {children}
+      </ReCaptchaProviderClient>
     </html> 
   )
 }

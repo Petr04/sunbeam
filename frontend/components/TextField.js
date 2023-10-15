@@ -11,7 +11,7 @@ export default function TextField({ name, register, error, validationSchema, ...
       />
 
       {error?.type === 'required' && (
-        <FormError>Заполните это поле</FormError>
+        <FormError>{error.message || 'Заполните это поле'}</FormError>
       )}
 
       {error?.type === 'minLength' && (

@@ -1,5 +1,7 @@
 'use strict';
 
+const axios = require('axios')
+
 async function refreshStatus(strapi, order, intervalId) {
   const status = await strapi.service('api::order.payment')
     .getStatus(order.data.invoiceId);
@@ -21,38 +23,42 @@ const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::order.order', ({ strapi }) => ({
   async create(ctx) {
+    if (!('recaptchaResponseKey' in ctx.request.body.data)) {
+      ctx.badRequest('recaptchaResponseKey is required')
+      return
+    }
+
     const paykeeperParams = {
       pay_amount: 1000,
       service_name: 'Купить работу',
       client_email: ctx.request.body.email,
-      client_phone: ctx.request.body.phone_number,
+      client_phone: ctx.request.body.phoneNumber,
     }
 
-    try {
-      const { invoiceUrl, invoiceId } =
-        await strapi.service('api::order.payment')
-          .getNewPaymentLink(paykeeperParams);
+    const response = await axios.post(
+      `https://www.google.com/recaptcha/api/siteverify` +
+      `?secret=${process.env.RECAPTCHA_SECRET_KEY}` +
+      `&response=${ctx.request.body.data.recaptchaResponseKey}`
+    )
 
-      ctx.request.body.data.invoiceUrl = invoiceUrl;
-      ctx.request.body.data.invoiceId = invoiceId;
-
-      const result = await super.create(ctx);
-
-      let intervalId = null;
-      intervalId = setInterval(() => refreshStatus(strapi, result, intervalId), 2000);
-
-      return result;
-    } catch (e) {
-      if (e.code === 400) {
-        ctx.badRequest(e.message);
-        return;
-      }
-
-      else if (e.code === 500) {
-        ctx.internalServerError(e.message);
-        return;
-      }
+    if (!response.data.success) {
+      ctx.badRequest('Invalid recaptchaResponseKey');
+      return;
     }
+
+    const { invoiceUrl, invoiceId } =
+      await strapi.service('api::order.payment')
+        .getNewPaymentLink(paykeeperParams);
+
+    ctx.request.body.data.invoiceUrl = invoiceUrl;
+    ctx.request.body.data.invoiceId = invoiceId;
+
+    const result = await super.create(ctx);
+
+    let intervalId = null;
+    intervalId = setInterval(() => refreshStatus(strapi, result, intervalId), 2000);
+
+    return result;
   },
   async findOne(ctx) {
     const refreshStatusRequired = !['', 'false', '0']

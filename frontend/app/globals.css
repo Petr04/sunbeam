@@ -22,3 +22,9 @@
 body {
   scrollbar-gutter: stable !important;
 }
+
+.grecaptcha-badge { visibility: hidden; }
+
+p a {
+  text-decoration: underline;
+}
