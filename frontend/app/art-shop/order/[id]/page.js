@@ -19,16 +19,16 @@ export default function OrderById() {
       </div>
       <div className="flex flex-col gap-[15px]"> {/* buttons */}
         <Link href={`/art-shop/order/${picture.id}/buy`} scroll={false} className="w-full">
-          <Button compact type="submit" className="w-full">
+          <Button compact type="submit" className="w-full dark:bg-primary dark:text-gray-04">
             <Image
-              src="/coins-stacked-03-gray-02.svg"
+              src="/coins-stacked-03-gray-04.svg"
               alt="coins-stacked"
               width={24} height={24}
             />
             Купить за 1 000 ₽
           </Button>
         </Link>
-        <Button compact type="submit" className="dark:bg-[#1868B7] dark:text-white">
+        <Button compact type="submit">
           <Image
             src="/opensea.svg"
             alt="opensea-logo"

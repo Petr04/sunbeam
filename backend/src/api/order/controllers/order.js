@@ -1,6 +1,6 @@
 'use strict';
 
-const axios = require('axios')
+const checkRecaptcha = require('../../../lib/checkRecaptcha')
 
 async function refreshStatus(strapi, order, intervalId) {
   const status = await strapi.service('api::order.payment')
@@ -23,27 +23,13 @@ const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::order.order', ({ strapi }) => ({
   async create(ctx) {
-    if (!('recaptchaResponseKey' in ctx.request.body.data)) {
-      ctx.badRequest('recaptchaResponseKey is required')
-      return
-    }
+    await checkRecaptcha(ctx);
 
     const paykeeperParams = {
       pay_amount: 1000,
       service_name: 'Купить работу',
       client_email: ctx.request.body.email,
       client_phone: ctx.request.body.phoneNumber,
-    }
-
-    const response = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify` +
-      `?secret=${process.env.RECAPTCHA_SECRET_KEY}` +
-      `&response=${ctx.request.body.data.recaptchaResponseKey}`
-    )
-
-    if (!response.data.success) {
-      ctx.badRequest('Invalid recaptchaResponseKey');
-      return;
     }
 
     const { invoiceUrl, invoiceId } =

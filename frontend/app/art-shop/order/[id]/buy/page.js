@@ -4,6 +4,8 @@ import { useState, useMemo, useCallback } from 'react'
 import { usePictureContext } from '../PictureProvider'
 import { useForm } from 'react-hook-form'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+import { handleReCaptchaVerify } from '@/components/ReCaptchaProviderClient'
+import statusToColor from '@/lib/statusToColor'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import twConfig from '@/tailwind.config.js'
 import ky from '@/ky'
@@ -59,47 +61,14 @@ function statusToButtonContent(status) {
     </>
 }
 
-function statusToColor(status) {
-  const tw = useMemo(() => resolveConfig(twConfig))
-
-  if (status === 'expired' || status === 'error')
-    return {
-      color: tw.theme.colors.white,
-      background: tw.theme.colors.error
-    }
-
-  if (status === 'paid')
-    return {
-      color: tw.theme.colors.white,
-      background: tw.theme.colors.success
-    }
-
-  return {
-    color: tw.theme.colors['gray-04'],
-    background: tw.theme.colors.primary
-  }
-}
-
 export default function Buy() {
   const { executeRecaptcha } = useGoogleReCaptcha()
-  const handleReCaptchaVerify = useCallback(async () => {
-    if (!executeRecaptcha) {
-      setTimeout(() => handleReCaptchaVerify(), 1000)
-      return
-    }
-
-    const token = await executeRecaptcha('order')
-    return token
-  }, [executeRecaptcha])
-
   const picture = usePictureContext()
-
   const { register, handleSubmit, formState: { errors }, getValues } = useForm()
-
   const [status, setStatus] = useState(null)
 
   const onSubmit = async data => {
-    const token = await handleReCaptchaVerify()
+    const token = await handleReCaptchaVerify(executeRecaptcha)
 
     const response = await ky.post('api/orders', { json: { data:
       {
