@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Layout({ dark, children }) {
   return (
-    <body className={`${montserrat.className} ${dark ? 'dark' : ''} overflow-x-hidden`}>
+    <body className={`${montserrat.className} ${dark ? 'dark' : ''} overflow-x-hidden min-w-[300px]`}>
       <div className="bg-background dark:bg-gray-04 text-primary dark:text-gray-02">
         <Menu />
         {children}

@@ -1,11 +1,11 @@
 import Layout from '@/components/Layout'
 import ky from '@/ky'
-import ListNews from '@/components/ListNews'
+import ListNews from '@/components/news/ListNews'
 
 export const revalidate = 2 // change in prod
 
 export default async function News() {
-  const news = await ky.get('api/news?populate[0]=images').json()
+  const news = await ky.get('api/news?populate[0]=image').json()
 
   return (
     <Layout>

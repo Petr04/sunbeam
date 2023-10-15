@@ -1,9 +1,13 @@
-import ItemOfListOurPrograms from "@/components/ItemOfListOurPrograms"
 import Layout from "@/components/Layout"
+import ky from '@/ky'
+import ListOurPrograms from "@/components/ListOurPrograms"
 
-export default function Home() {
+export const revalidate = 2 // change in prod
+
+export default async function Home() {
 
   const listElementsStyle="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 font-normal mr-5 mb-5 z-0 md:text-[16px] md:px-4 md:py-2 md:w-[90vw]"
+  const ourPrograms = await ky.get('api/our-programs?populate[0]=image').json()
 
   return (
     <Layout>
@@ -16,8 +20,8 @@ export default function Home() {
               wide:left-[10rem] wide:top-[10rem]
               block absolute xl:left-[-4rem] xl:top-[10rem] w-[13%] -z-10 
               lg:w-[8rem] lg:right-[6rem] lg:left-auto lg:top-[39rem]
-              mg:right-[-3rem] mg:top-[26rem]
-              md:w-[8rem] md:right-[-3rem] md:left-auto md:top-[35rem]
+              mg:right-[1rem] mg:top-[26rem]
+              md:w-[8rem] md:right-[1rem] md:left-auto md:top-[35rem]
             "/>
           <img 
             src="/explosion.svg" alt="explosion" 
@@ -35,9 +39,16 @@ export default function Home() {
             "/>
 
           <img 
+            src="/laptopBackgroundImage.svg" 
+            alt="main_photo" className="
+              block wide:absolute wide:top-[10rem] wide:right-0 wide:w-[40%] z-0
+              lg:hidden 
+              "/>
+
+          <img
             src="/homepage_main_photo.svg" 
             alt="main_photo" className="
-              block wide:absolute wide:top-[10rem] wide:right-[-8rem] wide:w-[48%] z-0
+              zoom:hidden
               lg:block lg:relative lg:top-[2rem] lg:left-[0rem] lg:mx-auto lg:w-[80%]
               md:hidden 
               "/>
@@ -79,7 +90,7 @@ export default function Home() {
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
               lg:py-4
-              ">Узнать расписание</button>
+              "><a href="/schedule">Узнать расписание</a></button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
               lt:px-5 lt:py-3 lt:text-lg
@@ -193,19 +204,7 @@ export default function Home() {
             md:mx-auto md:text-[36px]  
             ssm:text-[30px]
           ">Наши программы</div>
-          <div className="
-            mx-auto grid grid-cols-3 gap-4
-            lt:gap-0
-            lg:grid-cols-2 lg:gap-4
-            mg:grid-cols-1
-          ">
-            <ItemOfListOurPrograms title="Раннее творческое развитие" childrenAge="4 года" numOfChildren="4 человека в группе" image="/imgOurPrograms1.svg"/>
-            <ItemOfListOurPrograms title="Художественное творчество" childrenAge="5-6 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms2.svg"/>
-            <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="7-8 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms3.svg"/>
-            <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="8-9 лет" numOfChildren="4 человека в группе" image="/imgOurPrograms4.svg"/>
-            <ItemOfListOurPrograms title="Основы художественного образования" childrenAge="9-11 лет" numOfChildren="6 человек в группе" image="/imgOurPrograms5.svg"/>
-            <ItemOfListOurPrograms title="Индивидуальные коррекционные занятия" childrenAge="4-11 лет" numOfChildren="" image="/imgOurPrograms6.svg"/>
-          </div>
+          <ListOurPrograms ourPrograms={ourPrograms}/>
 
           <img 
             src="./lightWaves.svg" alt="lightwaves" 

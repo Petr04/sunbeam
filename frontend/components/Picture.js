@@ -7,7 +7,7 @@ export function generateAltText(picture) {
   return `${picture.technology}: ${picture.title}`
 }
 
-export default function Picture({ id, title, description, image, author, technology }) {
+export default function Picture({ id, title, description, image, author, technology, isArtShop }) {
   const path = process.env.NEXT_PUBLIC_API_URL + image.url;
 
   return (
@@ -22,9 +22,11 @@ export default function Picture({ id, title, description, image, author, technol
       <Badge text={technology} />
       <PictureTitle picture={{ title, author }} />
       <Link href={`/art-shop/order/${id}`} scroll={false}>
-        <button className="rounded-[17px] py-[13px] bg-gray-04 font-semibold text-[17px] shadow-md w-full">
-          Купить
-        </button>
+        {isArtShop === true &&
+          <button className="rounded-[17px] py-[13px] bg-gray-04 font-semibold text-[17px] shadow-md w-full">
+            Купить
+          </button>
+        }
       </Link>
     </div>
   )

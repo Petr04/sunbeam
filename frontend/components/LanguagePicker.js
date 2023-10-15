@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function LanguagePicker({ className }) {
   return (
     <div className={`flex flex-row gap-[5px] ${className}`}>
-      <div href="" className="lt:text-xl wide:text-2xl text-primary dark:text-gray-02">ru</div>
+      <div href="" className="lt:text-xl wide:text-2xl sm:text-base  text-primary dark:text-gray-02">ru</div>
       <Image
         className="dark:hidden"
         src="/chevron-down.svg"

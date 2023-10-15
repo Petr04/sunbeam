@@ -10,7 +10,7 @@ export default function ListNews({ news }) {
   const changeColumns = useCallback(() => {
     if (window.innerWidth < 700)
       setColumns(1)
-    else if (window.innerWidth < 1100)
+    else if (window.innerWidth < 1180)
       setColumns(2)
     else
       setColumns(3)
@@ -28,7 +28,7 @@ export default function ListNews({ news }) {
       columns={columns}
       spacing={2.5}
     >
-      {news.data.map((one_new, i) => <ItemOfListNews {...one_new} key={i} />)}
+      {news.data.map((one_new, id) => <ItemOfListNews id={id.toString()} {...one_new} key={id} />)}
     </Masonry>
   )
 }

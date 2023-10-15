@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_programs",
+  "info": {
+    "singularName": "our-program",
+    "pluralName": "our-programs",
+    "displayName": "OurProgram"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "childrenAge": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "childrenNumInGroup": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
