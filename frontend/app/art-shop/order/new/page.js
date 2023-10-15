@@ -48,10 +48,7 @@ export default function OrderNew() {
             error={errors.contact}
             validationSchema={{
               required: true,
-              minLength: {
-                value: 5,
-                message: 'Нехватает символов',
-              },
+              minLength: 5,
             }}
           />
         </div>

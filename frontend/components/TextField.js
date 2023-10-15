@@ -15,6 +15,10 @@ export default function TextField({ name, register, error, validationSchema, ...
       )}
 
       {error?.type === 'minLength' && (
+        <FormError>{error.message || 'Недостаточно символов'}</FormError>
+      )}
+
+      {error && (
         <FormError>{error.message}</FormError>
       )}
     </div>

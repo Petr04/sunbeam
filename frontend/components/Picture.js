@@ -1,19 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Badge from '@/components/Badge'
-
-export function numeralOfAge(age) {
-  if (age % 10 == 1) return 'год'
-  if ([2, 3, 4].includes(age % 10)) return 'года'
-  return 'лет'
-}
+import PictureTitle from '@/components/PictureTitle'
 
 export function generateAltText(picture) {
   return `${picture.technology}: ${picture.title}`
-}
-
-export function generateAuthorLabel(author) {
-  return `${author.fullName}, ${author.age} ${numeralOfAge(author.age)}`
 }
 
 export default function Picture({ id, title, description, image, author, technology }) {
@@ -29,10 +20,7 @@ export default function Picture({ id, title, description, image, author, technol
         className="w-full h-auto rounded-[15px]"
       />
       <Badge text={technology} />
-      <div className="flex flex-col gap-[10px]">
-        <h2 className="text-[36px] font-semibold mt-[-20px] mb-[-13px]">{title}</h2>
-        <p className="text-[21px]">{generateAuthorLabel(author)}</p>
-      </div>
+      <PictureTitle picture={{ title, author }} />
       <Link href={`/art-shop/order/${id}`} scroll={false}>
         <button className="rounded-[17px] py-[13px] bg-gray-04 font-semibold text-[17px] shadow-md w-full">
           Купить

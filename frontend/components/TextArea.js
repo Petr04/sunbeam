@@ -17,7 +17,7 @@ export default function TextArea({ name, register, error, validationSchema, ...r
       )}
 
       {error?.type === 'minLength' && (
-        <FormError>{error.message}</FormError>
+        <FormError>{error.message || 'Недостаточно символов'}</FormError>
       )}
     </div>
   )

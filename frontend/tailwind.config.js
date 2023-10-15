@@ -33,6 +33,7 @@ module.exports = {
       'dim': '#00000050',
       'placeholder': '#94949488',
       'error': '#FF1717',
+      'success': '#00a86b',
     },
     extend: {
       boxShadow: {

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "new-picture-order",
     "pluralName": "new-picture-orders",
-    "displayName": "NewPictureOrder"
+    "displayName": "NewPictureOrder",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,9 @@
       "type": "text"
     },
     "contact": {
+      "type": "string"
+    },
+    "deliveryAddress": {
       "type": "string"
     }
   }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-10-06T04:19:44.581Z"
+    "x-generation-date": "2023-10-15T07:18:43.004Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -827,7 +827,7 @@
                                 "attributes": {
                                   "type": "object",
                                   "properties": {
-                                    "deliveryAdress": {
+                                    "deliveryAddress": {
                                       "type": "string"
                                     },
                                     "picture": {
@@ -1958,6 +1958,9 @@
               },
               "contact": {
                 "type": "string"
+              },
+              "deliveryAddress": {
+                "type": "string"
               }
             }
           }
@@ -2016,6 +2019,9 @@
             "type": "string"
           },
           "contact": {
+            "type": "string"
+          },
+          "deliveryAddress": {
             "type": "string"
           },
           "createdAt": {
@@ -2352,7 +2358,7 @@
             ],
             "type": "object",
             "properties": {
-              "deliveryAdress": {
+              "deliveryAddress": {
                 "type": "string"
               },
               "picture": {
@@ -2442,7 +2448,7 @@
           "invoiceUrl"
         ],
         "properties": {
-          "deliveryAdress": {
+          "deliveryAddress": {
             "type": "string"
           },
           "picture": {
@@ -3096,7 +3102,7 @@
                               "attributes": {
                                 "type": "object",
                                 "properties": {
-                                  "deliveryAdress": {
+                                  "deliveryAddress": {
                                     "type": "string"
                                   },
                                   "picture": {
@@ -4164,7 +4170,7 @@
                   "attributes": {
                     "type": "object",
                     "properties": {
-                      "deliveryAdress": {
+                      "deliveryAddress": {
                         "type": "string"
                       },
                       "picture": {
