@@ -28,21 +28,21 @@ export default function Menu() {
           />
         </a>
 
-        <ul className="flex gap-8 wide:gap-12 lg:hidden md:hidden dark:text-gray-02">
+        <ul className="flex lt:gap-8 xl:gap-10 wide:gap-12 lg:hidden md:hidden dark:text-gray-02">
           <li>
-            <a href="" className="text-xl wide:text-2xl">расписание</a>
+            <a href="/schedule" className="lt:text-xl wide:text-2xl">расписание</a>
           </li>
           <li>
-            <a href="" className="text-xl wide:text-2xl">новости</a>
+            <a href="/news" className="lt:text-xl wide:text-2xl">новости</a>
           </li>
           <li>
-            <a href="" className="text-xl wide:text-2xl">наши работы</a>
+            <a href="/our-works" className="lt:text-xl wide:text-2xl">наши работы</a>
           </li>
           <li>
-            <a href="/art-shop" className="text-xl wide:text-2xl">арт-лавка</a>
+            <a href="/art-shop" className="lt:text-xl wide:text-2xl">арт-лавка</a>
           </li>
           <li>
-            <a href="" className="text-xl wide:text-2xl">контакты</a>
+            <a href="/contacts" className="lt:text-xl wide:text-2xl">контакты</a>
           </li>
           <LanguagePicker />
         </ul>
@@ -72,10 +72,10 @@ export default function Menu() {
         <div className="absolute md:top-[120px] md:left-5 lg:top-[140px] lg:left-10 bg-yellow_bg z-0"> 
           <ul className="grid grid-cols-2 gap-2">
             <li><a href="/schedule" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">расписание</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">новости</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
-            <li><a href="" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">контакты</a></li>
+            <li><a href="/news" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">новости</a></li>
+            <li><a href="/our-works" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">наши работы</a></li>
+            <li><a href="/art-shop" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">арт-лавка</a></li>
+            <li><a href="/contacts" className="font-light md:text-xl md:mx-5 lg:text-2xl lg:mx-8">контакты</a></li>
             <LanguagePicker />
           </ul>
         </div>       

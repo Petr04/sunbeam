@@ -33,6 +33,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "admin::user"
+    },
+    "readingTime": {
+      "type": "integer"
     }
   }
 }
