@@ -43,6 +43,15 @@
     },
     "technology": {
       "type": "string"
+    },
+    "mint": {
+      "type": "boolean"
+    },
+    "nftId": {
+      "type": "string"
+    },
+    "nftContractAddress": {
+      "type": "string"
     }
   }
 }
