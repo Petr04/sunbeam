@@ -7,11 +7,11 @@ import twConfig from '@/tailwind.config.js'
 import Image from 'next/image'
 import Dialog from '@/components/Dialog'
 import BackButton from '@/components/BackButton'
-import TextField from '@/components/TextField'
+import TextField from '@/components/art-shop/TextField'
 import ky from '@/ky'
 import { usePicturesContext } from '../../PicturesProvider'
 import PictureProvider from './PictureProvider'
-import { generateAltText } from '@/components/Picture'
+import { generateAltText } from '@/components/art-shop/Picture'
 import { useWindowSize } from '@react-hook/window-size'
 
 function getImageHeight(windowWidth, windowHeight, imageRatio, infoWidth, marginX, marginY) {
