@@ -4,7 +4,7 @@ import Button from '@/components/Button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePictureContext } from './PictureProvider'
-import PictureTitle from '@/components/PictureTitle'
+import PictureTitle from '@/components/art-shop/PictureTitle'
 
 export default function OrderById() {
   const picture = usePictureContext()

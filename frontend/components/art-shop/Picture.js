@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Badge from '@/components/Badge'
-import PictureTitle from '@/components/PictureTitle'
+import PictureTitle from '@/components/art-shop/PictureTitle'
 
 export function generateAltText(picture) {
   return `${picture.technology}: ${picture.title}`

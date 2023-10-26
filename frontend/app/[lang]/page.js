@@ -1,16 +1,21 @@
 import Layout from "@/components/Layout"
 import ky from '@/ky'
 import ListOurPrograms from "@/components/ListOurPrograms"
+import { getDictionary } from "@/lib/dictionary"
 
 export const revalidate = 2 // change in prod
 
-export default async function Home() {
+export default async function Home({ params: {lang} }) {
 
   const listElementsStyle="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 font-normal mr-5 mb-5 z-0 md:text-[16px] md:px-4 md:py-2 md:w-[90vw]"
-  const ourPrograms = await ky.get('api/our-programs?populate[0]=image').json()
+  let ourPrograms = await ky.get('api/our-programs?populate[0]=image&locale=ru').json()
+  if (lang === "en") {
+    ourPrograms = await ky.get('api/our-programs?populate[0]=image&locale=en').json()
+  }
+  const dict = await getDictionary(lang)
 
   return (
-    <Layout>
+    <Layout lang={lang}>
       <main className="wide:w-[80%] xl:w-[100%] lg:w-[80%] md:w-[100%] mx-auto grid grid-cols-1 h-fit items-center z-0">
 
         <div className="z-0">
@@ -65,13 +70,13 @@ export default async function Home() {
               lt:left-[4rem] lt:text-4xl 
               lg:text-[36px] lg:leading-10 lg:left-0 
               md:text-[36px] md:leading-10 md:left-0
-            ">Мы за детские улыбки!</div>
+            ">{dict.page.home.heading1}</div>
             <div className="
               font-medium text-xl mt-[1.2rem] z-0
               lt:text-lg
               lg:text-[18px] lg:mt-[1rem]
               md:text-[18px] md:mt-[1rem]
-            ">Помогаем детям с непростой судьбой заниматься творчеством</div>
+            ">{dict.page.home.heading2}</div>
           </div>
 
           <div className="
@@ -85,18 +90,18 @@ export default async function Home() {
               text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg
               lg:py-4
-              ">Записаться на занятия</button>
+              ">{dict.page.home.but1}</button>
             <button className="
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
               lg:py-4
-              "><a href="/schedule">Узнать расписание</a></button>
+              "><a href="/schedule">{dict.page.home.but2}</a></button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
               lt:px-5 lt:py-3 lt:text-lg
               lg:left-0 lg:py-4
               md:left-0 md:py-4
-              "><img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>Поддержать проект</button>
+              "><img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>{dict.page.home.but3}</button>
           </div>
 
           <img 
@@ -127,10 +132,10 @@ export default async function Home() {
             md:relative md:left-auto md:top-auto md:mx-auto md:mb-[2rem]
             sm:w-[13rem]
           "/>
-          <div>Наша цель — помогать детям в трудных жизненных ситуациях, обеспечивая им возможности для творчества и развития.</div>
-          <div>Занятия проводятся для детей с четырёх лет в группах по 4—6 человек.</div>
-          <div>В нашей студии дети обучаются основам изобразительного и декоративно-прикладного искусства под руководством опытных преподавателей. Это улучшает их когнитивные способности и даёт положительные эмоции.</div>
-          <div>У нас все дети равны и занимаются вместе. Это помогает им адаптироваться в обществе и улучшить коммуникативные навыки.</div>
+          <div>{dict.page.home.p1}</div>
+          <div>{dict.page.home.p2}</div>
+          <div>{dict.page.home.p3}</div>
+          <div>{dict.page.home.p4}</div>
           <img 
             src="./waves.svg" alt="waves" 
             className="
@@ -148,22 +153,22 @@ export default async function Home() {
           lg:mx-[1.5rem] lg:mt-[2rem] lg:gap-6
           md:mx-[1.5rem] md:mt-[2rem] md:gap-6
         "> 
-          <div className="text-5xl lt:text-4xl md:text-[36px] font-bold z-0">У нас занимаются бесплатно:</div>
+          <div className="text-5xl lt:text-4xl md:text-[36px] font-bold z-0">{dict.page.home.free_class_heading}</div>
           <div className="
             flex flex-wrap flex-row w-[52rem] z-0
             lg:flex-row lg:w-[52rem]
             mg:flex-col
           ">
-            <div className={listElementsStyle}>Дети, воспитываемые одним родителем</div>
-            <div className={listElementsStyle}>Сироты</div>
-            <div className={listElementsStyle}>Дети участников СВО</div>
-            <div className={listElementsStyle}>Дети из малоимущих семей</div>
-            <div className={listElementsStyle}>Дети из многодетных семей</div>
-            <div className={listElementsStyle}>Дети с инвалидностью</div>
-            <div className={listElementsStyle}>Дети, родители которых являются инвалидами</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li1}</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li2}</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li3}</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li4}</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li5}</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li6}</div>
+            <div className={listElementsStyle}>{dict.page.home.free_class_li7}</div>
           </div>
-          <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0 ssm:text-[18px]">Если вы хотите заниматься у нас, но не входите ни в одну из категорий, можете записаться на платной основе.</div>
-          <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">Записаться</button>
+          <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0 ssm:text-[18px]">{dict.page.home.free_class_p}</div>
+          <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">{dict.page.home.free_class_button}</button>
 
           <img 
             src="./spiral2.svg" alt="big_spiral" 
@@ -203,8 +208,8 @@ export default async function Home() {
             lg:mx-auto lg:text-[36px]  
             md:mx-auto md:text-[36px]  
             ssm:text-[30px]
-          ">Наши программы</div>
-          <ListOurPrograms ourPrograms={ourPrograms}/>
+          ">{dict.page.home.our_programs_heading}</div>
+          <ListOurPrograms ourPrograms={ourPrograms} lang={lang}/>
 
           <img 
             src="./lightWaves.svg" alt="lightwaves" 
@@ -221,21 +226,21 @@ export default async function Home() {
           lg:mx-[1.5rem] lg:mt-[4rem] lg:gap-6
           md:mx-[1.5rem] md:mt-[4rem] md:gap-6
           ">
-          <div className="text-5xl lt:text-4xl md:text-[36px] ssm:text-[30px] font-bold relative z-0">Почему рисование полезно</div>
+          <div className="text-5xl lt:text-4xl md:text-[36px] ssm:text-[30px] font-bold relative z-0">{dict.page.home.why_drawing_is_good_heading}</div>
           <div className="
             grid grid-cols-1 gap-0 z-0
             lg:flex lg:flex-wrap lg:flex-col lg:w-[52rem] lg:realtive lg:mx-auto
             md:flex md:flex-wrap md:flex-col md:w-[52rem] md:realtive md:mx-auto
             ">
-            <div className={listElementsStyle}>Учит быть нацеленным на результат</div>
-            <div className={listElementsStyle}>Позволяет справиться со стрессом</div>
-            <div className={listElementsStyle}>Развивает воображение</div>
-            <div className={listElementsStyle}>Развивает пространственное мышление</div>
-            <div className={listElementsStyle}>Развивает ассоциативное мышление </div>
-            <div className={listElementsStyle}>Позволяет самовыражаться</div>
-            <div className={listElementsStyle}>Улучшает память и внимание</div>
-            <div className={listElementsStyle}>Развивает мелкую моторику</div>
-            <div className={listElementsStyle}>Даёт эмоциональную устойчивость</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li1}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li2}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li3}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li4}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li5}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li6}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li7}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li8}</div>
+            <div className={listElementsStyle}>{dict.page.home.wdig_li9}</div>
           </div>
 
           <img 
@@ -280,7 +285,7 @@ export default async function Home() {
             md:text-[36px] md:ml-[7rem]
             sm:ml-[0.5rem] sm:w-[90%]
             ssm:text-[30px]
-            ">Где мы находимся?</div>
+            ">{dict.page.home.adress_heading}</div>
 
           <div className="
             wide:gap-0 
@@ -295,7 +300,7 @@ export default async function Home() {
                 text-white bg-primary text-xl rounded-[1rem] h-fit py-4 text-center w-[92%] font-normal
                 lg:mx-auto 
                 ssm:text-[18px]
-                ">г. Омск, ул. Энергетиков, 70</div>
+                ">{dict.page.home.adress}</div>
               <img 
                 src="./sunbeam_studio.svg" alt="studio" 
                 className="
@@ -324,8 +329,8 @@ export default async function Home() {
 
         <div className="z-0 mt-[4rem] mx-auto lg:w-full">
           <div className="wide:ml-[7rem] xl:mx-auto w-fit">
-            <div className="font-medium text-[24px] lt:text-[22px] ssm:text-[20px] text-center">Остались вопросы? Звоните!</div>
-            <div className="font-bold text-[24px] lt:text-[22px] ssm:text-[20px] text-center">+7 (913) 640-03-59</div>
+            <div className="font-medium text-[24px] lt:text-[22px] ssm:text-[20px] text-center">{dict.page.home.questions_p}</div>
+            <div className="font-bold text-[24px] lt:text-[22px] ssm:text-[20px] text-center">{dict.page.home.number}</div>
           </div>
           <div className="
             grid grid-cols-2 gap-6 w-fit mt-[1rem] wide:ml-[-2rem] xl:mx-auto
@@ -337,13 +342,13 @@ export default async function Home() {
               lt:px-5 lt:py-3 lt:text-lg
               lg:py-4
               md:py-4
-              ">Записаться на занятия</button>
+              ">{dict.page.home.but1}</button>
             <button className="
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 
               lt:px-5 lt:py-3 lt:text-lg
               lg:py-4
               md:py-4
-              ">Узнать расписание</button>
+              ">{dict.page.home.but2}</button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] 
               lt:px-5 lt:py-3 lt:text-lg
@@ -351,7 +356,7 @@ export default async function Home() {
               md:left-0 md:py-4
               ">
               <img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>
-            Поддержать проект</button>
+              {dict.page.home.but3}</button>
           </div>        
         </div>
       </main>

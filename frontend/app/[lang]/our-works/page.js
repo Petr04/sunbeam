@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import Pictures from '@/components/Pictures'
+import Pictures from '@/components/art-shop/Pictures'
 import ky from '@/ky'
 
 export const revalidate = 2 // change in prod
