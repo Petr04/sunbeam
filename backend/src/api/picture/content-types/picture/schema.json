@@ -52,6 +52,9 @@
     },
     "nftContractAddress": {
       "type": "string"
+    },
+    "nftTokenId": {
+      "type": "integer"
     }
   }
 }

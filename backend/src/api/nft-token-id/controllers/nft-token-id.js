@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
+
+const axios = require('axios')
 
 /**
  * A set of functions called "actions" for `nft-token-id`
  */
-
-const axios = require('axios')
 
 module.exports = {
   async nftTokenId(ctx, next) {
@@ -19,8 +19,21 @@ module.exports = {
         },
       }
     )
-    return response.data.onChain.status === 'success'
-      ? response.data.onChain.tokenId
-      : null
+    const nftTokenId = response.data.onChain.tokenId
+
+    const pictures = await strapi.entityService.findMany('api::picture.picture', {
+      fields: ['id'],
+      filters: { nftId: ctx.params.nftId }
+    })
+    const picture = pictures[0]
+
+    if (response.data.onChain.status === 'success') {
+      await strapi.entityService.update('api::picture.picture', picture.id, {
+        data: { nftTokenId }
+      })
+      return nftTokenId
+    }
+
+    return null
   }
 };

@@ -21,9 +21,14 @@ async function getNftTokenId(nftId) {
 export default function OrderById() {
   const picture = usePictureContext()
 
-  const [nftTokenId, setNftTokenId] = useState(null)
+  const [nftTokenId, setNftTokenId] = useState(picture.nftTokenId || null)
   useEffect(() => {
-    getNftTokenId(picture.nftId).then(setNftTokenId)
+    if (!nftTokenId) {
+      getNftTokenId(picture.nftId).then(value => {
+        setNftTokenId(value)
+        picture.nftTokenId = value
+      })
+    }
   })
 
   return (
