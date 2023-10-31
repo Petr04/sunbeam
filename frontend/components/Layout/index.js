@@ -4,13 +4,13 @@ import Footer from './Footer'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
-export default function Layout({ dark, children }) {
+export default function Layout({ dark, children, lang }) {
   return (
     <body className={`${montserrat.className} ${dark ? 'dark' : ''} overflow-x-hidden min-w-[300px]`}>
       <div className="bg-background dark:bg-gray-04 text-primary dark:text-gray-02">
-        <Menu />
-        {children}
-        <Footer />
+        <Menu lang={lang}/>
+          {children}
+        <Footer lang={lang}/>
       </div>
     </body>
   )

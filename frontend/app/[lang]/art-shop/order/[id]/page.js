@@ -5,7 +5,7 @@ import Button from '@/components/Button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePictureContext } from './PictureProvider'
-import PictureTitle from '@/components/PictureTitle'
+import PictureTitle from '@/components/picture/PictureTitle'
 import ky from '@/ky'
 
 function nftAddressToUrl(nftAddress, nftTokenId) {

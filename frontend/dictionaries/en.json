@@ -1,0 +1,52 @@
+{
+  "footer": {
+    "contacts": "",
+    "vk": "",
+    "number": "",
+    "company_name": "",
+    "owner_name": "",
+    "company_code": ""
+  },
+    "page": {
+      "home": {
+        "heading1": "For children's smiles",
+        "heading2": "We help children with a difficult fate to engage in creativity",
+        "but1": "Sign up for classes",
+        "but2": "Find out the schedule",
+        "but3": "Support the project",
+        "p1": "Our aim is to help children in difficult life situations, providing them with opportunities for creativity and development.",
+        "p2": "Classes are held for children from the age of four in groups of 4-6 people.",
+        "p3": "In our studio, children are taught the basics of fine and decorative arts under the guidance of experienced teachers. This improves their cognitive abilities and gives them positive emotions.",
+        "p4": "All our children are equal and study together. This helps them to adapt to society and improve their communication skills.",
+        "free_class_heading": "We teach for free:",
+        "free_class_li1": "Children raised by one parent",
+        "free_class_li2": "Orphans",
+        "free_class_li3": "Children of ITS participants",
+        "free_class_li4": "Children from poor families",
+        "free_class_li5": "Children from large families",
+        "free_class_li6": "Children with disabilities",
+        "free_class_li7": "Children whose parents are disabled",
+        "free_class_p": "If you want to study with us, but do not belong to any of the categories, you can enroll on a paid basis.",
+        "free_class_button": "Sign up",
+        "our_programs_heading": "Our programs",
+        "why_drawing_is_good_heading": "Why drawing is good",
+        "wdig_li1": "Teaches to be focused on results",
+        "wdig_li2": "Allows you to cope with stress",
+        "wdig_li3": "Develops imagination",
+        "wdig_li4": "Develops spatial thinking",
+        "wdig_li5": "Develops associative thinking",
+        "wdig_li6": "Allows to express yourself",
+        "wdig_li7": "Improves memory and attention",
+        "wdig_li8": "Develops fine motor skills",
+        "wdig_li9": "Gives emotional stability",
+        "adress_heading": "Where are we?",
+        "adress": "c. Omsk, Energeticov street, 70",
+        "questions_p": "Have a questions? Call us!",
+        "number": "+7 (913) 640-03-59"
+      },
+
+      "about": {
+        
+      }
+    }
+  }
