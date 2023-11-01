@@ -4,9 +4,36 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import LanguagePicker from '@/components/LanguagePicker'
 
-export default function Menu() {
+const languageDict = {
+  "ru": {
+    "schedule": "расписание",
+    "news": "новости",
+    "our_works": "наши работы",
+    "art_shop": "арт-лавка",
+    "contacts": "контакты"
+  },
+  "en": {
+    "schedule": "schedule",
+    "news": "news",
+    "our_works": "our works",
+    "art_shop": "art-shop",
+    "contacts": "contacts"
+  },
+}
+
+const choseLanguage = ( lang ) => {
+  if (lang==="ru"){
+    return(languageDict.ru)
+  } else {
+    return(languageDict.en)
+  }
+}
+
+export default function Menu({ lang }) {
   const [showModal, setShowModal] = useState(false)
   const toggleModal = () => setShowModal(!showModal)
+  const currentDict = choseLanguage(lang)
+  console.log(lang)
 
   const hideMenu = useCallback(() => {
     if (window.innerWidth < 1180)
@@ -41,19 +68,19 @@ export default function Menu() {
 
         <ul className="flex lt:gap-8 xl:gap-10 wide:gap-12 lg:hidden md:hidden dark:text-gray-02">
           <li>
-            <a href="/schedule" className="lt:text-xl wide:text-2xl">расписание</a>
+            <a href="/schedule" className="lt:text-xl wide:text-2xl">{currentDict.schedule}</a>
           </li>
           <li>
-            <a href="/news" className="lt:text-xl wide:text-2xl">новости</a>
+            <a href="/news" className="lt:text-xl wide:text-2xl">{currentDict.news}</a>
           </li>
           <li>
-            <a href="/our-works" className="lt:text-xl wide:text-2xl">наши работы</a>
+            <a href="/our-works" className="lt:text-xl wide:text-2xl">{currentDict.our_works}</a>
           </li>
           <li>
-            <a href="/art-shop" className="lt:text-xl wide:text-2xl">арт-лавка</a>
+            <a href="/art-shop" className="lt:text-xl wide:text-2xl">{currentDict.art_shop}</a>
           </li>
           <li>
-            <a href="/contacts" className="lt:text-xl wide:text-2xl">контакты</a>
+            <a href="/contacts" className="lt:text-xl wide:text-2xl">{currentDict.contacts}</a>
           </li>
           <LanguagePicker />
         </ul>
@@ -82,11 +109,11 @@ export default function Menu() {
       {showModal === true &&
         <div className="fixed lg:left-0 w-full bg-background z-20 rounded-b-[3rem]"> 
           <ul className="grid grid-cols-2 gap-2 px-[10rem] mg:px-[2rem] sm:px-0 sm:ps-2 py-[2rem] font-light md:text-xl lg:text-2xl sm:text-base">
-            <li><a href="/schedule" className="md:mx-5 lg:mx-8 ssm:mx-4">расписание</a></li>
-            <li><a href="/news" className="md:mx-5 lg:mx-8 ssm:mx-4">новости</a></li>
-            <li><a href="/our-works" className="md:mx-5 lg:mx-8 ssm:mx-4">наши работы</a></li>
-            <li><a href="/art-shop" className="md:mx-5 lg:mx-8 ssm:mx-4">арт-лавка</a></li>
-            <li><a href="/contacts" className="md:mx-5 lg:mx-8 ssm:mx-4">контакты</a></li>
+            <li><a href="/schedule" className="md:mx-5 lg:mx-8 ssm:mx-4">{currentDict.contacts}</a></li>
+            <li><a href="/news" className="md:mx-5 lg:mx-8 ssm:mx-4">{currentDict.news}</a></li>
+            <li><a href="/our-works" className="md:mx-5 lg:mx-8 ssm:mx-4">{currentDict.our_works}</a></li>
+            <li><a href="/art-shop" className="md:mx-5 lg:mx-8 ssm:mx-4">{currentDict.art_shop}</a></li>
+            <li><a href="/contacts" className="md:mx-5 lg:mx-8 ssm:mx-4">{currentDict.contacts}</a></li>
             <LanguagePicker className="md:mx-5 lg:mx-8 ssm:mx-4" />
           </ul>
         </div>       

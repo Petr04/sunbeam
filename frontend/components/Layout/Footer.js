@@ -1,6 +1,10 @@
 import LanguagePicker from '@/components/LanguagePicker'
+import { getDictionary } from '@/lib/dictionary'
 
-export default function Footer() {
+export default async function Footer( {lang} ) {
+
+  const {footer} = await getDictionary(lang)
+
   return (
     <div className="relative mt-[195px] h-[288px] lg:h-[470px] md:h-[470px] bg-gray-04 w-[100%] rounded-t-[3rem]">
       <div className="flex flex-col gap-[44px] absolute left-[90px] top-[3rem] lg:left-[70px] md:left-[30px]">

@@ -11,10 +11,10 @@ import twConfig from '@/tailwind.config.js'
 import ky from '@/ky'
 import Image from 'next/image'
 import { InfinitySpin } from 'react-loader-spinner'
-import PictureTitle from '@/components/PictureTitle'
-import TextField from '@/components/TextField'
+import PictureTitle from '@/components/picture/PictureTitle'
+import TextField from '@/components/form/TextField'
 import Button from '@/components/Button'
-import CheckBox from '@/components/CheckBox'
+import CheckBox from '@/components/form/CheckBox'
 
 function processData(data) {
   return {
