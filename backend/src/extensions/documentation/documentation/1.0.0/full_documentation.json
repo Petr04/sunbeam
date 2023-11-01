@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-10-25T06:00:59.310Z"
+    "x-generation-date": "2023-11-01T09:11:08.019Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1136,6 +1136,18 @@
                         },
                         "technology": {
                           "type": "string"
+                        },
+                        "mint": {
+                          "type": "boolean"
+                        },
+                        "nftId": {
+                          "type": "string"
+                        },
+                        "nftContractAddress": {
+                          "type": "string"
+                        },
+                        "nftTokenId": {
+                          "type": "integer"
                         },
                         "createdAt": {
                           "type": "string",
@@ -3811,6 +3823,18 @@
                       "technology": {
                         "type": "string"
                       },
+                      "mint": {
+                        "type": "boolean"
+                      },
+                      "nftId": {
+                        "type": "string"
+                      },
+                      "nftContractAddress": {
+                        "type": "string"
+                      },
+                      "nftTokenId": {
+                        "type": "integer"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -4937,6 +4961,18 @@
           "technology": {
             "type": "string"
           },
+          "mint": {
+            "type": "boolean"
+          },
+          "nftId": {
+            "type": "string"
+          },
+          "nftContractAddress": {
+            "type": "string"
+          },
+          "nftTokenId": {
+            "type": "integer"
+          },
           "locale": {
             "type": "string"
           }
@@ -4992,6 +5028,18 @@
               },
               "technology": {
                 "type": "string"
+              },
+              "mint": {
+                "type": "boolean"
+              },
+              "nftId": {
+                "type": "string"
+              },
+              "nftContractAddress": {
+                "type": "string"
+              },
+              "nftTokenId": {
+                "type": "integer"
               },
               "locale": {
                 "type": "string"
@@ -6038,6 +6086,18 @@
                                   "technology": {
                                     "type": "string"
                                   },
+                                  "mint": {
+                                    "type": "boolean"
+                                  },
+                                  "nftId": {
+                                    "type": "string"
+                                  },
+                                  "nftContractAddress": {
+                                    "type": "string"
+                                  },
+                                  "nftTokenId": {
+                                    "type": "integer"
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -6204,6 +6264,18 @@
           },
           "technology": {
             "type": "string"
+          },
+          "mint": {
+            "type": "boolean"
+          },
+          "nftId": {
+            "type": "string"
+          },
+          "nftContractAddress": {
+            "type": "string"
+          },
+          "nftTokenId": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",

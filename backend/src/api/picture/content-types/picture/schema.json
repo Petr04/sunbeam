@@ -67,6 +67,18 @@
           "localized": true
         }
       }
+    },
+    "mint": {
+      "type": "boolean"
+    },
+    "nftId": {
+      "type": "string"
+    },
+    "nftContractAddress": {
+      "type": "string"
+    },
+    "nftTokenId": {
+      "type": "integer"
     }
   }
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import './dialogStyle.css'
+import './style.css'
 import { useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'

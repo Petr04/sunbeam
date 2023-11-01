@@ -1,5 +1,5 @@
 import './globals.css'
-import ReCaptchaProviderClient from '@/components/order/ReCaptchaProviderClient'
+import ReCaptchaProviderClient from '@/components/ReCaptchaProviderClient'
 import { i18n } from '@/i18n.config'
 
 export const metadata = {
