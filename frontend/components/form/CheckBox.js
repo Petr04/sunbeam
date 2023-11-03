@@ -1,4 +1,4 @@
-import FormError from '@/components/FormError'
+import FormError from '@/components/form/FormError'
 
 export default function CheckBox({ name, register, error, validationSchema, children, ...rest }) {
   return (

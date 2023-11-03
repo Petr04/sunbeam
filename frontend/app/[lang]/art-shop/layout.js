@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import Pictures from '@/components/art-shop/Pictures'
+import Pictures from '@/components/picture/Pictures'
 import ky from '@/ky'
 import translateToLang from "@/lib/translateToLang"
 import PicturesProvider from './PicturesProvider'

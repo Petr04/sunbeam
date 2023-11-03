@@ -1,4 +1,4 @@
-import FormError from '@/components/FormError'
+import FormError from '@/components/form/FormError'
 
 export default function TextField({ name, register, error, validationSchema, ...rest }) {
   return (

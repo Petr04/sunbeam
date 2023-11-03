@@ -1,11 +1,13 @@
-import FormError from '@/components/order/FormError'
+import TextareaAutosize from 'react-textarea-autosize'
+import FormError from '@/components/form/FormError'
 
-export default function TextField({ name, register, error, validationSchema, ...rest }) {
+export default function TextArea({ name, register, error, validationSchema, ...rest }) {
   return (
     <div className="flex flex-col gap-[5px]">
-      <input
-        type="text"
+      <TextareaAutosize
         className="bg-gray-04 p-[20px] rounded-[20px] resize-none outline-none placeholder-placeholder text-[20px] w-full"
+        minRows={5}
+        maxRows={10}
         {...register(name, validationSchema)}
         {...rest}
       />
@@ -15,7 +17,7 @@ export default function TextField({ name, register, error, validationSchema, ...
       )}
 
       {error?.type === 'minLength' && (
-        <FormError>{error.message}</FormError>
+        <FormError>{error.message || 'Недостаточно символов'}</FormError>
       )}
     </div>
   )
