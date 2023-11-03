@@ -2,13 +2,13 @@ import './globals.css'
 import ReCaptchaProviderClient from '@/components/order/ReCaptchaProviderClient'
 import { i18n } from '@/i18n.config'
 
+export async function generateStaticParams() {
+  return i18n.locales.map(locale => ({ lang: locale }))
+}
+
 export const metadata = {
   title: 'Луч солнца',
   description: 'Сайт-магазин для продажи картин воспитанников студии',
-}
-
-export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }))
 }
 
 export default function RootLayout({ children, params }) {

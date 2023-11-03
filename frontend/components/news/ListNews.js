@@ -4,7 +4,7 @@ import Masonry from '@mui/lab/Masonry'
 import ItemOfListNews from './ItemOfListNews';
 import { useState, useEffect, useCallback } from 'react'
 
-export default function ListNews({ news }) {
+export default function ListNews({ news, lang }) {
   const [columns, setColumns] = useState(3);
 
   const changeColumns = useCallback(() => {
@@ -28,7 +28,7 @@ export default function ListNews({ news }) {
       columns={columns}
       spacing={2.5}
     >
-      {news.data.map((one_new, id) => <ItemOfListNews id={id.toString()} {...one_new} key={id} />)}
+      {news.data.map((one_new, id) => <ItemOfListNews id={id.toString()} {...one_new} key={id} lang={lang}/>)}
     </Masonry>
   )
 }

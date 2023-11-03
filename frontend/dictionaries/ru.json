@@ -1,11 +1,11 @@
 {
     "footer": {
-      "contacts": "",
-      "vk": "",
-      "number": "",
-      "company_name": "",
-      "owner_name": "",
-      "company_code": ""
+      "contacts": "Контакты:",
+      "vk": "ВК 2гис",
+      "number": "+7 (913) 640-03-59",
+      "company_name": "© Луч солнца, 2023",
+      "owner_name": "ИП Рыбин Д. А.",
+      "company_code": "ОГРНИП: 320723200066545"
     },
     "page": {
       "home": {
@@ -43,6 +43,10 @@
         "adress": "г. Омск, ул. Энергетиков, 70",
         "questions_p": "Остались вопросы? Звоните!",
         "number": "+7 (913) 640-03-59"
+      },
+
+      "news": {
+        "news": "Новости"
       },
 
       "about": {
