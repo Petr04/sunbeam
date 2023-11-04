@@ -7,7 +7,15 @@ function formatTime(time) {
   return time.slice(8, 10) + "." + time.slice(5,7) + "." + time.slice(0,4)
 }
 
-export default function ItemOfListNews({ id, title, content, image, publishedAt, readingTime }) {
+function formatReadingTime(lang){
+  if (lang === "ru"){
+    return " мин"
+  } else if (lang === "en"){
+    return " min"
+  }
+}
+
+export default function ItemOfListNews({ id, title, content, image, publishedAt, readingTime, lang }) {
 
   const path = process.env.NEXT_PUBLIC_API_URL + image.url;
   const publishedTime = formatTime(publishedAt)
@@ -31,7 +39,7 @@ export default function ItemOfListNews({ id, title, content, image, publishedAt,
           </div>
           <div className="bg-white rounded-[2rem] flex flex-inline gap-1 w-fit">
             <img alt="hourglass" src="/news/hourglass.svg" className="ps-[0.6rem]"/> 
-            <p className="p-[0.2rem] pe-[0.6rem]">{readingTime} мин</p> 
+            <p className="p-[0.2rem] pe-[0.6rem]">{readingTime} {formatReadingTime(lang)}</p> 
           </div>
         </div>
         <h1 className="text-white text-[32px] font-semibold mt-[-20px] mb-[-13px] ssm:text-[28px]">{title}</h1>

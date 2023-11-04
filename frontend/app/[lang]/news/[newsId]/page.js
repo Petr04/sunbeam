@@ -20,7 +20,7 @@ export default async function Page({params}) {
   const path = process.env.NEXT_PUBLIC_API_URL + news.data.image.url;
 
     return(
-        <Layout>
+        <Layout >
           <Image
             alt="explosion"
             src="/news/explosion.svg"

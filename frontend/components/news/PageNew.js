@@ -1,9 +1,9 @@
 import Layout from '@/components/Layout'
 
-export default function PageNew( {title} ) {
+export default function PageNew( {title, lang} ) {
 
     return (
-        <Layout>
+        <Layout lang={lang}>
             <p>{title}</p>
         </Layout>
     )

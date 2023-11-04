@@ -18,14 +18,14 @@ export default async function Footer( {lang} ) {
           md:grid-cols-1 md:gap-2
           ">
           <div className="flex-col items-start">
-            <div className='text-gray-02 text-lg font-semibold'>Контакты:</div>
-            <div className='text-gray-02 text-lg'>ВК 2гис</div>
-            <div className='text-gray-02 text-lg'>+7 (913) 640-03-59</div>
+            <div className='text-gray-02 text-lg font-semibold'>{footer.contacts}</div>
+            <div className='text-gray-02 text-lg'>{footer.vk}</div>
+            <div className='text-gray-02 text-lg'>{footer.number}</div>
           </div>
           <div className="flex-col items-start">
-            <div className='text-gray-02 text-lg'>© Луч солнца, 2023</div>
-            <div className='text-gray-02 text-lg'>ИП Рыбин Д. А.</div>
-            <div className='text-gray-02 text-lg'>ОГРНИП: 320723200066545</div>
+            <div className='text-gray-02 text-lg'>{footer.company_name}</div>
+            <div className='text-gray-02 text-lg'>{footer.owner_name}</div>
+            <div className='text-gray-02 text-lg'>{footer.company_code}</div>
           </div>
         </div>
       
