@@ -6,7 +6,7 @@ function formatTime(time) {
   String(time)
   return time.slice(8, 10) + "." + time.slice(5,7) + "." + time.slice(0,4)
 }
-
+  
 function formatReadingTime(lang){
   if (lang === "ru"){
     return " мин"

@@ -4,19 +4,19 @@ import { useState, useMemo, useCallback } from 'react'
 import { useForm } from 'react-hook-form'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { handleReCaptchaVerify } from '@/components/ReCaptchaProviderClient'
-import statusToColor from '@/lib/statusToColor'
+import useColor from '@/lib/useColor'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import twConfig from '@/tailwind.config.js'
 import Image from 'next/image'
 import Dialog from '@/components/Dialog'
 import BackButton from '@/components/BackButton'
-import TextArea from '@/components/art-shop/TextArea'
+import TextArea from '@/components/form/TextArea'
 import TextField from '@/components/form/TextField'
 import Button from '@/components/Button'
 import { InfinitySpin } from 'react-loader-spinner'
 import ky from '@/ky'
 
-function statusToButtonContent(status) {
+function useStatusToButtonContent(status) {
   const tw = useMemo(() => resolveConfig(twConfig))
 
   if (status === 'loading')
@@ -120,9 +120,9 @@ export default function OrderNew() {
           <Button
             compact
             type="submit"
-            style={statusToColor(status)}
+            style={useColor(status)}
           >
-            {statusToButtonContent(status)}
+            {useStatusToButtonContent(status)}
           </Button>
         </div>
       </form>
