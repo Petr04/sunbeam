@@ -5,7 +5,7 @@ import { usePictureContext } from '../PictureProvider'
 import { useForm } from 'react-hook-form'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { handleReCaptchaVerify } from '@/components/ReCaptchaProviderClient'
-import statusToColor from '@/lib/statusToColor'
+import statusToColor from '@/lib/useColor'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import twConfig from '@/tailwind.config.js'
 import ky from '@/ky'
@@ -24,7 +24,7 @@ function processData(data) {
   }
 }
 
-function statusToButtonContent(status) {
+function useStatusToButtonContent(status) {
   const tw = useMemo(() => resolveConfig(twConfig))
 
   if (status === null)
@@ -204,7 +204,7 @@ export default function Buy() {
             className="py-[20px]"
             style={statusToColor(status)}
           >
-            {statusToButtonContent(status)}
+            {useStatusToButtonContent(status)}
           </Button>
         </div>
       </form>

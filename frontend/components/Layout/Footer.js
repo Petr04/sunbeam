@@ -9,7 +9,7 @@ export default async function Footer( {lang} ) {
     <div className="relative mt-[195px] h-[288px] lg:h-[470px] md:h-[470px] bg-gray-04 w-[100%] rounded-t-[3rem]">
       <div className="flex flex-col gap-[44px] absolute left-[90px] top-[3rem] lg:left-[70px] md:left-[30px]">
         <div className="flex flex-col items-start gap-[20px]">
-          <img src="/logo_grey.svg" alt="logo" className=""></img>
+          <img src={footer.logo_src} alt="logo" className=""></img>
           <LanguagePicker className="dark" />
         </div>
         <div className="
