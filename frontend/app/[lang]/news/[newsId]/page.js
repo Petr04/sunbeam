@@ -2,6 +2,7 @@ import ky from '@/ky'
 import Layout from '@/components/Layout'
 import Image from 'next/image'
 import BackButton from '@/components/BackButton'
+import { getLocationOrigin } from 'next/dist/shared/lib/utils'
 
 function formatDate(time) {
   String(time)
@@ -15,12 +16,16 @@ function formatTime(time) {
 
 export default async function Page({params}) {
 
-  const url = 'api/news/'+params.newsId+'?populate[0]=image'
+  let url = 'api/news/'+params.newsId+'?populate[0]=image&locale=ru'
+  if (params.lang === "en") {
+    url = 'api/news/'+params.newsId+'?populate[0]=image&locale=en'
+  }
   const news = await ky.get(url).json()
   const path = process.env.NEXT_PUBLIC_API_URL + news.data.image.url;
+  const location = getLocationOrigin()
 
     return(
-        <Layout>
+        <Layout lang={params.lang}>
           <Image
             alt="explosion"
             src="/news/explosion.svg"
@@ -44,7 +49,7 @@ export default async function Page({params}) {
             />
 
           <div className="flex flex-col gap-[25px] mx-auto max-w-[1300px] wide:px-[10rem] xl:px-[18rem] align-center lg:px-[10rem] pic_help:px-[2rem] sm:gap-[0.8rem]">
-            <BackButton/>
+            <BackButton onClick={location.href = '/news'} />
             <p className="text-[48px] font-bold whitespace-nowrap sm:text-[34px]">{news.data.title}</p>
             <div className="relative flex flex-inline gap-4 text-white sm:text-[12px] sm:gap-2 sm:flex-col">
               <div className=" bg-primary rounded-[2rem] flex flex-inline gap-1 w-fit">

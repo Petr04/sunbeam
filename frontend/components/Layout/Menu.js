@@ -10,14 +10,18 @@ const languageDict = {
     "news": "новости",
     "our_works": "наши работы",
     "art_shop": "арт-лавка",
-    "contacts": "контакты"
+    "contacts": "контакты",
+    "src_yellow": "/logo_yellow.svg",
+    "src_grey": "/logo_grey.svg"
   },
   "en": {
     "schedule": "schedule",
     "news": "news",
     "our_works": "our works",
     "art_shop": "art-shop",
-    "contacts": "contacts"
+    "contacts": "contacts",
+    "src_yellow": "/logo_yellow_en.svg",
+    "src_grey": "/logo_grey_en.svg"
   },
 }
 
@@ -52,13 +56,13 @@ export default function Menu({ lang }) {
         <a href="/">
           <Image
             className="dark:hidden ssm:w-[13rem]"
-            src="/logo_yellow.svg"
+            src={currentDict.src_yellow}
             width={276}
             height={41.25}
             alt="Логотип Луч солнца"
           />
           <Image
-            src="/logo_grey.svg"
+            src={currentDict.src_grey}
             width={276}
             height={41.25}
             alt="Логотип Луч солнца"

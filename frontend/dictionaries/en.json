@@ -1,11 +1,12 @@
 {
   "footer": {
-    "contacts": "",
-    "vk": "",
-    "number": "",
-    "company_name": "",
-    "owner_name": "",
-    "company_code": ""
+    "contacts": "Contacts:",
+    "vk": "VK, 2GIS",
+    "number": "+7 (913) 640-03-59",
+    "company_name": "© Sun Beam, 2023",
+    "owner_name": "PE Rybin D. A.",
+    "company_code": "PSRNSP: 320723200066545",
+    "logo_src": "/logo_grey_en.svg"
   },
     "page": {
       "home": {
@@ -43,6 +44,21 @@
         "adress": "c. Omsk, Energeticov street, 70",
         "questions_p": "Have a questions? Call us!",
         "number": "+7 (913) 640-03-59"
+      },
+
+      "news": {
+        "news": "News"
+      },
+
+      "our_works": {
+        "heading": "Our works"
+      },
+
+      "art_shop": {
+        "heading": "Art-shop",
+        "order_button": "Order picture",
+        "description1": "Here you can purchase the works of our students or order a new one.",
+        "description2": "All funds will be used to support the studio."
       },
 
       "about": {

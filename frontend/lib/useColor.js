@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import twConfig from '@/tailwind.config.js'
 
-export default function statusToColor(status) {
+export default function useColor(status) {
   const tw = useMemo(() => resolveConfig(twConfig))
 
   if (status === 'expired' || status === 'error')

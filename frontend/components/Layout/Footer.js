@@ -9,7 +9,7 @@ export default async function Footer( {lang} ) {
     <div className="relative mt-[195px] h-[288px] lg:h-[470px] md:h-[470px] bg-gray-04 w-[100%] rounded-t-[3rem]">
       <div className="flex flex-col gap-[44px] absolute left-[90px] top-[3rem] lg:left-[70px] md:left-[30px]">
         <div className="flex flex-col items-start gap-[20px]">
-          <img src="/logo_grey.svg" alt="logo" className=""></img>
+          <img src={footer.logo_src} alt="logo" className=""></img>
           <LanguagePicker className="dark" />
         </div>
         <div className="
@@ -18,14 +18,14 @@ export default async function Footer( {lang} ) {
           md:grid-cols-1 md:gap-2
           ">
           <div className="flex-col items-start">
-            <div className='text-gray-02 text-lg font-semibold'>Контакты:</div>
-            <div className='text-gray-02 text-lg'>ВК 2гис</div>
-            <div className='text-gray-02 text-lg'>+7 (913) 640-03-59</div>
+            <div className='text-gray-02 text-lg font-semibold'>{footer.contacts}</div>
+            <div className='text-gray-02 text-lg'>{footer.vk}</div>
+            <div className='text-gray-02 text-lg'>{footer.number}</div>
           </div>
           <div className="flex-col items-start">
-            <div className='text-gray-02 text-lg'>© Луч солнца, 2023</div>
-            <div className='text-gray-02 text-lg'>ИП Рыбин Д. А.</div>
-            <div className='text-gray-02 text-lg'>ОГРНИП: 320723200066545</div>
+            <div className='text-gray-02 text-lg'>{footer.company_name}</div>
+            <div className='text-gray-02 text-lg'>{footer.owner_name}</div>
+            <div className='text-gray-02 text-lg'>{footer.company_code}</div>
           </div>
         </div>
       

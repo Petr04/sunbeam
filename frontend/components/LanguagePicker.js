@@ -20,7 +20,7 @@ export default function LanguagePicker({ className }) {
     <div className={`flex flex-row gap-[5px] ${className}`}>
       {i18n.locales.map(locale => {
         return (
-          <li key={locale}>
+          <li key={locale} className="list-none">
             <Link
               href={redirectedPathName(locale)}
               className='lt:text-xl wide:text-2xl sm:text-base  text-primary dark:text-gray-02'

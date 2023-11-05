@@ -10,23 +10,43 @@ services:
       - ./postgres:/data/postgres
     restart: unless-stopped
 
-  strapi: 
+  strapi:
     build: ./backend/ 
-    depends_on: 
-      - database 
-    environment: 
+    image: strapi/strapi
+    container_name: strapi
+    restart: unless-stopped
+    env_file: ./backend/.env
+    environment:
       DATABASE_HOST: database 
       DATABASE_PORT: 5432 
       DATABASE_CLIENT: postgres 
       DATABASE_NAME: ${POSTGRES_DB} 
       DATABASE_USERNAME: ${POSTGRES_USER} 
       DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
-    env_file: ./backend/.env
+    depends_on: 
+      - database 
     volumes:
-      - ./backend/public/uploads:/data/public
-    ports: 
-      - 1337:1337 
-    restart: unless-stopped 
+      - ./app:/srv/app
+    ports:
+      - "1337:1337"
+
+  # strapi: 
+  #   build: ./backend/ 
+  #   depends_on: 
+  #     - database 
+  #   environment: 
+  #     DATABASE_HOST: database 
+  #     DATABASE_PORT: 5432 
+  #     DATABASE_CLIENT: postgres 
+  #     DATABASE_NAME: ${POSTGRES_DB} 
+  #     DATABASE_USERNAME: ${POSTGRES_USER} 
+  #     DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+  #   env_file: ./backend/.env
+  #   volumes:
+  #     - ./backend/public/uploads:/data/public
+  #   ports: 
+  #     - 1337:1337 
+  #   restart: unless-stopped 
     
   # nginx:
   #   image: nginx:latest
@@ -50,13 +70,26 @@ services:
 
   frontend:
     container_name: frontend
-    build: ./frontend/
+    build:
+      context: ./frontend/
+      target: runner
     env_file: ./frontend/.env
     volumes:
-      - ./frontend_build/:/app/build/:rw
-    depends_on:
-      - strapi
+      - .:/app
     ports:
-      - 3000:3000
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+
+  # frontend:
+  #   container_name: frontend
+  #   build: ./frontend/
+  #   env_file: ./frontend/.env
+  #   volumes:
+  #     - ./frontend_build/:/app/build/:rw
+  #   depends_on:
+  #     - strapi
+  #   ports:
+  #     - 3000:3000
     # restart: unless-stopped
   
