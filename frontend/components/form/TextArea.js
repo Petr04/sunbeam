@@ -5,7 +5,7 @@ export default function TextArea({ name, register, error, validationSchema, ...r
   return (
     <div className="flex flex-col gap-[5px]">
       <TextareaAutosize
-        className="bg-gray-04 p-[20px] rounded-[20px] resize-none outline-none placeholder-placeholder text-[20px] w-full"
+        className="bg-gray-00 dark:bg-gray-04 p-[20px] rounded-[20px] resize-none outline-none placeholder-placeholder text-[20px] w-full"
         minRows={5}
         maxRows={10}
         {...register(name, validationSchema)}

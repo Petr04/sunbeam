@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/dictionary"
 import SupportDialog from '@/components/SupportDialog'
 import SupportCryptoDialog from '@/components/SupportCryptoDialog'
 import DialogWithLayout from '@/components/DialogWithLayout'
+import SignUpForClassesDialog from '@/components/SignUpForClassesDialog'
 
 export const revalidate = 2 // change in prod
 
@@ -89,11 +90,13 @@ export default async function Home({ params: { lang }, searchParams }) {
             md:left-0 md:top-[6rem] md:grid-cols-1 md:gap-4 md:w-[90%] md:mx-[2rem]
             sm:mx-[1rem]
             ">
-            <button className="
-              text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 z-0
-              lt:px-5 lt:py-3 lt:text-lg
-              lg:py-4
-              ">{dict.page.home.but1}</button>
+            <Link href="?signUpForClasses=true" scroll={false}>
+              <button className="
+                text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 z-0
+                lt:px-5 lt:py-3 lt:text-lg
+                lg:py-4
+                ">{dict.page.home.but1}</button>
+            </Link>
             <button className="
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
@@ -375,6 +378,7 @@ export default async function Home({ params: { lang }, searchParams }) {
           : <SupportDialog />
         }
       </DialogWithLayout>
+      <SignUpForClassesDialog show={searchParams.signUpForClasses} />
     </Layout>
   )
 }

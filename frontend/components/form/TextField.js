@@ -5,7 +5,7 @@ export default function TextField({ name, register, error, validationSchema, ...
     <div className="flex flex-col gap-[5px]">
       <input
         type="text"
-        className="bg-gray-04 p-[20px] rounded-[20px] resize-none outline-none placeholder-placeholder text-[20px] w-full"
+        className="bg-gray-00 dark:bg-gray-04 p-[20px] rounded-[20px] resize-none outline-none placeholder-placeholder text-[20px] w-full"
         {...register(name, validationSchema)}
         {...rest}
       />
