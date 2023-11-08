@@ -27,6 +27,7 @@ module.exports = {
       'primary': '#FFCC17',
       'background': '#FFF9E4',
       'white': 'white',
+      'gray-00': '#F0F0F0',
       'gray-01': '#ACACAC',
       'gray-02': '#949494',
       'gray-03': '#373737',

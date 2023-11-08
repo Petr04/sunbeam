@@ -3,9 +3,11 @@ dialog {
   transform: translateY(50px);
   transition: 0.3s;
   display: block;
+  pointer-events: none;
 }
 
 dialog[open] {
   opacity: 1;
   transform: translateY(0px);
+  pointer-events: auto;
 }
