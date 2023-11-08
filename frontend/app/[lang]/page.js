@@ -18,6 +18,8 @@ export default async function Home({ params: { lang }, searchParams }) {
   }
   const dict = await getDictionary(lang)
 
+  const cryptoAddresses = await ky.get('api/crypto-address').json()
+
   return (
     <Layout lang={lang}>
       <main className="wide:w-[80%] xl:w-[100%] lg:w-[80%] md:w-[100%] mx-auto grid grid-cols-1 h-fit items-center z-0">
@@ -374,7 +376,7 @@ export default async function Home({ params: { lang }, searchParams }) {
         showDialog={searchParams.support}
       >
         {searchParams.send === 'crypto'
-          ? <SupportCryptoDialog />
+          ? <SupportCryptoDialog cryptoAddresses={cryptoAddresses.data} />
           : <SupportDialog />
         }
       </DialogWithLayout>
