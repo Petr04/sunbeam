@@ -19,7 +19,7 @@
   scrollbar-width: none !important;  /* Firefox */
 }
 
-body {
+html {
   scrollbar-gutter: stable !important;
 }
 

@@ -5,12 +5,8 @@ import { usePictureContext } from '../PictureProvider'
 import { useForm } from 'react-hook-form'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { handleReCaptchaVerify } from '@/components/ReCaptchaProviderClient'
-import statusToColor from '@/lib/useColor'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import twConfig from '@/tailwind.config.js'
 import ky from '@/ky'
 import Image from 'next/image'
-import { InfinitySpin } from 'react-loader-spinner'
 import PictureTitle from '@/components/picture/PictureTitle'
 import TextField from '@/components/form/TextField'
 import Button from '@/components/Button'
@@ -22,43 +18,6 @@ function processData(data) {
     fullName: `${data.firstName} ${data.lastName} ${data.fatherName}`,
     deliveryAddress: data.pickup ? 'pickup' : data.deliveryAddress,
   }
-}
-
-function useStatusToButtonContent(status) {
-  const tw = useMemo(() => resolveConfig(twConfig))
-
-  if (status === null)
-    return 'Заказать за 1 000 ₽'
-
-  if (status === 'created')
-    return (
-      <div className="m-[-20px]">
-        <InfinitySpin
-          width={150}
-          color={tw.theme.colors['gray-04']}
-        />
-      </div>
-    )
-
-  if (status === 'expired' || status === 'error')
-    return <>
-      <Image
-        src="/alert-octagon-white.svg"
-        width={24} height={24}
-        alt="alert"
-      />
-      Ошибка. Попробовать снова
-    </>
-
-  if (status === 'paid')
-    return <>
-      <Image
-        src="/check-white.svg"
-        width={24} height={24}
-        alt="check"
-      />
-      Оплачено
-    </>
 }
 
 export default function Buy() {
@@ -201,10 +160,14 @@ export default function Buy() {
           </CheckBox>
           <Button
             type="submit"
-            className="py-[20px]"
-            style={statusToColor(status)}
+            className="py-[20px] dark:bg-primary dark:text-gray-04"
+            isLoading={status === 'created'}
+            isError={status === 'expired' || status === 'error'}
+            isSuccess={status === 'paid'}
+            errorMessage="Ошибка. Попробовать снова"
+            successMessage="Оплачено"
           >
-            {useStatusToButtonContent(status)}
+            Заказать за 1 000 ₽
           </Button>
         </div>
       </form>

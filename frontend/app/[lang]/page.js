@@ -1,18 +1,24 @@
+import Link from 'next/link'
 import Layout from "@/components/Layout"
 import ky from '@/ky'
 import ListOurPrograms from "@/components/ListOurPrograms"
 import { getDictionary } from "@/lib/dictionary"
+import SupportDialog from '@/components/SupportDialog'
+import SupportCryptoDialog from '@/components/SupportCryptoDialog'
+import DialogWithLayout from '@/components/DialogWithLayout'
+import SignUpForClassesDialog from '@/components/SignUpForClassesDialog'
 
 export const revalidate = 2 // change in prod
 
-export default async function Home({ params: {lang} }) {
-
+export default async function Home({ params: { lang }, searchParams }) {
   const listElementsStyle="text-gray-04 bg-primary text-xl rounded-[5rem] w-fit py-3 px-8 font-normal mr-5 mb-5 z-0 md:text-[16px] md:px-4 md:py-2 md:w-[90vw]"
   let ourPrograms = await ky.get('api/our-programs?populate[0]=image&locale=ru').json()
   if (lang === "en") {
     ourPrograms = await ky.get('api/our-programs?populate[0]=image&locale=en').json()
   }
   const dict = await getDictionary(lang)
+
+  const cryptoAddresses = await ky.get('api/crypto-address').json()
 
   return (
     <Layout lang={lang}>
@@ -86,22 +92,26 @@ export default async function Home({ params: {lang} }) {
             md:left-0 md:top-[6rem] md:grid-cols-1 md:gap-4 md:w-[90%] md:mx-[2rem]
             sm:mx-[1rem]
             ">
-            <button className="
-              text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 z-0
-              lt:px-5 lt:py-3 lt:text-lg
-              lg:py-4
-              ">{dict.page.home.but1}</button>
+            <Link href="?signUpForClasses=true" scroll={false}>
+              <button className="
+                text-gray-04 bg-primary text-xl rounded-2xl shadow-xl px-9 py-5 z-0
+                lt:px-5 lt:py-3 lt:text-lg
+                lg:py-4
+                ">{dict.page.home.but1}</button>
+            </Link>
             <button className="
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
               lg:py-4
               "><a href={`../${lang}/schedule`}>{dict.page.home.but2}</a></button>
-            <button className="
-              text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
-              lt:px-5 lt:py-3 lt:text-lg
-              lg:left-0 lg:py-4
-              md:left-0 md:py-4
-              "><img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>{dict.page.home.but3}</button>
+            <Link href="?support=true" scroll={false}>
+              <button className="
+                text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
+                lt:px-5 lt:py-3 lt:text-lg
+                lg:left-0 lg:py-4
+                md:left-0 md:py-4
+                "><img src="/coins-stacked-03.svg" alt="support_project" className="inline mr-3"/>{dict.page.home.but3}</button>
+            </Link>
           </div>
 
           <img 
@@ -360,6 +370,17 @@ export default async function Home({ params: {lang} }) {
           </div>        
         </div>
       </main>
+      <DialogWithLayout
+        className="max-w-[500px]"
+        closeUrl={searchParams.send ? '?support=true' : '/'}
+        showDialog={searchParams.support}
+      >
+        {searchParams.send === 'crypto'
+          ? <SupportCryptoDialog cryptoAddresses={cryptoAddresses.data} />
+          : <SupportDialog />
+        }
+      </DialogWithLayout>
+      <SignUpForClassesDialog show={searchParams.signUpForClasses} />
     </Layout>
   )
 }

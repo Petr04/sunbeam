@@ -3,7 +3,7 @@ import FormError from '@/components/form/FormError'
 export default function CheckBox({ name, register, error, validationSchema, children, ...rest }) {
   return (
     <div className="flex flex-col gap-[5px]">
-      <label className="flex items-baseline gap-[15px] text-[18px] text-gray-02">
+      <label className="flex items-baseline gap-[15px] text-[18px] text-gray-01 dark:text-gray-02">
         <input
           type="checkbox"
           className="accent-primary"

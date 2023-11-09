@@ -9,7 +9,14 @@ export default function BackButton({ onClick, chip, className }) {
       onClick={onClick}
     >
       <Image
-        src="/arrow-left.svg"
+        className="hidden dark:block"
+        src="/arrow-left-gray-02.svg"
+        alt="arrow_left"
+        width={24} height={24}
+      />
+      <Image
+        className="dark:hidden"
+        src="/arrow-left-gray-01.svg"
         alt="arrow_left"
         width={24} height={24}
       />

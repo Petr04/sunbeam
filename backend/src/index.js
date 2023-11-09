@@ -85,13 +85,15 @@ module.exports = {
     strapi.db.lifecycles.subscribe({
       models: ['api::picture.picture'],
       async beforeCreate(event) {
+        const cryptoAddresses = await strapi.entityService.findOne('api::crypto-address.crypto-address', 1)
+
         const { data } = event.params;
 
         if (!data.mint) return;
 
         const imageCID = await pinImage(strapi, data)
         const metadataCID = await pinJSON(data, imageCID)
-        const nftData = await mint(metadataCID, process.env.RECEPIENT_WALLET_ADDRESS)
+        const nftData = await mint(metadataCID, cryptoAddresses.polygon)
         event.params.data = { ...event.params.data, ...nftData }
       },
     })
