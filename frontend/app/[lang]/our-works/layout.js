@@ -1,3 +1,5 @@
+import { i18n } from '@/i18n.config'
+
 export async function generateMetadata({ params }) {
   const lang = params.lang
  
@@ -16,8 +18,8 @@ export async function generateMetadata({ params }) {
 
 export default function RootLayout({ children, params }) {
  return (
-  <html lang={params.lang}>
+    <html lang={params.lang}>
       {children}
-  </html>
+    </html>
   )
 }

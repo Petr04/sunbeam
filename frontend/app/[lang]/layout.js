@@ -2,21 +2,34 @@ import './globals.css'
 import ReCaptchaProviderClient from '@/components/ReCaptchaProviderClient'
 import { i18n } from '@/i18n.config'
 
+
+export async function generateMetadata({ params }) {
+  const lang = params.lang
+ 
+  if (lang === "en") {
+    return {
+      title: 'Sun beam',
+      description: 'Сайт-магазин для продажи картин воспитанников студии',
+    }
+  } else if (lang === "ru") {
+    return {
+      title: 'Луч солнца',
+      description: 'Сайт-магазин для продажи картин воспитанников студии',
+    }
+  }
+}
+
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
 }
 
-export const metadata = {
-  title: 'Луч солнца',
-  description: 'Сайт-магазин для продажи картин воспитанников студии',
-}
-
 export default function RootLayout({ children, params }) {
+
   return (
     <html suppressHydrationWarning={true} lang={params.lang}>
-      <ReCaptchaProviderClient reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}>
-        {children}
-      </ReCaptchaProviderClient>
-    </html> 
+        <ReCaptchaProviderClient reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}>
+          {children}
+        </ReCaptchaProviderClient>
+    </html>
   )
 }

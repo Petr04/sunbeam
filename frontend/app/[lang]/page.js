@@ -95,7 +95,7 @@ export default async function Home({ params: {lang} }) {
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
               lg:py-4
-              "><a href="/schedule">{dict.page.home.but2}</a></button>
+              "><a href={`../${lang}/schedule`}>{dict.page.home.but2}</a></button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
               lt:px-5 lt:py-3 lt:text-lg
@@ -348,7 +348,7 @@ export default async function Home({ params: {lang} }) {
               lt:px-5 lt:py-3 lt:text-lg
               lg:py-4
               md:py-4
-              ">{dict.page.home.but2}</button>
+              "><a href={`../${lang}/schedule`}>{dict.page.home.but2}</a></button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] 
               lt:px-5 lt:py-3 lt:text-lg

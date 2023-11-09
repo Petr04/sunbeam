@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
 
 export default function RootLayout({ children, params }) {
  return (
-  <html lang={params.lang}>
+    <html lang={params.lang}>
       {children}
-  </html>
+    </html>
   )
 }
