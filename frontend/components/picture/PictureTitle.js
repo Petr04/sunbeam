@@ -13,7 +13,7 @@ export default function PictureTitle({ picture: { title, author } }) {
   return (
     <div className="flex flex-col gap-[10px]">
       <h2 className="text-[36px] font-semibold mt-[-20px] mb-[-13px]">{title}</h2>
-      <p className="text-[21px]">{generateAuthorLabel(author)}</p>
+      {/* <p className="text-[21px]">{generateAuthorLabel(author)}</p> */}
     </div>
   )
 }

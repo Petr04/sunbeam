@@ -54,6 +54,10 @@
         "heading": "Наши работы"
       },
 
+      "schedule": {
+        "heading": "Расписание"
+      },
+
       "art_shop": {
         "heading": "Арт-лавка",
         "order_button": "Заказать картину",

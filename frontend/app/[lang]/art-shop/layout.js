@@ -6,15 +6,14 @@ import { getDictionary } from '@/lib/dictionary'
 import PicturesProvider from './PicturesProvider'
 import Image from 'next/image'
 
+
+
 export const revalidate = 2 // change in prod
 
 export default async function ArtShopLayout({ children,  params: {lang} }) {
   const isArtShop = true
 
-  let pictures = await ky.get('api/pictures?populate[0]=image&populate[1]=author&locale=ru').json()
-  if (lang === "en") {
-    pictures = await ky.get('api/pictures?populate[0]=image&populate[1]=author&locale=en').json()
-  }
+  const pictures = await ky.get(`api/pictures?populate[0]=image&locale=${lang}`).json()
 
   const dict = await getDictionary(lang)
 

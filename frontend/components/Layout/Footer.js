@@ -10,7 +10,6 @@ export default async function Footer( {lang} ) {
       <div className="flex flex-col gap-[44px] absolute left-[90px] top-[3rem] lg:left-[70px] md:left-[30px]">
         <div className="flex flex-col items-start gap-[20px]">
           <img src={footer.logo_src} alt="logo" className=""></img>
-          <LanguagePicker className="dark" />
         </div>
         <div className="
           grid grid-cols-2 gap-20 
@@ -33,7 +32,7 @@ export default async function Footer( {lang} ) {
       <img 
         src="/info_footer.svg" alt="payment" 
         className="
-          absolute bottom-[50px] right-[90px] 
+          absolute bottom-[80px] right-[90px] 
           lg:left-[70px] 
           md:left-[30px]
           ssm:w-[15rem]"

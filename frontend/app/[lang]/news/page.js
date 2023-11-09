@@ -7,10 +7,7 @@ export const revalidate = 2 // change in prod
 
 export default async function News( {params: {lang}} ) {
 
-  let news = await ky.get('api/news?populate[0]=image&locale=ru').json()
-  if (lang === "en") {
-    news = await ky.get('api/news?populate[0]=image&locale=en').json()
-  }
+  const news = await ky.get(`api/news?populate[0]=image&locale=${lang}`).json()
 
   const dict = await getDictionary(lang)
 

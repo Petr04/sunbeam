@@ -19,7 +19,7 @@ export default function ItemOfListNews({ id, title, content, image, publishedAt,
 
   const path = process.env.NEXT_PUBLIC_API_URL + image.url;
   const publishedTime = formatTime(publishedAt)
-  const url = "/news/"+id
+  const url = `../${lang}/news/`+id
 
   return (
     <Link href={url}>

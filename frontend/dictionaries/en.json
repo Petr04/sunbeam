@@ -54,6 +54,10 @@
         "heading": "Our works"
       },
 
+      "schedule": {
+        "heading": "Schedule"
+      },
+
       "art_shop": {
         "heading": "Art-shop",
         "order_button": "Order picture",

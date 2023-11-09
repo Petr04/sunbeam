@@ -10,7 +10,7 @@ export default function Layout({ dark, children, lang }) {
       <div className="bg-background dark:bg-gray-04 text-primary dark:text-gray-02">
         <Menu lang={lang}/>
           {children}
-        <Footer lang={lang}/>
+        <Footer lang={lang} dark />
       </div>
     </body>
   )
