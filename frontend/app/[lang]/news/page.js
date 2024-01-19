@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout'
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 import ListNews from '@/components/news/ListNews'
 import { getDictionary } from '@/lib/dictionary'
 

@@ -1,4 +1,4 @@
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 import Layout from '@/components/Layout'
 import Image from 'next/image'
 import BackButton from '@/components/BackButton'

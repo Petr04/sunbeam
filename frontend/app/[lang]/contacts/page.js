@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout'
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 import { getDictionary } from '@/lib/dictionary'
 
 export const revalidate = 2 // change in prod

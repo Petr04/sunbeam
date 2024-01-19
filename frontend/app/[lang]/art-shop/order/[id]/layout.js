@@ -8,7 +8,7 @@ import Dialog from '@/components/Dialog'
 import BackButton from '@/components/BackButton'
 import { usePicturesContext } from '../../PicturesProvider'
 import PictureProvider from './PictureProvider'
-import { generateAltText } from '@/components/picture/Picture'
+import generateAltText from '@/lib/generatePictureAltText'
 import { useWindowSize } from '@react-hook/window-size'
 
 function getImageHeight(windowWidth, windowHeight, imageRatio, infoWidth, marginX, marginY) {

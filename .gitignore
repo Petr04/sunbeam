@@ -5,3 +5,4 @@ postgres/
 .idea
 frontend_build/
 ssl/
+ignore/

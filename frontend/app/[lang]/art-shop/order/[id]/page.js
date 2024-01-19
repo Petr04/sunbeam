@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePictureContext } from './PictureProvider'
 import PictureTitle from '@/components/picture/PictureTitle'
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 
 function nftAddressToUrl(nftAddress, nftTokenId) {
   return `https://testnet.rarible.com/token/polygon/${nftAddress}:${nftTokenId}`

@@ -22,6 +22,7 @@ export default function SignUpForClassesDialog({ show }) {
       .catch(() => setStatus('error'))
   })
 
+
   return (
     <DialogWithLayout
       closeUrl="/"

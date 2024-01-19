@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from "@/components/Layout"
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 import ListOurPrograms from "@/components/ListOurPrograms"
 import { getDictionary } from "@/lib/dictionary"
 import SupportDialog from '@/components/SupportDialog'

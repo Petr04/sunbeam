@@ -3,14 +3,14 @@
 import { useState, useMemo, useCallback } from 'react'
 import { useForm } from 'react-hook-form'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
-import { handleReCaptchaVerify } from '@/components/ReCaptchaProviderClient'
+import handleReCaptchaVerify from '@/lib/handleReCaptchaVerify'
 import Image from 'next/image'
 import Dialog from '@/components/Dialog'
 import BackButton from '@/components/BackButton'
 import TextArea from '@/components/form/TextArea'
 import TextField from '@/components/form/TextField'
 import Button from '@/components/Button'
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 
 export default function OrderNew() {
   const { register, handleSubmit, formState: { errors } } = useForm()

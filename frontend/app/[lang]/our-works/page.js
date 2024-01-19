@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import Pictures from '@/components/picture/Pictures'
-import ky from '@/ky'
+import ky from '@/kyUniversal'
 import { getDictionary } from '@/lib/dictionary'
 
 export const revalidate = 2 // change in prod
