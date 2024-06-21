@@ -12,7 +12,6 @@
   "dependencies": {
     "@localazy/strapi-plugin": "^0.2.2",
     "@pinata/sdk": "^2.1.0",
-    "@strapi/plugin-documentation": "^4.11.3",
     "@strapi/plugin-graphql": "^4.12.1",
     "@strapi/plugin-i18n": "4.11.3",
     "@strapi/plugin-users-permissions": "4.11.3",

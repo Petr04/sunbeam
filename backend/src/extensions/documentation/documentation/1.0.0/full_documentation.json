@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-18T08:40:08.553Z"
+    "x-generation-date": "2024-06-21T11:13:28.805Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1673,7 +1673,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/AuthorListResponseDataItemLocalized"
                 }
               }
             }
@@ -3011,7 +3011,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/New"
+                  "$ref": "#/components/schemas/NewListResponseDataItemLocalized"
                 }
               }
             }
@@ -3517,7 +3517,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/NewPictureOrder"
+                  "$ref": "#/components/schemas/NewPictureOrderListResponseDataItemLocalized"
                 }
               }
             }
@@ -4778,7 +4778,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/OrderListResponseDataItemLocalized"
                 }
               }
             }
@@ -5689,7 +5689,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/OurProgram"
+                  "$ref": "#/components/schemas/OurProgramListResponseDataItemLocalized"
                 }
               }
             }
@@ -7137,7 +7137,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Picture"
+                  "$ref": "#/components/schemas/PictureListResponseDataItemLocalized"
                 }
               }
             }
@@ -7652,7 +7652,7 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Schedule"
+                  "$ref": "#/components/schemas/ScheduleListResponseDataItemLocalized"
                 }
               }
             }
