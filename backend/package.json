@@ -16,13 +16,27 @@
     "@strapi/plugin-i18n": "4.11.3",
     "@strapi/plugin-users-permissions": "4.11.3",
     "@strapi/strapi": "4.11.3",
+    "assert": "^2.1.0",
     "axios": "^1.4.0",
     "better-sqlite3": "8.0.1",
+    "browserify-zlib": "^0.2.0",
+    "crypto-browserify": "^3.12.0",
+    "fs": "^0.0.1-security",
+    "https-browserify": "^1.0.0",
     "lodash": "^4.17.21",
+    "net": "^1.0.2",
+    "os-browserify": "^0.3.0",
     "pg": "^8.11.1",
     "pinata": "^0.0.1",
+    "querystring-es3": "^0.2.1",
     "sharp": "^0.32.4",
-    "strapi-plugin-transformer": "^3.1.0"
+    "strapi-plugin-transformer": "^3.1.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "timers-browserify": "^2.0.12",
+    "tls": "^0.0.1",
+    "tty-browserify": "^0.0.1",
+    "url": "^0.11.3"
   },
   "author": {
     "name": "A Strapi developer"
