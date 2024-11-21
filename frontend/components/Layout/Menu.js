@@ -7,20 +7,20 @@ import Link from 'next/link'
 
 const languageDict = {
   "ru": {
-    "schedule": "расписание",
-    "news": "новости",
+    // "schedule": "расписание",
+    // "news": "новости",
     "our_works": "наши работы",
     "art_shop": "арт-лавка",
-    "contacts": "контакты",
+    // "contacts": "контакты",
     "src_yellow": "/logo_yellow.svg",
     "src_grey": "/logo_grey.svg"
   },
   "en": {
-    "schedule": "schedule",
-    "news": "news",
+    // "schedule": "schedule",
+    // "news": "news",
     "our_works": "our works",
     "art_shop": "art-shop",
-    "contacts": "contacts",
+    // "contacts": "contacts",
     "src_yellow": "/logo_yellow_en.svg",
     "src_grey": "/logo_grey_en.svg"
   },
@@ -88,7 +88,7 @@ export default function Menu({ lang }) {
           <li>
             <a href={`../${lang}/contacts`} className="lt:text-xl wide:text-2xl">{currentDict.contacts}</a>
           </li>
-          <LanguagePicker lang={lang}/>
+          {/* <LanguagePicker lang={lang}/> */}
         </ul>
 
         <button

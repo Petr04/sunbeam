@@ -103,7 +103,7 @@ export default async function Home({ params: { lang }, searchParams }) {
               text-gray-04 bg-white text-xl rounded-2xl shadow-xl px-9 py-5 z-0
               lt:px-5 lt:py-3 lt:text-lg 
               lg:py-4
-              "><a href={`../${lang}/schedule`}>{dict.page.home.but2}</a></button>
+              "><a href={`../${lang}/art-shop`}>{dict.page.home.but2}</a></button>
             <Link href="?support=true" scroll={false}>
               <button className="
                 text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem]  z-0
@@ -178,7 +178,9 @@ export default async function Home({ params: { lang }, searchParams }) {
             <div className={listElementsStyle}>{dict.page.home.free_class_li7}</div>
           </div>
           <div className="text-[24px] font-medium w-[50rem] md:text-[20px] lg:w-fit md:w-fit z-0 ssm:text-[18px]">{dict.page.home.free_class_p}</div>
-          <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">{dict.page.home.free_class_button}</button>
+          <Link href="?signUpForClasses=true" scroll={false}>
+            <button className="text-gray-04 bg-primary text-xl rounded-2xl shadow-xl w-fit py-4 px-11 text-[20px] font-normal z-0">{dict.page.home.free_class_button}</button>
+          </Link>
 
           <img 
             src="./spiral2.svg" alt="big_spiral" 
@@ -207,7 +209,7 @@ export default async function Home({ params: { lang }, searchParams }) {
         </div>
 
 
-        <div className="
+        {/* <div className="
           grid grid-cols-1 mx-auto mt-[8rem] z-0
           lg:mx-[1.5rem] lg:mt-[2rem]
           md:mx-[1.5rem] md:mt-[4rem]
@@ -229,7 +231,7 @@ export default async function Home({ params: { lang }, searchParams }) {
             md:block md:relative md:mx-auto md:mt-[2rem] 
             sm:w-[15rem]
           "/>
-        </div>
+        </div> */}
 
         <div className="
           grid grid-cols-1 gap-10 mx-auto mt-[8rem] z-0
@@ -253,36 +255,36 @@ export default async function Home({ params: { lang }, searchParams }) {
             <div className={listElementsStyle}>{dict.page.home.wdig_li9}</div>
           </div>
 
-          <img 
+          {/* <img 
             src="/dawnCenter.svg" alt="dawn" 
             className="
               wide:left-[10rem] wide:top-[210rem] wide:w-[15%]
               block absolute xl:left-[1rem] xl:top-[210rem] xl:w-[24%] -z-10
               lg:hidden
-            "/>
-          <img 
+            "/> */}
+          {/* <img 
             src="/explosionReverse.svg" alt="explosion" 
             className="
               wide:top-[235rem] wide:w-[15%]
               block absolute left-[0rem] xl:top-[235rem] xl:w-[16%] -z-10
               lg:hidden
-            "/>
-          <img 
+            "/> */}
+          {/* <img 
             src="./spiral5.svg" alt="spiral" 
             className="
               wide:right-[15rem] wide:top-[220rem] wide:w-[15%]
               block absolute xl:right-[6rem] xl:top-[216rem] xl:w-[24%] -z-10
               lg:hidden
-            "/>
+            "/> */}
 
-          <img 
+          {/* <img 
             src="./spiralBetween.svg" alt="spiralbetween" 
             className="
             wide:hidden -z-10
             lg:block lg:relative lg:mx-auto lg:top-[0rem] lg:w-[30%]
             md:block md:relative md:mx-auto md:top-[0rem] 
             sm:w-[15rem]
-          "/>
+          "/> */}
 
         </div>
 
@@ -358,7 +360,7 @@ export default async function Home({ params: { lang }, searchParams }) {
               lt:px-5 lt:py-3 lt:text-lg
               lg:py-4
               md:py-4
-              "><a href={`../${lang}/schedule`}>{dict.page.home.but2}</a></button>
+              "><a href={`../${lang}/art-shop`}>{dict.page.home.but2}</a></button>
             <button className="
               text-white bg-gray-04 text-xl rounded-2xl shadow-xl px-9 py-5 relative left-[10rem] 
               lt:px-5 lt:py-3 lt:text-lg
