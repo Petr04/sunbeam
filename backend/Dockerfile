@@ -14,4 +14,4 @@ COPY . .
 RUN chown -R node:node /opt/app
 USER node
 RUN ["npm", "run", "build"]
-CMD npm run develop ; sleep 3600
+CMD npm start
