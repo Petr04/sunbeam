@@ -16,7 +16,7 @@ export default async function Schedule( {children, params: {lang}} ) {
       <div className="flex flex-col gap-[50px] mx-auto max-w-[1300px] px-[10px] align-center">
         <div className="flex flex-row lg:flex-col gap-x-[70px] md:gap-y-[20px] justify-between lg:items-center px-[10px] w-fit mx-auto">
           <h1 className="text-[129px] lt:text-[112px] lg:text-[100px] mg:text-[80px] pic_help:text-[60px] md:text-[48px] sm:text-[38px] font-bold whitespace-nowrap">{dict.page.schedule.heading}</h1>
-          <img src="/yellowWaveSpiral.svg" className="w-fit object-fit sm:w-[15rem]" />
+          <img alt="spiral" src="/yellowWaveSpiral.svg" className="w-fit object-fit sm:w-[15rem]" />
         </div>
       </div>
 

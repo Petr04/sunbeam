@@ -10,7 +10,7 @@ import BackButton from '@/components/BackButton'
 import TextArea from '@/components/form/TextArea'
 import TextField from '@/components/form/TextField'
 import Button from '@/components/Button'
-import ky from '@/kyUniversal'
+import ky from '@/ky'
 
 export default function OrderNew() {
   const { register, handleSubmit, formState: { errors } } = useForm()

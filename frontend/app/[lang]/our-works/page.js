@@ -20,12 +20,12 @@ export default async function OurWorks({ children, params: {lang} }) {
         <div className="flex lg:flex-col gap-x-[70px] md:gap-y-[20px] justify-between px-[10px] w-fit mx-auto">
           <div className="w-fit md:hidden">
             <h1 className="text-[129px] lg:text-[100px] mg:text-[80px] pic_help:text-[60px] font-bold whitespace-nowrap">{dict.page.our_works.heading}</h1>
-            <img src="/greyWaveSpiral.svg" className="w-full object-fill mg:hidden" />
-            <img src="/greyWaveSpiral.svg" className="hidden mg:block w-full object-fill" />
+            <img alt="spiral" src="/greyWaveSpiral.svg" className="w-full object-fill mg:hidden" />
+            <img alt="spiral" src="/greyWaveSpiral.svg" className="hidden mg:block w-full object-fill" />
           </div>
           <h1 className="hidden md:block text-[48px] font-bold whitespace-nowrap sm:text-[38px]">{dict.page.our_works.heading}</h1>
         </div>
-        <img src="/greyWaveSpiralSmall.svg" className="object-scale-down hidden md:block mx-auto w-[15rem]" />
+        <img alt="spiral" src="/greyWaveSpiralSmall.svg" className="object-scale-down hidden md:block mx-auto w-[15rem]" />
         <Pictures pictures={pictures} isArtShop={isArtShop} />
       </div>
     </Layout>

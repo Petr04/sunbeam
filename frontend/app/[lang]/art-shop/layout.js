@@ -28,8 +28,8 @@ export default async function ArtShopLayout({ children,  params: {lang} }) {
             <h1 className="text-[129px] mg:text-[100px] font-bold whitespace-nowrap">
               {dict.page.art_shop.heading}
             </h1>
-            <img src="/art-shop-spiral.svg" className="w-full object-fill mg:hidden"/>
-            <img src="/art-shop-spiral-medium.svg" className="hidden mg:block w-full object-fill"/>
+            <img alt="spiral" src="/art-shop-spiral.svg" className="w-full object-fill mg:hidden"/>
+            <img alt="spiral" src="/art-shop-spiral-medium.svg" className="hidden mg:block w-full object-fill"/>
           </div>
           <h1 className="hidden md:block text-[48px] font-bold whitespace-nowrap">{dict.page.art_shop.heading}</h1>
           <div className="flex flex-col gap-[20px] pt-[60px] mg:pt-[40px] md:pt-0 lg:w-[800px] mg:w-[570px] md:w-auto">
