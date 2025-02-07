@@ -1,4 +1,5 @@
 # Луч солнца
+![Снимок экрана от 2025-02-07 18-15-15](https://github.com/user-attachments/assets/a1ac1aef-6960-428d-aabb-2bb80a80351b)
 
 1)
 ```
